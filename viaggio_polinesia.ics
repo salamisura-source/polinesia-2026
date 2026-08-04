@@ -1,0 +1,331 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Daily Brief Polinesia//IT//IT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Viaggio Polinesia Francese 2026
+X-WR-CALDESC:Itinerario ufficiale Bologna → Polinesia Francese · 7-30 agosto 2026
+X-WR-TIMEZONE:Europe/Rome
+BEGIN:VTIMEZONE
+TZID:Europe/Rome
+BEGIN:STANDARD
+DTSTART:19701025T030000
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T020000
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:Pacific/Tahiti
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:-1000
+TZOFFSETTO:-1000
+TZNAME:TAHT
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:STANDARD
+DTSTART:19701101T020000
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700308T020000
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:polinesia-2026-lx1669@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Europe/Rome:20260807T102500
+DTEND;TZID=Europe/Rome:20260807T114000
+SUMMARY:✈️ LX 1669 · Bologna → Zurigo
+LOCATION:Aeroporto Bologna Marconi (BLQ) T1
+DESCRIPTION:Swiss LX 1669\nBLQ 10:25 → ZRH 11:40\nCheck-in Swiss al banco BLQ · Star Alliance\nCabin bag 8 kg + personale · stiva 23 kg\nArriva 2h prima (entro 08:25)
+CATEGORIES:VOLO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Volo BLQ→ZRH tra 3 ore · check-in
+TRIGGER:-PT3H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Volo domani · prepara valigie
+TRIGGER:-PT1D
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-lx38@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Europe/Rome:20260807T131500
+DTEND;TZID=America/Los_Angeles:20260807T161500
+SUMMARY:✈️ LX 38 · Zurigo → San Francisco (12h)
+LOCATION:Aeroporto Zurigo (ZRH) → SFO
+DESCRIPTION:Swiss LX 38\nZRH 13:15 → SFO 16:15 (ora locale)\nVolo intercontinentale ~12h\nAdatta orologio a UTC-7 già a bordo\nDurante il volo: hydrate + sonno\nSFO: fila Visitors ESTA (30-60 min attesa)
+CATEGORIES:VOLO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Imbarco LX 38 tra 1h
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-sf-hotel@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=America/Los_Angeles:20260807T190000
+DTEND;TZID=America/Los_Angeles:20260808T110000
+SUMMARY:🌉 Francisco Bay Inn · notte a SF
+LOCATION:1501 Lombard Street, San Francisco, CA 94123
+URL:https://franciscobayinn.reservandohoteles.com/
+DESCRIPTION:Hotel: Francisco Bay Inn (Marina District)\nTel: +1 415 474 3030\nTransfer SFO → hotel: Uber ~40-50 USD, ~30 min\nCena veloce zona Marina (Lucca Delicatessen / Delarosa)\nCheck-out 11:00 sabato\nBAGAGLIO: minimo per la notte + tutto pronto per SFO
+CATEGORIES:HOTEL
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Check-out Francisco Bay Inn entro 11:00
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-ua115@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=America/Los_Angeles:20260808T132500
+DTEND;TZID=Pacific/Tahiti:20260808T185500
+SUMMARY:✈️ UA 115 · San Francisco → Papeete (8h)
+LOCATION:SFO T3 → Faa'a (PPT)
+DESCRIPTION:United UA 115\nSFO 13:25 → PPT 18:55 (ora Tahiti UTC-10)\nVolo ~8h · attraversamento equatore\nMangia leggero + acqua\nAll'arrivo: shuttle IC Tahiti (3 min in auto)
+CATEGORIES:VOLO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Al gate SFO tra 1h30 · UA 115 per Papeete
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-ictahiti-1@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Pacific/Tahiti:20260808T200000
+DTEND;TZID=Pacific/Tahiti:20260812T110000
+SUMMARY:🌺 IC Tahiti · 1° soggiorno (4 notti)
+LOCATION:InterContinental Tahiti Resort & Spa · Faa'a
+URL:https://tahiti.intercontinental.com/
+DESCRIPTION:Hotel: InterContinental Tahiti Resort & Spa\nConcierge: +689 40 86 51 68\nEmail: concierge.tahiti@ihg.com\n\n4 notti: 8→12 agosto\nDOM 9: recupero jet-lag (giornata resort)\nLUN 10 + MAR 11: esplorazione libera\nMER 12 mattina: check-out entro 11:00 → ferry
+CATEGORIES:HOTEL
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-ferry@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Pacific/Tahiti:20260812T122500
+DTEND;TZID=Pacific/Tahiti:20260812T130000
+SUMMARY:⛴️ Ferry Aremiti · Tahiti → Moorea
+LOCATION:Papeete Ferry Terminal (Motu Uta) → Vaiare (Moorea)
+URL:https://aremitiexpress.com/
+DESCRIPTION:Ferry Aremiti (biglietto x2 già acquistato)\nCorsa consigliata: 12:25 (A5 o A6, ~30 min)\n\nProcedura:\n1. Check-out IC Tahiti entro 11:00\n2. Taxi IC→Papeete Ferry Terminal (~15 min, ~2.500 XPF)\n3. Arriva al terminal 30-45 min prima\n4. QR/PDF biglietto al gate\n5. Sbarco Vaiare: transfer Cook's Bay già prenotato\n\nBACKUP: corse 14:25 · 15:30
+CATEGORIES:TRASPORTO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:FERRY OGGI 12:25 · esci dall'hotel!
+TRIGGER:-PT2H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ferry domani · verifica orari
+TRIGGER:-PT1D
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-cooksbay@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Pacific/Tahiti:20260812T150000
+DTEND;TZID=Pacific/Tahiti:20260818T110000
+SUMMARY:🥥 Cook's Bay Hotel · Moorea (6 notti)
+LOCATION:Cook's Bay Hotel & Suites · Moorea
+URL:https://www.mooreacooksbay.com/
+DESCRIPTION:Hotel: Cook's Bay Hotel & Suites\nTel: +689 40 55 41 00\n\n6 notti: 12→18 agosto\nInclude Ferragosto sabato 15/8 (festa nazionale)\n\nMUST-DO:\n- Lagoon Cruise razze&squali (~15k XPF) prenota 2-3gg prima\n- Tiki Tour outrigger (~14k XPF) prenota 1 sett prima\n- 4×4 Safari Belvedere FranckyFranck (~11k XPF)\n\nGRATIS: kayak + snorkel + kitchenette in camera
+CATEGORIES:HOTEL
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-nm918@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Pacific/Tahiti:20260818T103500
+DTEND;TZID=Pacific/Tahiti:20260818T112500
+SUMMARY:✈️ NM 918 · Moorea → Bora Bora (50 min)
+LOCATION:Aeroporto Moorea Temae (MOZ) → Bora Bora (BOB)
+DESCRIPTION:Air Moana NM918\nMOZ 10:35 → BOB 11:25 (~50 min)\n\nProcedura:\n- Check-out Cook's Bay entro 09:30\n- Transfer Cook's Bay → aeroporto Temae (~10 min, ~1.500 XPF)\n- Arriva 90 min prima (aeroporto piccolo ma coda check-in)\n- 1 bagaglio 15 kg incluso\n\nArrivo BOB: shuttle Royal Bora Bora
+CATEGORIES:VOLO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Volo NM918 tra 3h · esci per aeroporto
+TRIGGER:-PT3H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Volo Moorea→Bora domani · prepara valigie
+TRIGGER:-PT1D
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-royalbb@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Pacific/Tahiti:20260818T130000
+DTEND;TZID=Pacific/Tahiti:20260824T110000
+SUMMARY:💜 Royal Bora Bora (6 notti)
+LOCATION:Royal Bora Bora · Matira Point
+URL:https://www.royalborabora.com/
+DESCRIPTION:Hotel: Royal Bora Bora (main island · no barca)\nTel: +689 40 67 50 51\n\n6 notti: 18→24 agosto\nMatira Beach a 5 min a piedi\n\nMUST-DO:\n- Full Day Lagoon + motu picnic ⭐ (~22k XPF) prenota 2 sett prima\n- Sunset cruise catamaran (vista Mont Otemanu) 2-3gg prima\n- 4×4 Safari cannoni WWII (~13k XPF) 1 sett prima\n\nGRATIS: kayak + e-bike + Matira Beach pubblica
+CATEGORIES:HOTEL
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-transfer-bb@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Pacific/Tahiti:20260824T140000
+DTEND;TZID=Pacific/Tahiti:20260824T143000
+SUMMARY:🚕 Trasferimento Royal → IC Le Moana
+LOCATION:Matira Point, Bora Bora
+DESCRIPTION:Trasferimento tra i due hotel (stessa isola)\nTaxi ~5-10 min · ~1.500 XPF\n\nCheck-out Royal entro 11:00\nCheck-in IC Le Moana dalle 15:00\n\nSuggerimento: lascia bagagli al Royal, pranzo a Matira Beach, poi ti sposti alle 14
+CATEGORIES:TRASPORTO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Oggi trasferimento a IC Le Moana
+TRIGGER:-PT3H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-lemoana@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Pacific/Tahiti:20260824T150000
+DTEND;TZID=Pacific/Tahiti:20260826T140000
+SUMMARY:🐚 IC Le Moana · overwater (2 notti)
+LOCATION:InterContinental Bora Bora Le Moana Resort · Matira Point
+URL:https://lemoana.intercontinental.com/
+DESCRIPTION:Hotel: IC Le Moana Resort (overwater bungalow)\nResort: +689 40 60 49 00\nReservation: +689 40 86 51 78\nEmail: gsc.borabora.lemoana@ihg.com\n\n2 notti: 24→26 agosto · apoteosi del viaggio\n\nMUST-DO:\n- Deep Ocean Spa (IC Thalasso, shuttle gratis) 1-2gg prima\n- Sunset cruise Mont Otemanu\n\nGRATIS: snorkel reef sotto il bungalow · kayak · SUP\nMER 26 mattina: check-out per volo 15:15
+CATEGORIES:HOTEL
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-nm914@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Pacific/Tahiti:20260826T151500
+DTEND;TZID=Pacific/Tahiti:20260826T160500
+SUMMARY:✈️ NM 914 · Bora Bora → Papeete (50 min)
+LOCATION:Bora Bora (BOB) → Faa'a (PPT)
+DESCRIPTION:Air Moana NM914\nBOB 15:15 → PPT ~16:05 (~50 min)\n\nProcedura:\n- Check-out IC Le Moana entro 14:00\n- Transfer al pontile · shuttle boat aeroporto BOB (~15 min)\n- Arriva 90 min prima\n\nArrivo PPT: shuttle IC Tahiti (2° soggiorno)
+CATEGORIES:VOLO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Volo Bora→Tahiti tra 3h
+TRIGGER:-PT3H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-ictahiti-2@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Pacific/Tahiti:20260826T180000
+DTEND;TZID=Pacific/Tahiti:20260828T180000
+SUMMARY:🌺 IC Tahiti · 2° soggiorno (2 notti)
+LOCATION:InterContinental Tahiti Resort & Spa · Faa'a
+URL:https://tahiti.intercontinental.com/
+DESCRIPTION:Hotel: IC Tahiti (2° fase)\n\n2 notti: 26→28 agosto\n\nGIO 27 = ultimo giorno pieno in Polinesia\n- Marché de Papeete (mattina)\n- Shopping perle nere\n- Ultimo bagno in laguna\n- Cena Meherio Tahitian Bistro\n\nVEN 28 sera: transfer aeroporto per UA 114 delle 21:10
+CATEGORIES:HOTEL
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-ua114@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Pacific/Tahiti:20260828T211000
+DTEND;TZID=America/Los_Angeles:20260829T081500
+SUMMARY:🛫 UA 114 · Papeete → San Francisco (rientro 1/3)
+LOCATION:Faa'a (PPT) → SFO
+DESCRIPTION:United UA 114 · volo notturno\nPPT 21:10 → SFO 08:15 (+1) · ~8h\n\nInizio rientro (~40h totali con stopover)\nAttraversamento equatore inverso\n\nAll'arrivo SFO: cambio terminal per LH 455\nAttesa SFO ~6h15 · lounge Star Alliance
+CATEGORIES:VOLO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Al gate PPT · UA 114 per SFO
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-lh455@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=America/Los_Angeles:20260829T144000
+DTEND;TZID=Europe/Rome:20260830T102500
+SUMMARY:🛫 LH 455 · San Francisco → Francoforte (rientro 2/3)
+LOCATION:SFO → FRA
+DESCRIPTION:Lufthansa LH 455\nSFO 14:40 → FRA 10:25 (+1) · ~11h\n\nAttraversamento data line inverso\nAdatta orologio a CEST (+2 UTC) a bordo\n\nAll'arrivo FRA: attesa 5h55 per LH 286\nLounge Lufthansa disponibile
+CATEGORIES:VOLO
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-lh286@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;TZID=Europe/Rome:20260830T162000
+DTEND;TZID=Europe/Rome:20260830T175000
+SUMMARY:🏠 LH 286 · Francoforte → Bologna · RIENTRO
+LOCATION:FRA → BLQ
+DESCRIPTION:Lufthansa LH 286\nFRA 16:20 → BLQ 17:50 (~1h30)\n\n🏠 RIENTRO A CASA\n\nAll'arrivo BLQ: casa, doccia, sonno lungo\nLunedì 31/8: preparati a essere zombie (jet-lag inverso +12h)\nConsiglio: 1-2 giorni ferie extra
+CATEGORIES:VOLO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ultimo volo · a casa tra 1h30!
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-esta-check@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;VALUE=DATE:20260806
+DTEND;VALUE=DATE:20260807
+SUMMARY:⚠️ VERIFICA ESTA (T-1)
+DESCRIPTION:Verifica che ESTA sia approvata per entrambi.\n\nDomani parti per gli USA (scalo SFO).\nSito: esta.cbp.dhs.gov\n\nSe non ancora fatta: FAI SUBITO (min 72h prima ideale, ma spesso approvata in poche ore)
+CATEGORIES:TODO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ultimo giorno per ESTA · verifica ora
+TRIGGER:PT9H
+END:VALARM
+END:VEVENT
+
+BEGIN:VEVENT
+UID:polinesia-2026-checkin-online@dailybrief
+DTSTAMP:20260804T060000Z
+DTSTART;VALUE=DATE:20260806
+DTEND;VALUE=DATE:20260807
+SUMMARY:📱 Check-in online voli (T-1)
+DESCRIPTION:Check-in online T-24h per tutti i voli:\n- LX 1669 (Swiss)\n- LX 38 (Swiss)\n- UA 115 (United)\n\nSalva boarding pass mobile.\nPreferisci sedile finestrino se vuoi guardare
+CATEGORIES:TODO
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Fai check-in online voli · apre T-24h
+TRIGGER:PT8H
+END:VALARM
+END:VEVENT
+
+END:VCALENDAR

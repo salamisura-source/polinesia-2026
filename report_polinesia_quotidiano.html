@@ -1,0 +1,2659 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Daily Brief Polinesia Francese – 4 agosto 2026 · SNELLITO OPERATIVO (N°21)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(180deg, #eaf4f8 0%, #f7fbfd 100%);
+    color: #1c2b3a;
+    line-height: 1.55;
+  }
+  .container { max-width: 980px; margin: 0 auto; padding: 24px 22px 70px; }
+
+  /* Header in stile "quotidiano" */
+  header.newspaper {
+    background: #fff;
+    border-top: 6px solid #006d8f;
+    border-bottom: 3px double #006d8f;
+    padding: 22px 28px 18px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    border-radius: 6px;
+  }
+  .nameplate {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: Georgia, "Times New Roman", serif;
+    border-bottom: 1px solid #ccd9df; padding-bottom: 10px; margin-bottom: 12px;
+  }
+  .nameplate .title {
+    font-size: 36px; font-weight: 900; letter-spacing: -1px; color: #006d8f;
+  }
+  .nameplate .title small { font-size: 14px; font-weight: 400; color: #5a6b78; letter-spacing: 1px; }
+  .nameplate .date {
+    font-size: 13px; color: #5a6b78; text-transform: uppercase; letter-spacing: 1.5px;
+  }
+  .lead {
+    font-family: Georgia, serif; font-size: 18px; color: #2b3e50;
+    font-style: italic; margin: 6px 0 0;
+  }
+
+  /* Sommario */
+  .summary {
+    background: #fff; border-radius: 10px; padding: 18px 22px;
+    margin-bottom: 22px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid #ffb84d;
+  }
+  .summary h2 { margin: 0 0 10px; font-size: 16px; color: #8a5a00; letter-spacing: 1px; text-transform: uppercase; }
+  .summary ul { margin: 0 0 0 18px; padding: 0; }
+  .summary li { margin-bottom: 6px; font-size: 14.5px; }
+
+  /* Sezioni */
+  section {
+    background: #fff; border-radius: 12px; padding: 22px 26px;
+    margin-bottom: 20px; box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  }
+  section h2.section-title {
+    margin: 0 0 14px; font-size: 20px;
+    border-bottom: 2px solid #e6f4f8; padding-bottom: 8px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .tag {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 3px 9px; border-radius: 12px; letter-spacing: 1px;
+    text-transform: uppercase; color: #fff;
+  }
+  .tag-meteo  { background: #00aac1; }
+  .tag-news   { background: #006d8f; }
+  .tag-cronaca{ background: #b03b3b; }
+  .tag-eventi { background: #1ea84f; }
+  .tag-travel { background: #c2723e; }
+    .tag-tip    { background: #8a5a00; }
+    .tag-salute { background: #7a3aa8; }
+
+  /* Meteo boxes */
+  .weather-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+  .wbox { flex: 1 1 140px; background: #f1f8fb; border-radius: 10px; padding: 12px 14px; border: 1px solid #dde9ee; }
+  .wbox .num { font-size: 22px; font-weight: 700; color: #006d8f; }
+  .wbox .lbl { font-size: 11px; color: #5a6b78; text-transform: uppercase; letter-spacing: 1px; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #e6eef2; }
+  th { background: #f0f7fa; color: #006d8f; font-weight: 600; }
+
+  /* Article style */
+  .article { padding: 12px 0; border-bottom: 1px dashed #d9e3e8; }
+  .article:last-child { border-bottom: none; }
+  .article h3 { margin: 0 0 4px; font-family: Georgia, serif; font-size: 17px; color: #1c2b3a; }
+  .article .byline { font-size: 12px; color: #7a8b95; margin-bottom: 6px; }
+  .article p { margin: 6px 0; font-size: 14.5px; }
+
+  .alert { background: #ffefe5; border-left: 4px solid #b03b3b; padding: 12px 16px; border-radius: 8px; margin: 12px 0; font-size: 14px; }
+  .warn  { background: #fff7e6; border-left: 4px solid #ffb84d; padding: 12px 16px; border-radius: 8px; margin: 12px 0; font-size: 14px; }
+  .ok    { background: #ecfbf0; border-left: 4px solid #1ea84f; padding: 12px 16px; border-radius: 8px; margin: 12px 0; font-size: 14px; }
+  .info  { background: #e8f4fb; border-left: 4px solid #00aac1; padding: 12px 16px; border-radius: 8px; margin: 12px 0; font-size: 14px; }
+
+  /* Cronaca specific */
+  .crime-grid { display: grid; gap: 14px; }
+  .crime-card {
+    border: 1px solid #f0d6d6; background: #fdf6f6;
+    border-left: 4px solid #b03b3b; border-radius: 8px; padding: 12px 16px;
+  }
+  .crime-card .when { font-size: 11px; color: #b03b3b; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .crime-card h4 { margin: 4px 0 6px; font-size: 15.5px; }
+  .crime-card p { margin: 4px 0; font-size: 13.5px; color: #4a5a68; }
+
+  /* Salute specific */
+  .health-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .health-grid { grid-template-columns: 1fr 1fr; } }
+  .health-card {
+    border: 1px solid #e3d4f0; background: #faf6fd;
+    border-left: 4px solid #7a3aa8; border-radius: 8px; padding: 14px 16px;
+  }
+  .health-card .when { font-size: 11px; color: #7a3aa8; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .health-card h4 { margin: 4px 0 6px; font-size: 15.5px; color: #4a1f6a; }
+  .health-card p { margin: 4px 0; font-size: 13.5px; color: #4a5a68; }
+  .risk-level {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 2px 8px; border-radius: 10px; margin-left: 6px;
+  }
+  .risk-low    { background: #d4f4dd; color: #1a7a3a; }
+  .risk-medium { background: #ffe9c2; color: #8a5a00; }
+  .risk-high   { background: #ffd0d0; color: #a02020; }
+  .hospital-box {
+    background: #f5edfb; border-radius: 10px; padding: 16px 18px;
+    margin-top: 12px; border: 1px solid #e0cef0;
+  }
+  .hospital-box h4 { margin: 0 0 8px; color: #4a1f6a; }
+  .stat-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+  .stat { flex: 1 1 130px; background: white; border-radius: 8px; padding: 10px 12px; border: 1px solid #e0cef0; }
+  .stat .n { font-size: 22px; font-weight: 800; color: #7a3aa8; }
+  .stat .l { font-size: 11px; color: #5a6b78; text-transform: uppercase; letter-spacing: 1px; }
+
+  .countdown {
+    background: linear-gradient(135deg, #006d8f, #00aac1);
+    color: white; padding: 16px 20px; border-radius: 10px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+    margin-bottom: 18px;
+  }
+  .countdown .big { font-size: 36px; font-weight: 800; line-height: 1; }
+  .countdown .lbl { font-size: 13px; opacity: 0.9; letter-spacing: 1px; text-transform: uppercase; }
+
+  /* Infografiche */
+  .infographic {
+    margin: 16px 0;
+    text-align: center;
+  }
+  .infographic img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border: 1px solid #e3eef3;
+  }
+  .infographic .caption {
+    font-size: 12px;
+    color: #5a6b78;
+    font-style: italic;
+    margin-top: 8px;
+  }
+
+  /* Ferry monitor box */
+  .ferry-monitor {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7fa 100%);
+    border: 2px solid #006d8f;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 18px rgba(0, 109, 143, 0.15);
+  }
+  .ferry-monitor .ferry-head {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 8px; margin-bottom: 12px;
+    border-bottom: 1px solid #cfe1e9; padding-bottom: 10px;
+  }
+  .ferry-monitor .ferry-title {
+    font-size: 17px; font-weight: 800; color: #006d8f;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .ferry-monitor .ferry-meta {
+    font-size: 11px; color: #5a6b78; letter-spacing: 1px; text-transform: uppercase;
+  }
+  .ferry-monitor .ferry-pill {
+    display: inline-block; background: #d4f4dd; color: #1a7a3a;
+    font-size: 11px; font-weight: 700; padding: 3px 10px;
+    border-radius: 12px; letter-spacing: 1px; text-transform: uppercase;
+  }
+  .ferry-monitor img {
+    width: 100%; height: auto; border-radius: 8px;
+    border: 1px solid #d0dde3; margin-top: 4px;
+  }
+  .ferry-monitor .ferry-note {
+    font-size: 13px; color: #2b3e50; margin-top: 12px;
+    background: #fff; padding: 10px 14px; border-radius: 8px;
+    border-left: 3px solid #00aac1;
+  }
+  .ferry-monitor h4 {
+    margin: 18px 0 8px; color: #006d8f; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .ferry-compare {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+    background: white; border-radius: 8px; overflow: hidden;
+  }
+  .ferry-compare th {
+    background: #006d8f; color: white; padding: 8px 10px;
+    text-align: left; font-size: 12px; letter-spacing: 0.5px;
+  }
+  .ferry-compare td {
+    padding: 8px 10px; border-bottom: 1px solid #e6eef2; vertical-align: top;
+  }
+  .ferry-compare tr:last-child td { border-bottom: none; }
+  .ferry-compare .name { font-weight: 700; color: #006d8f; }
+  .ferry-compare .badge-fast {
+    background: #fff7e6; color: #8a5a00; padding: 1px 6px;
+    border-radius: 8px; font-size: 10px; font-weight: 700; margin-left: 4px;
+  }
+  .ferry-compare .badge-car {
+    background: #e8f4fb; color: #14628e; padding: 1px 6px;
+    border-radius: 8px; font-size: 10px; font-weight: 700; margin-left: 4px;
+  }
+
+  /* Occupancy bar */
+  .occupancy-grid {
+    display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 8px;
+  }
+  @media (min-width: 720px) {
+    .occupancy-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .occupancy-day {
+    background: white; border: 1px solid #e3eef3; border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .occupancy-day .day-label {
+    font-size: 12px; font-weight: 700; color: #006d8f;
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .occupancy-day .day-pct {
+    font-size: 16px; font-weight: 800;
+  }
+  .occ-bar {
+    height: 10px; background: #f0f7fa; border-radius: 5px; overflow: hidden;
+    position: relative;
+  }
+  .occ-fill {
+    height: 100%; border-radius: 5px;
+    transition: width 0.3s;
+  }
+  .occ-low    { background: linear-gradient(90deg, #1ea84f, #4cc28a); }
+  .occ-medium { background: linear-gradient(90deg, #ffb84d, #ff9c2e); }
+  .occ-high   { background: linear-gradient(90deg, #e07a30, #b03b3b); }
+  .occ-full   { background: linear-gradient(90deg, #b03b3b, #7a1f1f); }
+  .occ-label-row {
+    display: flex; justify-content: space-between; font-size: 11px;
+    color: #5a6b78; margin-top: 4px;
+  }
+  .occupancy-legend {
+    display: flex; flex-wrap: wrap; gap: 12px; font-size: 11px;
+    color: #5a6b78; margin-top: 10px; padding-top: 8px;
+    border-top: 1px dashed #d9e3e8;
+  }
+  .occupancy-legend span { display: inline-flex; align-items: center; gap: 4px; }
+  .occupancy-legend i {
+    width: 12px; height: 12px; border-radius: 3px; display: inline-block;
+  }
+  .occ-disclaimer {
+    background: #fff7e6; border-left: 3px solid #ffb84d;
+    padding: 8px 12px; border-radius: 6px;
+    font-size: 12px; color: #5a4a20; margin: 10px 0;
+  }
+
+  footer { text-align: center; color: #5a6b78; font-size: 12px; margin-top: 24px; padding: 14px; }
+
+  /* Scheda escursioni InterContinental (in cima al brief) */
+  /* Specchietto valute (in assoluto primo blocco) */
+  .currency-box {
+    background: linear-gradient(135deg, #1a5a72 0%, #006d8f 60%, #00aac1 100%);
+    color: white;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(0,109,143,0.25);
+  }
+  .currency-box .cur-head {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px; margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 10px;
+  }
+  .currency-box .cur-title {
+    font-size: 17px; font-weight: 800;
+  }
+  .currency-box .cur-rate {
+    background: #ffb84d; color: #4a2f0a;
+    font-size: 13px; font-weight: 800; padding: 5px 12px;
+    border-radius: 12px; letter-spacing: 0.5px;
+  }
+  .currency-box p { margin: 8px 0; font-size: 13.5px; opacity: 0.95; }
+  .currency-box .cur-grid {
+    display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 10px;
+  }
+  @media (min-width: 720px) {
+    .currency-box .cur-grid { grid-template-columns: 1fr 1fr; }
+  }
+  .currency-box .cur-card {
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px; padding: 12px 14px;
+  }
+  .currency-box .cur-card h5 {
+    margin: 0 0 8px; font-size: 14px; letter-spacing: 0.5px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .currency-box .cur-flag {
+    background: rgba(255,255,255,0.2); padding: 2px 8px;
+    border-radius: 8px; font-size: 11px; font-weight: 700;
+  }
+  .currency-box table.cur-table {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+  }
+  .currency-box table.cur-table td {
+    padding: 5px 6px; border-bottom: 1px solid rgba(255,255,255,0.14);
+  }
+  .currency-box table.cur-table td:first-child { font-weight: 600; }
+  .currency-box table.cur-table td:last-child { text-align: right; opacity: 0.9; }
+  .currency-box table.cur-table tr:last-child td { border-bottom: none; }
+  .currency-box .cur-tips {
+    background: rgba(255,255,255,0.12); border-radius: 8px;
+    padding: 10px 14px; margin-top: 12px; font-size: 12.5px;
+  }
+  .currency-box .cur-tips strong { color: #ffe4b8; }
+
+  /* Cash budget box (verde-oro) */
+  .cash-box {
+    background: linear-gradient(135deg, #146945 0%, #1a8c5a 60%, #2fa876 100%);
+    color: white;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(20,105,69,0.25);
+  }
+  .cash-box .cash-head {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px; margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 10px;
+  }
+  .cash-box .cash-title { font-size: 17px; font-weight: 800; }
+  .cash-box .cash-badge {
+    background: #ffb84d; color: #4a2f0a;
+    font-size: 13px; font-weight: 800; padding: 5px 12px;
+    border-radius: 12px; letter-spacing: 0.5px;
+  }
+  .cash-box p { margin: 8px 0; font-size: 13.5px; opacity: 0.95; }
+  .cash-box table.cash-table {
+    width: 100%; border-collapse: collapse; margin-top: 10px;
+    background: rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden;
+  }
+  .cash-box table.cash-table th {
+    background: rgba(255,255,255,0.15); padding: 8px 10px;
+    text-align: left; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  .cash-box table.cash-table td {
+    padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.14);
+    font-size: 13px;
+  }
+  .cash-box table.cash-table td.amount {
+    font-weight: 700; color: #ffe4b8; white-space: nowrap;
+  }
+  .cash-box table.cash-table tr:last-child td { border-bottom: none; }
+  .cash-box table.cash-table tr.total { background: rgba(255,184,77,0.2); }
+  .cash-box table.cash-table tr.total td { font-weight: 800; font-size: 14px; }
+  .cash-box .cash-tips {
+    background: rgba(255,255,255,0.12); border-radius: 8px;
+    padding: 10px 14px; margin-top: 12px; font-size: 12.5px;
+  }
+  .cash-box .cash-tips strong { color: #ffe4b8; }
+
+  /* Card acceptance box (viola-blu) */
+  .cards-box {
+    background: linear-gradient(135deg, #4a1f6a 0%, #6c3aa8 60%, #8b5ac9 100%);
+    color: white;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(74,31,106,0.25);
+  }
+  .cards-box .cards-head {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px; margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 10px;
+  }
+  .cards-box .cards-title { font-size: 17px; font-weight: 800; }
+  .cards-box .cards-badge {
+    background: #ffb84d; color: #4a2f0a;
+    font-size: 13px; font-weight: 800; padding: 5px 12px;
+    border-radius: 12px; letter-spacing: 0.5px;
+  }
+  .cards-box p { margin: 8px 0; font-size: 13.5px; opacity: 0.95; }
+  .cards-box table.cards-table {
+    width: 100%; border-collapse: collapse; margin-top: 10px;
+    background: rgba(255,255,255,0.08); border-radius: 8px; overflow: hidden;
+    font-size: 12.5px;
+  }
+  .cards-box table.cards-table th {
+    background: rgba(255,255,255,0.15); padding: 8px 10px;
+    text-align: center; font-size: 11.5px; font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .cards-box table.cards-table th:first-child { text-align: left; }
+  .cards-box table.cards-table td {
+    padding: 8px 10px; border-bottom: 1px solid rgba(255,255,255,0.14);
+    text-align: center;
+  }
+  .cards-box table.cards-table td:first-child {
+    text-align: left; font-weight: 600;
+  }
+  .cards-box table.cards-table tr:last-child td { border-bottom: none; }
+  .cards-box .pct-hi { color: #6ff5a0; font-weight: 800; }
+  .cards-box .pct-mid { color: #ffd97a; font-weight: 800; }
+  .cards-box .pct-lo { color: #ff9c9c; font-weight: 800; }
+  .cards-box .pct-null { color: #d4b8ff; font-weight: 800; }
+  .cards-box .cards-tips {
+    background: rgba(255,255,255,0.12); border-radius: 8px;
+    padding: 10px 14px; margin-top: 12px; font-size: 12.5px;
+  }
+  .cards-box .cards-tips strong { color: #ffe4b8; }
+
+  .excursions-box {
+    background: linear-gradient(135deg, #fff 0%, #fef7ed 100%);
+    border: 2px solid #c2723e;
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 20px rgba(194,114,62,0.18);
+  }
+  .excursions-box .exc-head {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px; margin-bottom: 14px;
+    border-bottom: 1px solid #eadbc7; padding-bottom: 10px;
+  }
+  .excursions-box .exc-title {
+    font-size: 18px; font-weight: 800; color: #8a4a1f;
+  }
+  .excursions-box .exc-pill {
+    background: #c2723e; color: white; font-size: 11px; font-weight: 700;
+    padding: 4px 10px; border-radius: 12px; letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .excursions-box h4 {
+    margin: 16px 0 8px; color: #8a4a1f; font-size: 15px;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .exc-table {
+    width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 13.5px;
+    background: white; border-radius: 8px; overflow: hidden;
+  }
+  .exc-table th {
+    background: #c2723e; color: white; padding: 8px 10px;
+    text-align: left; font-weight: 600; font-size: 12px;
+  }
+  .exc-table td {
+    padding: 8px 10px; border-bottom: 1px solid #eadbc7; vertical-align: top;
+  }
+  .exc-table tr:last-child td { border-bottom: none; }
+  .exc-savings {
+    background: #ecfbf0; border-left: 4px solid #1ea84f;
+    padding: 12px 16px; border-radius: 8px; margin: 12px 0;
+    font-size: 13.5px;
+  }
+  .exc-warn {
+    background: #fff7e6; border-left: 4px solid #ffb84d;
+    padding: 12px 16px; border-radius: 8px; margin: 12px 0;
+    font-size: 13.5px;
+  }
+  .exc-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 8px; }
+  @media (min-width: 720px) { .exc-grid { grid-template-columns: 1fr 1fr; } }
+  .exc-card {
+    background: white; border: 1px solid #eadbc7; border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .exc-card h5 { margin: 0 0 6px; color: #8a4a1f; font-size: 14px; }
+  .exc-card p { margin: 4px 0; font-size: 13px; }
+  .exc-card .price {
+    display: inline-block; background: #ffb84d; color: #4a2f0a;
+    font-weight: 700; padding: 2px 8px; border-radius: 10px;
+    font-size: 12px; margin-top: 4px;
+  }
+  .exc-card .free {
+    display: inline-block; background: #1ea84f; color: white;
+    font-weight: 700; padding: 2px 8px; border-radius: 10px;
+    font-size: 12px; margin-top: 4px;
+  }
+  .exc-card .booking-info {
+    background: #f7fbfd; border-left: 3px solid #00aac1;
+    padding: 8px 10px; margin-top: 8px; border-radius: 4px;
+    font-size: 11.5px; color: #2b3e50;
+  }
+  .exc-card .booking-info strong { color: #006d8f; }
+  .booking-badge {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    padding: 2px 7px; border-radius: 8px; margin-right: 4px;
+    letter-spacing: 0.3px;
+  }
+  .booking-badge.walk-in { background: #d4f4dd; color: #1a7a3a; }
+  .booking-badge.same-day { background: #e8f4fb; color: #14628e; }
+  .booking-badge.day-before { background: #fff7e6; color: #8a5a00; }
+  .booking-badge.week-before { background: #ffefe5; color: #b03b3b; }
+
+  /* Ristoranti box (per hotel) */
+  .restaurants-box {
+    background: #fff8f0; border: 1px solid #f0d9c2;
+    border-left: 4px solid #c2723e;
+    border-radius: 8px; padding: 14px 16px; margin: 14px 0;
+  }
+  .restaurants-box h4 {
+    margin: 0 0 8px; color: #8a4a1f; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+  .restaurants-box .rest-intro {
+    font-size: 12.5px; color: #5a4a30; margin: 0 0 10px; font-style: italic;
+  }
+  table.rest-table {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+    background: white; border-radius: 6px; overflow: hidden;
+  }
+  table.rest-table th {
+    background: #c2723e; color: white; padding: 7px 10px;
+    text-align: left; font-weight: 600; font-size: 11.5px;
+    letter-spacing: 0.3px;
+  }
+  table.rest-table td {
+    padding: 8px 10px; border-bottom: 1px solid #f0e0cc; vertical-align: top;
+  }
+  table.rest-table tr:last-child td { border-bottom: none; }
+  table.rest-table .rest-name { font-weight: 700; color: #8a4a1f; }
+  table.rest-table .price-tag small {
+    display: block;
+    font-size: 0.72em;
+    font-weight: 600;
+    margin-top: 2px;
+    opacity: 0.85;
+    letter-spacing: 0;
+  }
+  table.rest-table .price-tag {
+    display: inline-block; padding: 1px 6px; border-radius: 8px;
+    font-size: 11px; font-weight: 700; white-space: nowrap;
+  }
+  .price-€ { background: #d4f4dd; color: #1a7a3a; }
+  .price-€€ { background: #fff7e6; color: #8a5a00; }
+  .price-€€€ { background: #ffefe5; color: #b03b3b; }
+
+  /* Hotel section header (per distinguere i due resort) */
+  .hotel-section {
+    margin-top: 22px; padding-top: 20px;
+    border-top: 3px dashed #eadbc7;
+  }
+  .hotel-section.first { margin-top: 8px; padding-top: 0; border-top: none; }
+  .hotel-badge {
+    display: inline-block;
+    padding: 6px 14px; border-radius: 20px;
+    font-size: 13px; font-weight: 800; letter-spacing: 0.5px;
+    color: white; margin-bottom: 12px;
+  }
+  .hotel-badge.intercont { background: linear-gradient(135deg, #c2723e, #8a4a1f); }
+  .hotel-badge.cooksbay { background: linear-gradient(135deg, #1a8c5a, #146945); }
+  .hotel-badge.royalbb { background: linear-gradient(135deg, #6c5aa8, #3d2e70); }
+  .hotel-badge.lemoana { background: linear-gradient(135deg, #00aac1, #006d8f); }
+  .hotel-section .hotel-tagline {
+    font-size: 13px; color: #5a6b78; font-style: italic;
+    margin: 0 0 12px;
+  }
+
+  
+  
+  /* === UI GLOBALE CHECKBOX (barra progresso + bottoni) === */
+  #checkbox-progress {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: rgba(0,0,0,0.05);
+    z-index: 9999;
+    display: flex;
+  }
+  #checkbox-progress-label {
+    position: fixed;
+    top: 12px; right: 16px;
+    background: white;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex; gap: 4px;
+  }
+  #checkbox-share-btn {
+    position: fixed;
+    top: 54px; right: 16px;
+    background: #006d8f;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  #checkbox-share-btn:hover { background: #00889b; }
+  #checkbox-reset-btn {
+    position: fixed;
+    top: 88px; right: 16px;
+    background: #b03b3b;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    opacity: 0.7;
+  }
+  #checkbox-reset-btn:hover { opacity: 1; }
+
+  /* Base per liste e card actionable (comune ai 3 stati) */
+  ul.actionable, ol.actionable {
+    list-style: none;
+    padding-left: 8px !important;
+  }
+  ul.actionable > li, ol.actionable > li {
+    position: relative;
+    padding: 6px 8px 6px 34px;
+    margin-bottom: 8px;
+    border-left: 3px solid transparent;
+    border-radius: 6px;
+    transition: background 0.2s, border-color 0.2s;
+    cursor: pointer;
+  }
+  ul.actionable > li::before, ol.actionable > li::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #8a5a00;
+    border-radius: 4px;
+    background: white;
+    transition: all 0.2s;
+  }
+  ul.actionable > li:hover:not(.done):not(.like):not(.dislike),
+  ol.actionable > li:hover:not(.done):not(.like):not(.dislike) {
+    background: #fff9ec;
+    border-left-color: #d4941a;
+  }
+
+  .actionable-card {
+    position: relative !important;
+    padding-left: 40px !important;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .actionable-card::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #8a5a00;
+    border-radius: 5px;
+    background: white;
+    transition: all 0.2s;
+    z-index: 2;
+  }
+  .actionable-card:hover:not(.done):not(.like):not(.dislike) {
+    background: #fff9ec !important;
+    border-color: #d4941a !important;
+  }
+
+  .actionable-table tr.actionable-row {
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .actionable-table tr.actionable-row > td:first-child {
+    position: relative;
+    padding-left: 32px !important;
+  }
+  .actionable-table tr.actionable-row > td:first-child::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #8a5a00;
+    border-radius: 4px;
+    background: white;
+    transition: all 0.2s;
+  }
+  .actionable-table tr.actionable-row:hover:not(.done):not(.like):not(.dislike) {
+    background: #fff9ec;
+  }
+
+  @media print {
+    #checkbox-progress, #checkbox-progress-label,
+    #checkbox-share-btn, #checkbox-reset-btn, .actionable-hint { display: none; }
+  }
+
+  /* === CHECKBOX MULTI-STATO (vuoto → fatto → mi piace → non mi piace → vuoto) === */
+
+  /* ─── Stato FATTO (verde) ─── */
+  ul.actionable > li.done, ol.actionable > li.done {
+    background: linear-gradient(90deg, #d4f4dd 0%, #f0fff5 100%);
+    border-left-color: #1a7a3a;
+    opacity: 0.75;
+  }
+  ul.actionable > li.done::before, ol.actionable > li.done::before {
+    background: #1a7a3a;
+    border-color: #1a7a3a;
+  }
+  ul.actionable > li.done::after, ol.actionable > li.done::after {
+    content: "✓";
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1;
+  }
+  ul.actionable > li.done > *:not(.check-badge), ol.actionable > li.done > *:not(.check-badge) {
+    text-decoration: line-through;
+    text-decoration-color: rgba(26,122,58,0.5);
+    text-decoration-thickness: 1.5px;
+  }
+
+  /* ─── Stato MI PIACE (rosa/rosso cuore) ─── */
+  ul.actionable > li.like, ol.actionable > li.like {
+    background: linear-gradient(90deg, #ffe6ed 0%, #fff5f8 100%);
+    border-left: 3px solid #d93a68;
+  }
+  ul.actionable > li.like::before, ol.actionable > li.like::before {
+    background: #d93a68;
+    border-color: #d93a68;
+  }
+  ul.actionable > li.like::after, ol.actionable > li.like::after {
+    content: "❤";
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  /* ─── Stato NON MI PIACE (grigio/barrato) ─── */
+  ul.actionable > li.dislike, ol.actionable > li.dislike {
+    background: linear-gradient(90deg, #e8e8e8 0%, #f5f5f5 100%);
+    border-left: 3px solid #6a6a70;
+    opacity: 0.55;
+  }
+  ul.actionable > li.dislike::before, ol.actionable > li.dislike::before {
+    background: #6a6a70;
+    border-color: #6a6a70;
+  }
+  ul.actionable > li.dislike::after, ol.actionable > li.dislike::after {
+    content: "✗";
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1;
+  }
+  ul.actionable > li.dislike > *:not(.check-badge), ol.actionable > li.dislike > *:not(.check-badge) {
+    text-decoration: line-through;
+    text-decoration-color: rgba(106,106,112,0.6);
+    text-decoration-thickness: 1.5px;
+    color: #7a7a80;
+  }
+
+  /* ─── Variante ACTIONABLE-LIGHT per bonus finale (blu) ─── */
+  ul.actionable-light > li.done::before, ol.actionable-light > li.done::before {
+    background: #1a5aa8;
+    border-color: #1a5aa8;
+  }
+
+  /* ═══════════════════════════════════════════════════════ */
+  /* CARD (attività gratuite) — stessi 3 stati              */
+  /* ═══════════════════════════════════════════════════════ */
+  .actionable-card.done {
+    background: linear-gradient(90deg, #d4f4dd 0%, #f0fff5 100%) !important;
+    border-color: #1a7a3a !important;
+    opacity: 0.75;
+  }
+  .actionable-card.done::before {
+    background: #1a7a3a;
+    border-color: #1a7a3a;
+  }
+  .actionable-card.done::after {
+    content: "✓";
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1;
+    z-index: 3;
+  }
+  .actionable-card.done h5,
+  .actionable-card.done p:not(.booking-info):not(.booking-badge) {
+    text-decoration: line-through;
+    text-decoration-color: rgba(26,122,58,0.5);
+    text-decoration-thickness: 1.5px;
+  }
+
+  .actionable-card.like {
+    background: linear-gradient(90deg, #ffe6ed 0%, #fff5f8 100%) !important;
+    border-color: #d93a68 !important;
+  }
+  .actionable-card.like::before {
+    background: #d93a68;
+    border-color: #d93a68;
+  }
+  .actionable-card.like::after {
+    content: "❤";
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1;
+    z-index: 3;
+  }
+
+  .actionable-card.dislike {
+    background: linear-gradient(90deg, #e8e8e8 0%, #f5f5f5 100%) !important;
+    border-color: #6a6a70 !important;
+    opacity: 0.55;
+  }
+  .actionable-card.dislike::before {
+    background: #6a6a70;
+    border-color: #6a6a70;
+  }
+  .actionable-card.dislike::after {
+    content: "✗";
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1;
+    z-index: 3;
+  }
+  .actionable-card.dislike h5,
+  .actionable-card.dislike p:not(.booking-info):not(.booking-badge) {
+    text-decoration: line-through;
+    color: #7a7a80;
+  }
+
+  /* ═══════════════════════════════════════════════════════ */
+  /* RIGHE TABELLA — stessi 3 stati                         */
+  /* ═══════════════════════════════════════════════════════ */
+  .actionable-table tr.actionable-row.done {
+    background: linear-gradient(90deg, #d4f4dd 0%, #f0fff5 100%);
+    opacity: 0.75;
+  }
+  .actionable-table tr.actionable-row.done > td:first-child::before {
+    background: #1a7a3a;
+    border-color: #1a7a3a;
+  }
+  .actionable-table tr.actionable-row.done > td:first-child::after {
+    content: "✓";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .actionable-table tr.actionable-row.done > td {
+    text-decoration: line-through;
+    text-decoration-color: rgba(26,122,58,0.5);
+    text-decoration-thickness: 1.2px;
+  }
+
+  .actionable-table tr.actionable-row.like {
+    background: linear-gradient(90deg, #ffe6ed 0%, #fff5f8 100%);
+  }
+  .actionable-table tr.actionable-row.like > td:first-child::before {
+    background: #d93a68;
+    border-color: #d93a68;
+  }
+  .actionable-table tr.actionable-row.like > td:first-child::after {
+    content: "❤";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .actionable-table tr.actionable-row.dislike {
+    background: linear-gradient(90deg, #e8e8e8 0%, #f5f5f5 100%);
+    opacity: 0.55;
+  }
+  .actionable-table tr.actionable-row.dislike > td:first-child::before {
+    background: #6a6a70;
+    border-color: #6a6a70;
+  }
+  .actionable-table tr.actionable-row.dislike > td:first-child::after {
+    content: "✗";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .actionable-table tr.actionable-row.dislike > td {
+    text-decoration: line-through;
+    text-decoration-color: rgba(106,106,112,0.6);
+    color: #7a7a80;
+  }
+
+  /* ═══════════════════════════════════════════════════════ */
+  /* BADGE PROGRESS (aggiornato per mostrare 3 conteggi)   */
+  /* ═══════════════════════════════════════════════════════ */
+  #checkbox-progress-label {
+    display: flex;
+    gap: 6px;
+    padding: 4px 8px !important;
+  }
+  #checkbox-progress-label .stat {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+  #checkbox-progress-label .stat-done { background: #1a7a3a; color: white; }
+  #checkbox-progress-label .stat-like { background: #d93a68; color: white; }
+  #checkbox-progress-label .stat-dislike { background: #6a6a70; color: white; }
+  #checkbox-progress-label .stat-todo { background: white; color: #4a5a68; border: 1px solid #d9e3e8; }
+
+  /* Progress bar segmented */
+  #checkbox-progress {
+    display: flex;
+    align-items: stretch;
+  }
+  #checkbox-progress .segment {
+    height: 100%;
+    transition: width 0.3s ease-out;
+  }
+  #checkbox-progress .segment.done { background: #1a7a3a; }
+  #checkbox-progress .segment.like { background: #d93a68; }
+  #checkbox-progress .segment.dislike { background: #6a6a70; }
+
+  /* Tooltip suggerimento click */
+  .actionable-hint {
+    position: fixed;
+    bottom: 20px; right: 16px;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: 260px;
+    z-index: 9998;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: none;
+  }
+  .actionable-hint.show { display: block; animation: hintFadeIn 0.3s; }
+  @keyframes hintFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .actionable-hint .close {
+    position: absolute; top: 4px; right: 6px;
+    cursor: pointer; opacity: 0.7; font-size: 14px;
+  }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<div style="background:linear-gradient(135deg,#0c5b7a,#164a6b); color:white; border-radius:10px; padding:12px 20px; margin:14px 0; font-size:14px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+  <div>📱 <strong>Sei su smartphone?</strong> Prova la versione ottimizzata mobile-first, più veloce e tap-friendly.</div>
+  <a href="report_polinesia_mobile.html" style="background:white; color:#0c5b7a; padding:8px 14px; border-radius:6px; text-decoration:none; font-weight:700; white-space:nowrap;">📱 Apri versione mobile ↗</a>
+</div>
+
+<div style="background:linear-gradient(135deg,#eaf7ee 0%,#fff5f8 50%,#f5f5f5 100%); border:2px solid #1a7a3a; border-radius:10px; padding:14px 20px; margin:14px 0; font-size:13.5px; color:#1a5c2a;">
+  <strong>✨ SPUNTE MULTI-STATO (novità):</strong> tutte le voci con il pallino a sinistra ciclano tra 4 stati con click ripetuti:
+  <div style="display:flex; gap:10px; margin:8px 0; flex-wrap:wrap;">
+    <span style="background:white; border:2px solid #8a5a00; padding:4px 10px; border-radius:16px; font-size:12px;"><strong>○ Vuoto</strong> — da valutare</span>
+    <span style="background:#1a7a3a; color:white; padding:4px 10px; border-radius:16px; font-size:12px;"><strong>✓ Fatto</strong> — completato</span>
+    <span style="background:#d93a68; color:white; padding:4px 10px; border-radius:16px; font-size:12px;"><strong>❤ Mi piace</strong> — voglio farlo/rifarlo</span>
+    <span style="background:#6a6a70; color:white; padding:4px 10px; border-radius:16px; font-size:12px;"><strong>✗ Non mi piace</strong> — da escludere</span>
+  </div>
+  <span style="color:#5a6b78; font-size:12.5px;">Il ciclo click è: <em>vuoto → fatto → mi piace → non mi piace → vuoto</em>. Le spunte si salvano <strong>nell'URL della pagina</strong>: usa <em>🔗 Copia link</em> in alto a destra per condividere lo stato con chi ti accompagna. In alto vedi <strong>barra progresso multi-colore</strong> e <strong>contatori per ogni stato</strong>.</span>
+</div>
+<!-- ============ SPECCHIETTO VALUTE (primo blocco in assoluto) ============ -->
+  <div class="currency-box">
+    <div class="cur-head">
+      <div class="cur-title">💱 Cambio valuta · Polinesia francese</div>
+      <span class="cur-rate">1 € = 119,33 XPF · fisso</span>
+    </div>
+
+    <p><strong>Franco CFP (XPF)</strong> — moneta ufficiale di Polinesia francese, Nuova Caledonia, Wallis e Futuna. <strong>Cambio fisso con l'euro dal 1° gennaio 1999</strong>: 1.000 XPF = 8,38 €. Nessuna oscillazione di mercato: quello che vedi al ristorante è quello che paghi, senza sorprese di cambio. Emissione: Institut d'émission d'Outre-Mer (IEOM).</p>
+
+    <div class="cur-grid">
+      <!-- BANCONOTE XPF -->
+      <div class="cur-card">
+        <h5>💵 Banconote XPF <span class="cur-flag">Polinesia · uso locale</span></h5>
+        <table class="cur-table">
+          <tr><td>500 F</td><td>≈ 4,19 €</td></tr>
+          <tr><td>1.000 F</td><td>≈ 8,38 €</td></tr>
+          <tr><td>5.000 F</td><td>≈ 41,89 €</td></tr>
+          <tr><td>10.000 F</td><td>≈ 83,79 €</td></tr>
+        </table>
+        <p style="font-size:11.5px; margin:8px 0 0; opacity:0.85;">Solo 4 tagli. La 500 F è la più usata per acquisti quotidiani (roulottes, mercato). La 10.000 F è difficile da spendere per piccole somme, richiedi resti.</p>
+      </div>
+
+      <!-- MONETE XPF -->
+      <div class="cur-card">
+        <h5>🪙 Monete XPF <span class="cur-flag">spiccioli</span></h5>
+        <table class="cur-table">
+          <tr><td>5 F</td><td>≈ 0,04 €</td></tr>
+          <tr><td>10 F</td><td>≈ 0,08 €</td></tr>
+          <tr><td>20 F</td><td>≈ 0,17 €</td></tr>
+          <tr><td>50 F</td><td>≈ 0,42 €</td></tr>
+          <tr><td>100 F</td><td>≈ 0,84 €</td></tr>
+          <tr><td>200 F</td><td>≈ 1,68 €</td></tr>
+        </table>
+        <p style="font-size:11.5px; margin:8px 0 0; opacity:0.85;">Utili per il bus pubblico Te Reo, mance simboliche, mercato di Papeete. Tienile in tasca.</p>
+      </div>
+
+      <!-- EURO → XPF (tagli tipici) -->
+      <div class="cur-card">
+        <h5>🇪🇺 EURO → XPF <span class="cur-flag">quanto ricevi</span></h5>
+        <table class="cur-table">
+          <tr><td>10 €</td><td>≈ 1.193 XPF</td></tr>
+          <tr><td>20 €</td><td>≈ 2.387 XPF</td></tr>
+          <tr><td>50 €</td><td>≈ 5.966 XPF</td></tr>
+          <tr><td>100 €</td><td>≈ 11.933 XPF</td></tr>
+          <tr><td>200 €</td><td>≈ 23.866 XPF</td></tr>
+          <tr><td>500 €</td><td>≈ 59.665 XPF</td></tr>
+        </table>
+      </div>
+
+      <!-- XPF → EURO (tagli tipici quotidiani) -->
+      <div class="cur-card">
+        <h5>🌺 XPF → EURO <span class="cur-flag">spese comuni</span></h5>
+        <table class="cur-table">
+          <tr><td>500 F (birra locale Hinano)</td><td>≈ 4,19 €</td></tr>
+          <tr><td>1.500 F (poisson cru al roulotte)</td><td>≈ 12,57 €</td></tr>
+          <tr><td>2.030 F (biglietto Aremiti tourist)</td><td>≈ 17,01 €</td></tr>
+          <tr><td>5.000 F (pranzo per 2 in snack)</td><td>≈ 41,89 €</td></tr>
+          <tr><td>15.000 F (lagoon tour a Moorea)</td><td>≈ 125,68 €</td></tr>
+          <tr><td>25.000 F (4×4 safari giornata intera)</td><td>≈ 209,50 €</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="cur-tips">
+      <strong>💡 Tip operativi:</strong>
+      <ul style="margin:6px 0 0 18px; padding:0;">
+        <li><strong>Cambio in Italia:</strong> quasi impossibile. Cambia direttamente all'arrivo a Faa'a (Banque de Polynésie o Banque de Tahiti) o preleva al bancomat.</li>
+        <li><strong>Carte di credito:</strong> Visa/Mastercard accettate ovunque in hotel e ristoranti. Nei roulottes e mercatini è cash only (XPF).</li>
+        <li><strong>Bancomat:</strong> a Papeete numerosi, a Moorea/Bora Bora concentrati vicino ai porti. Nelle isole minori (Tuamotu) portati XPF cash da Tahiti.</li>
+        <li><strong>Novità 3 luglio 2026:</strong> autorizzato il <strong>cashback</strong> (ritiro XPF cash al commerciante pagando con carta). Utile fuori dai centri.</li>
+        <li><strong>Mance:</strong> non usanza polinesiana. Non attese in hotel/ristoranti; se lasci mancia, spiccioli sono ok.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ SPECCHIETTO BUDGET CONTANTI SETTIMANALE ============ -->
+  <div class="cash-box">
+    <div class="cash-head">
+      <div class="cash-title">💵 Cash budget · quanti XPF tenere in tasca a settimana</div>
+      <span class="cash-badge">2 persone · alta stagione</span>
+    </div>
+
+    <p>Stima realistica per una coppia in un mix di resort premium + attività locali (roulottes, mercati, taxi, mance, tour cash-only). <strong>Le grandi spese (escursioni, cene resort, hotel) vanno con carta.</strong> Il cash serve per micro-transazioni quotidiane dove la carta non è accettata.</p>
+
+    <table class="cash-table">
+      <thead>
+        <tr>
+          <th>Voce di spesa cash</th>
+          <th style="text-align:right;">Freq. settimanale</th>
+          <th style="text-align:right;">Costo tipico</th>
+          <th style="text-align:right;">Totale sett.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🍽️ Roulottes (Papeete, Vaiare, Vaitape) — <em>solo cash</em></td>
+          <td style="text-align:right;">3-4 pasti</td>
+          <td class="amount">~2.500 F/pasto ×2</td>
+          <td class="amount">15.000-20.000 F</td>
+        </tr>
+        <tr>
+          <td>🥭 Marchés (Papeete, Paopao, Vaitape) — prevalentemente cash</td>
+          <td style="text-align:right;">2-3 visite</td>
+          <td class="amount">~3.000 F/visita</td>
+          <td class="amount">6.000-9.000 F</td>
+        </tr>
+        <tr>
+          <td>🚕 Taxi (aeroporto ↔ porto, spostamenti brevi) — cash only</td>
+          <td style="text-align:right;">4-6 corse</td>
+          <td class="amount">1.500-3.500 F</td>
+          <td class="amount">10.000-18.000 F</td>
+        </tr>
+        <tr>
+          <td>🎨 Artigianato locale, souvenir piccoli (pareu, monoi, ukulele)</td>
+          <td style="text-align:right;">2-3 acquisti</td>
+          <td class="amount">2.000-5.000 F</td>
+          <td class="amount">6.000-12.000 F</td>
+        </tr>
+        <tr>
+          <td>🍹 Snack + bevande fuori dal resort (bar locali, chioschi spiaggia)</td>
+          <td style="text-align:right;">quotidiano</td>
+          <td class="amount">1.500-2.500 F/gg</td>
+          <td class="amount">10.500-17.500 F</td>
+        </tr>
+        <tr>
+          <td>💐 Mance opzionali (guide, portabagagli, servizio speciale)</td>
+          <td style="text-align:right;">variabile</td>
+          <td class="amount">500-2.000 F/volta</td>
+          <td class="amount">3.000-6.000 F</td>
+        </tr>
+        <tr>
+          <td>🎯 Piccole escursioni cash-only (tour barca artigianali, aitivà local)</td>
+          <td style="text-align:right;">1-2 volte</td>
+          <td class="amount">5.000-10.000 F</td>
+          <td class="amount">5.000-10.000 F</td>
+        </tr>
+        <tr>
+          <td>💊 Farmacia, imprevisti, tasse d'ingresso siti minori</td>
+          <td style="text-align:right;">variabile</td>
+          <td class="amount">buffer</td>
+          <td class="amount">5.000 F</td>
+        </tr>
+        <tr class="total">
+          <td colspan="3"><strong>TOTALE consigliato per settimana (2 pax)</strong></td>
+          <td class="amount"><strong>60.000-95.000 F<br>≈ 500-800 €</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cash-tips">
+      <strong>💡 Come gestirli:</strong>
+      <ul style="margin:6px 0 0 18px; padding:0;">
+        <li><strong>All'arrivo a Faa'a:</strong> preleva subito <strong>50.000-60.000 F al bancomat</strong> Banque de Polynésie o Socredo (in aeroporto). Costo commissione: 300-600 F.</li>
+        <li><strong>Ricarica settimanale:</strong> a Moorea/Bora Bora prelievi ~30.000-40.000 F. Ci sono ATM a Vaiare (Moorea), Vaitape e Matira (Bora Bora).</li>
+        <li><strong>Tagli utili:</strong> chiedi <strong>banconote da 500, 1.000, 5.000 F</strong> (le 10.000 F sono difficili da spendere ai roulottes → chiedi il resto in cassa hotel).</li>
+        <li><strong>Cashback nuovo (dal 3 luglio 2026):</strong> ora puoi ritirare XPF direttamente al supermercato pagando con carta. Utile se un ATM è fuori servizio.</li>
+        <li><strong>Riserva minima raccomandata sempre in tasca:</strong> <strong>10.000 F/persona</strong> per emergenze (medico privato costa 3.800 F cash-only, taxi imprevisto, ecc.).</li>
+        <li><strong>Non cambiare tutto il budget in una volta:</strong> quello che ti avanza in EUR/USD in banca in Italia rende di più che ricambiare XPF alla fine.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ SPECCHIETTO ACCETTAZIONE CARTE ============ -->
+  <div class="cards-box">
+    <div class="cards-head">
+      <div class="cards-title">💳 Accettazione pagamenti · Visa / Mastercard / contactless</div>
+      <span class="cards-badge">% stimata per contesto</span>
+    </div>
+
+    <p>Situazione realistica per le <strong>Isole della Società</strong> (Tahiti, Moorea, Bora Bora, il tuo itinerario). Nei Tuamotu/Marchesi/Australi le percentuali crollano drasticamente. <strong>Visa e Mastercard</strong> sono lo standard universale. Il <strong>contactless</strong> è arrivato tardi in Polinesia ma ora è molto diffuso nei circuiti turistici.</p>
+
+    <table class="cards-table">
+      <thead>
+        <tr>
+          <th>Dove paghi</th>
+          <th>Visa</th>
+          <th>Mastercard</th>
+          <th>Contactless</th>
+          <th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🏨 Hotel resort (IC, Cook's Bay, Royal, Le Moana)</td>
+          <td><span class="pct-hi">100%</span></td>
+          <td><span class="pct-hi">100%</span></td>
+          <td><span class="pct-hi">~95%</span></td>
+          <td>POS moderni, chip+PIN o contactless</td>
+        </tr>
+        <tr>
+          <td>🍽️ Ristoranti resort + fine dining</td>
+          <td><span class="pct-hi">100%</span></td>
+          <td><span class="pct-hi">100%</span></td>
+          <td><span class="pct-hi">~90%</span></td>
+          <td>Nessun problema con Visa/MC</td>
+        </tr>
+        <tr>
+          <td>🍕 Ristoranti/snack di media categoria (in città/paese)</td>
+          <td><span class="pct-hi">~95%</span></td>
+          <td><span class="pct-hi">~95%</span></td>
+          <td><span class="pct-hi">~80%</span></td>
+          <td>Contactless in crescita rapida</td>
+        </tr>
+        <tr>
+          <td>🛒 Supermercati (Super U, Carrefour, Champion)</td>
+          <td><span class="pct-hi">100%</span></td>
+          <td><span class="pct-hi">100%</span></td>
+          <td><span class="pct-hi">~90%</span></td>
+          <td>Cashback disponibile dal 3 luglio</td>
+        </tr>
+        <tr>
+          <td>🏪 Negozi turistici, boutique perle nere</td>
+          <td><span class="pct-hi">~98%</span></td>
+          <td><span class="pct-hi">~98%</span></td>
+          <td><span class="pct-mid">~65%</span></td>
+          <td>Per perle: chiedi ricevuta dettagliata</td>
+        </tr>
+        <tr>
+          <td>⛴️ Aremiti / voli Air Tahiti (biglietteria)</td>
+          <td><span class="pct-hi">100%</span></td>
+          <td><span class="pct-hi">100%</span></td>
+          <td><span class="pct-hi">~90%</span></td>
+          <td>Online: solo Visa/MC affidabili</td>
+        </tr>
+        <tr>
+          <td>🎯 Tour operator (Lagoon Service, Reef Discovery, Marama, ecc.)</td>
+          <td><span class="pct-hi">~90%</span></td>
+          <td><span class="pct-hi">~90%</span></td>
+          <td><span class="pct-mid">~55%</span></td>
+          <td>Prenoti online = carta ok</td>
+        </tr>
+        <tr>
+          <td>⛽ Distributori benzina</td>
+          <td><span class="pct-hi">100%</span></td>
+          <td><span class="pct-hi">100%</span></td>
+          <td><span class="pct-hi">~85%</span></td>
+          <td>Utile per l'auto a noleggio</td>
+        </tr>
+        <tr>
+          <td>🥭 Marché de Papeete / marché locali</td>
+          <td><span class="pct-mid">~40%</span></td>
+          <td><span class="pct-mid">~40%</span></td>
+          <td><span class="pct-lo">~20%</span></td>
+          <td>Meglio cash sempre</td>
+        </tr>
+        <tr>
+          <td>🚚 Roulottes / food trucks (Place Vaiete, spiagge)</td>
+          <td><span class="pct-null">0%</span></td>
+          <td><span class="pct-null">0%</span></td>
+          <td><span class="pct-null">0%</span></td>
+          <td><strong>CASH ONLY sempre</strong></td>
+        </tr>
+        <tr>
+          <td>🚕 Taxi (Tahiti + Moorea + Bora Bora)</td>
+          <td><span class="pct-lo">~10%</span></td>
+          <td><span class="pct-lo">~10%</span></td>
+          <td><span class="pct-lo">~5%</span></td>
+          <td><strong>Cash quasi obbligatorio</strong></td>
+        </tr>
+        <tr>
+          <td>🎨 Artigianato locale, bancarelle spiaggia</td>
+          <td><span class="pct-lo">~15%</span></td>
+          <td><span class="pct-lo">~15%</span></td>
+          <td><span class="pct-lo">~10%</span></td>
+          <td>Solo bancarelle "importanti"</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cards-tips">
+      <strong>💡 Consigli operativi:</strong>
+      <ul style="margin:6px 0 0 18px; padding:0;">
+        <li><strong>Carta principale consigliata:</strong> Visa o Mastercard debit/credit standard. <strong>Revolut / N26 / Wise</strong> perfette per il cambio (fisso EUR→XPF senza commissioni + notifiche in tempo reale + card virtuali).</li>
+        <li><strong>Doppia carta consigliata:</strong> porta almeno <em>due</em> carte Visa/Mastercard di circuiti/banche diverse (es. 1 Revolut + 1 di banca tradizionale) come backup in caso di blocco antifrode o smagnetizzazione.</li>
+        <li><strong>Contactless:</strong> molto diffuso in Society Islands. <strong>Apple Pay / Google Pay</strong> con carta Visa o Mastercard sottostante funzionano regolarmente nei POS moderni dei resort, ristoranti e supermercati.</li>
+        <li><strong>Attenzione al DCC (Dynamic Currency Conversion):</strong> se il POS chiede "vuoi pagare in EUR invece che XPF?" → <strong>rispondi sempre NO</strong>. Il cambio applicato dal terminale è del 3-8% peggiore di quello fisso della banca.</li>
+        <li><strong>Blocco carta preventivo:</strong> avvisa la tua banca in Italia della trasferta (chat/app) per evitare blocchi antifrode al primo utilizzo.</li>
+        <li><strong>ATM:</strong> Banque de Polynésie e Banque Socredo hanno le migliori compatibilità con carte estere. Evita ATM di piccole banche minori.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============ SCHEDA ESCURSIONI HOTEL (in cima a tutto) ============ -->
+  <div class="excursions-box">
+    <div class="exc-head">
+      <div class="exc-title">🏝️ Focus escursioni degli hotel</div>
+      <span class="exc-pill">4 resort del tuo itinerario</span>
+    </div>
+
+    <p style="font-size:14px; margin:0 0 6px;">Panoramica delle escursioni proposte dai <strong>quattro hotel del tuo itinerario</strong>: <strong>InterContinental Tahiti Resort &amp; Spa</strong> (Faa'a) → <strong>Cook's Bay Hotel &amp; Suites</strong> (Moorea) → <strong>Royal Bora Bora</strong> + <strong>InterContinental Bora Bora Le Moana</strong> (Bora Bora). Per tutti: gli hotel non organizzano nulla in proprio, fanno da tramite verso operatori partner. Regola generale: <strong>quasi sempre conviene prenotare fuori</strong>, con risparmio del 20-40%.</p>
+
+    <p style="font-size:12px; margin:8px 0 0; padding:8px 12px; background:#f7fbfd; border-radius:6px;">
+      <strong>Legenda badge prenotazione attività gratuite:</strong>
+      <span class="booking-badge walk-in">FIRST-COME / LIBERO</span> nessuna prenotazione, ma arriva presto ·
+      <span class="booking-badge same-day">STESSO GIORNO</span> prenota al mattino ·
+      <span class="booking-badge day-before">1-2 GG PRIMA</span> concierge / email ·
+      <span class="booking-badge week-before">1 SETTIMANA PRIMA</span> attività ad alta domanda
+    </p>
+
+    <!-- ============ BOX SITI HOTEL DEL VIAGGIO ============ -->
+    <div style="margin:14px 0 4px; padding:12px 14px; background:#f0f8ff; border:1px solid #c8dcef; border-left:5px solid #0c5b7a; border-radius:6px;">
+      <p style="margin:0 0 8px; font-size:14px; font-weight:700; color:#0c5b7a;">🏨 I 5 HOTEL DEL TUO ITINERARIO · siti ufficiali e contatti</p>
+      <table style="width:100%; border-collapse:collapse; font-size:12.5px;">
+        <tr style="background:#e6f0fa;">
+          <th style="text-align:left; padding:6px 8px; border:1px solid #c8dcef;">Notti</th>
+          <th style="text-align:left; padding:6px 8px; border:1px solid #c8dcef;">Hotel</th>
+          <th style="text-align:left; padding:6px 8px; border:1px solid #c8dcef;">Sito ufficiale</th>
+          <th style="text-align:left; padding:6px 8px; border:1px solid #c8dcef;">Telefono</th>
+        </tr>
+        <tr>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">7-8/8<br>(1 notte)</td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;"><strong>Francisco Bay Inn</strong><br><span style="color:#666;">San Francisco · Marina District · 1501 Lombard St</span></td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">🌐 <a href="https://franciscobayinn.reservandohoteles.com/" target="_blank" rel="noopener">franciscobayinn.reservandohoteles.com ↗</a></td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">+1 415 474 3030</td>
+        </tr>
+        <tr>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">8-12/8 + 26-28/8<br>(4+2 notti)</td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;"><strong>InterContinental Tahiti Resort &amp; Spa</strong><br><span style="color:#666;">Faa'a · Tahiti · tra aeroporto e Papeete</span></td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">🌐 <a href="https://tahiti.intercontinental.com/" target="_blank" rel="noopener">tahiti.intercontinental.com ↗</a></td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">+689 40 86 51 68<br><small>concierge.tahiti@ihg.com</small></td>
+        </tr>
+        <tr>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">12-18/8<br>(6 notti)</td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;"><strong>Cook's Bay Hotel &amp; Suites</strong><br><span style="color:#666;">Cook's Bay · Moorea · fronte laguna</span></td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">🌐 <a href="https://www.mooreacooksbay.com/" target="_blank" rel="noopener">mooreacooksbay.com ↗</a></td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">+689 40 55 41 00</td>
+        </tr>
+        <tr>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">18-24/8<br>(6 notti)</td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;"><strong>Royal Bora Bora</strong><br><span style="color:#666;">Matira · Bora Bora main island · no barca</span></td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">🌐 <a href="https://www.royalborabora.com/" target="_blank" rel="noopener">royalborabora.com ↗</a></td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">+689 40 67 50 51</td>
+        </tr>
+        <tr>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">24-26/8<br>(2 notti)</td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;"><strong>InterContinental Bora Bora Le Moana Resort</strong><br><span style="color:#666;">Matira Point · overwater bungalows</span></td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">🌐 <a href="https://lemoana.intercontinental.com/" target="_blank" rel="noopener">lemoana.intercontinental.com ↗</a></td>
+          <td style="padding:6px 8px; border:1px solid #c8dcef;">+689 40 60 49 00<br><small>gsc.borabora.lemoana@ihg.com</small></td>
+        </tr>
+      </table>
+      <p style="margin:8px 0 0; font-size:11px; color:#555; font-style:italic;">💡 Totale: 21 notti hotel + 2 notti in volo (28/8 UA 114 + 29/8 LH 455) = 23 giorni di viaggio. Tutti i link sono cliccabili dai contatti singoli anche più sotto in ogni scheda hotel.</p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ============ HOTEL 1 · INTERCONTINENTAL TAHITI ============ -->
+    <!-- ============================================================ -->
+    <div class="hotel-section first">
+      <div class="hotel-badge intercont">🌺 HOTEL 1 · InterContinental Tahiti Resort &amp; Spa</div>
+      <p class="hotel-tagline">Faa'a (Tahiti) · tra aeroporto e Papeete · tappa arrivo/partenza · partner principali: <strong>Marama Tours</strong> (terra) + <strong>Activiseas</strong> (mare)</p>
+
+      <h4>✅ Attività GRATUITE / a donazione — quando e come prenotare</h4>
+      <div class="exc-grid">
+        <div class="exc-card actionable-card">
+          <h5>🐢 Te Mana o Te Moana</h5>
+          <p>Tour guidato di 1h al centro di riabilitazione tartarughe marine (ONG). <strong>Non più "gratis" dal 2023</strong>: aperto al pubblico con <em>donazione</em> richiesta (5-10 € consigliati). Ideale per famiglie.</p>
+          <span class="free">A DONAZIONE</span>
+          <div class="booking-info">
+            <span class="booking-badge day-before">PRENOTA 1-2 GG PRIMA</span><br>
+            <strong>Come:</strong> email a <em>reservation@temanaotemoana.org</em>, Messenger dell'associazione, o di persona al kiosk dentro l'activity center del resort.<br>
+            <strong>Orari 2026:</strong> Lun-Mer-Ven 13:30 · Sab 09:30 (verifica al momento della prenotazione)<br>
+            <strong>Capienza:</strong> <strong>max 20 pax</strong>. In alta stagione si riempie facilmente → prenota subito all'arrivo in hotel o meglio via email prima della partenza.<br>
+            <strong>Cancellazione:</strong> gratuita fino a 24h prima.
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🐠 Fare l'a Reserve</h5>
+          <p>Lagunario naturale del resort con fauna marina locale (razze, pesci pappagallo, tartarughe). Snorkeling libero.</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge walk-in">ACCESSO LIBERO</span><br>
+            <strong>Come:</strong> vai direttamente. Prendi maschera e pinne al beach kiosk (deposito documento). Nessuna prenotazione.<br>
+            <strong>Orari:</strong> tutto il giorno finché c'è luce. Migliore visibilità mattina 8-11 (mare più calmo, sole basso non abbaglia).
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🎨 Dimostrazioni culturali</h5>
+          <p>Intreccio pareu, ukulele, danza 'ori Tahiti, apertura cocco. Calendario settimanale variabile.</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge same-day">ISCRIVITI LO STESSO GIORNO</span><br>
+            <strong>Come:</strong> al check-in prendi il "weekly activity sheet" con calendario aggiornato. Iscrizione al kiosk dell'activity center il giorno stesso (poche ore prima).<br>
+            <strong>Capienza:</strong> gruppi da 8-15 persone. Il corso più richiesto è <em>pareu weaving</em> (venerdì mattina).
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🏊 Piscina + jogging + padel</h5>
+          <p>Piscina infinity acqua dolce, percorso jogging nei giardini, 2 campi padel outdoor (aperti da set. 2024).</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge walk-in">PISCINA/JOGGING: LIBERO</span><br>
+            <span class="booking-badge same-day">PADEL: PRENOTA STESSA GIORNATA</span><br>
+            <strong>Come padel:</strong> 2 campi, slot da 1h, prenotazione telefonica al concierge (+689 40 86 51 68) o all'activity center. In alta stagione conviene prenotare al mattino per giocare lo stesso giorno.<br>
+            <strong>Racchette:</strong> a noleggio 1.500 XPF (~12 €). Meglio portare le tue.
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 RISTORANTI · IC TAHITI -->
+      <div class="restaurants-box">
+        <h4>🍽️ 5 posti dove pranzare/cenare · zona IC Tahiti (Faa'a - Papeete)</h4>
+        <p class="rest-intro">Selezione pulita, qualità decente, prezzo contenuto per Tahiti. Include opzioni sia in zona resort che a breve taxi (10-15 min = 1.500-2.500 XPF).</p>
+        <div style="background:#fff7e6; border:1px solid #f0d9a8; border-radius:8px; padding:8px 12px; margin:6px 0 10px; font-size:0.88em; color:#6a4a10;">
+          <strong>💰 Legenda fasce di prezzo</strong> (spesa a persona per un pasto completo: piatto principale + bevanda/dessert):<br>
+          <span class="price-tag price-€" style="display:inline-block; padding:2px 8px; border-radius:6px; background:#d4f4dd; color:#1a7a3a; font-weight:700; margin:4px 4px 0 0;">€ · 1,5–3k XPF (~12–25 €)</span>
+          <span class="price-tag price-€€" style="display:inline-block; padding:2px 8px; border-radius:6px; background:#fff7e6; color:#8a5a00; font-weight:700; margin:4px 4px 0 0;">€€ · 3,5–7k XPF (~30–60 €)</span>
+          <span class="price-tag price-€€" style="display:inline-block; padding:2px 8px; border-radius:6px; background:#fff2d9; color:#8a5a00; font-weight:700; margin:4px 4px 0 0;">€€-€€€ · 5–10k XPF (~40–85 €)</span>
+          <span class="price-tag price-€€€" style="display:inline-block; padding:2px 8px; border-radius:6px; background:#ffefe5; color:#b03b3b; font-weight:700; margin:4px 4px 0 0;">€€€ · 8–15k XPF (~65–125 €)</span>
+          <br><small style="opacity:0.75;">Cambio riferimento: 1 € = 119,33 XPF · 1.000 XPF ≈ 8,38 €. I roulottes/food truck sono <strong>cash only</strong>.</small>
+        </div>
+        <table class="rest-table actionable-table">
+          <tr><th>Ristorante</th><th>Dove</th><th>Cucina</th><th>Fascia</th><th>Perché</th></tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.facebook.com/pages/Blue-Banana/330193647041640" target="_blank" rel="noopener">Blue Banana ↗</a></td>
+            <td>Punaauia, fronte laguna (~15 min taxi)</td>
+            <td>Polinesiana + fusion</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td>Tavoli sull'acqua, poisson cru eccellente, atmosfera rilassata. Spesso raccomandato come alternativa "off-property"</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.meheriotahitianbistro.com/" target="_blank" rel="noopener">Meherio Tahitian Bistro ↗</a></td>
+            <td>Punaauia (~10 min)</td>
+            <td>Bistrot tahitiano moderno</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td>Cucina locale rivisitata, ambiente curato, prenotazione consigliata. Su TripAdvisor tra i più menzionati</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.facebook.com/La-Casa-Bianca-Tahiti-169675609751886/" target="_blank" rel="noopener">Casa Bianca ↗</a></td>
+            <td>Punaauia costa ovest (~10 min)</td>
+            <td>Italiana</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td>Pizza al forno a legna + pasta. Rifugio "italiano" quando vuoi break dalla cucina locale. Fronte mare</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.yestahiti.fr/info-voyageurs/roulottes-place-vaiete" target="_blank" rel="noopener">Roulottes Place Vaiete ↗</a></td>
+            <td>Papeete waterfront (~20 min taxi, ~2.500 XPF)</td>
+            <td>Multi (chinese, tahitiano, pizza)</td>
+            <td><span class="price-tag price-€">€<br><small>1,5–3k XPF</small></span></td>
+            <td><strong>L'esperienza da fare almeno una volta:</strong> 10-15 food truck la sera. Cash only. 2.000-3.000 XPF/piatto. Vibe locale autentico</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="http://lycee-hotelier-tahiti.com/" target="_blank" rel="noopener">Lycée Hôtelier de Tahiti ↗</a></td>
+            <td>Punaauia (~15 min)</td>
+            <td>Francese gourmet</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td>Ristorante-scuola dove gli studenti chef cucinano piatti di livello alto a prezzi contenuti. Solo lun-ven pranzo. Prenotare</td>
+          </tr>
+        </table>
+      </div>
+
+      <h4>🚗 Escursioni via TERRA (via concierge resort)</h4>
+      <table class="exc-table actionable-table">
+        <tr><th>Escursione</th><th>Durata</th><th>Prezzo resort</th><th>Fornitore</th><th>⏱️ Quando &amp; come prenotare</th></tr>
+        <tr class="actionable-row"><td><strong>Circle Island Tour</strong></td><td>5-8 h</td><td>~12.000 XPF</td><td><a href="https://maramatours.com/en/activities-excursions-tahiti/" target="_blank" rel="noopener">Marama Tours ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br>Concierge o Viator. Partenze giornaliere. Sold-out raro per il tour condiviso, frequente per i private tour in agosto.</td></tr>
+        <tr class="actionable-row"><td><strong>4×4 Papenoo Valley</strong></td><td>8 h</td><td>~17.000 XPF</td><td><a href="https://maramatours.com/en/activities-excursions-tahiti/" target="_blank" rel="noopener">Marama ↗</a></td><td><span class="booking-badge week-before">1 SETTIMANA PRIMA</span><br>Il più richiesto dei tour terrestri: Te Mana Tahiti Tours è "likely to sell out" su Viator. In agosto <strong>prenota prima di partire dall'Italia</strong>.</td></tr>
+        <tr class="actionable-row"><td>Quad tour interno isola</td><td>2-4 h</td><td>21-25.000 XPF</td><td><a href="https://maramatours.com/en/activities-excursions-tahiti/" target="_blank" rel="noopener">Marama ↗</a></td><td><span class="booking-badge day-before">1-2 GG PRIMA</span><br>Partenze mattino/pomeriggio. Casco fornito. Patente non richiesta (guida su strade sterrate private).</td></tr>
+        <tr class="actionable-row"><td>Elicottero panoramico</td><td>20-40 min</td><td>30-60.000 XPF</td><td><a href="https://tahitinuihelicopters.com/en/contact-us" target="_blank" rel="noopener">Polynesia Helicopter ↗</a></td><td><span class="booking-badge week-before">1-2 SETTIMANE PRIMA</span><br>Solo 2 elicotteri operativi, richiestissimi. <strong>Prenota via concierge appena arrivi</strong> o direttamente sul sito. Voli mattutini più stabili (meno turbolenza).</td></tr>
+        <tr class="actionable-row"><td>Golf Atimaono</td><td>mezza gg</td><td>~10.000 XPF</td><td><a href="https://www.golfdetahiti.com/" target="_blank" rel="noopener">Golf Course ↗</a></td><td><span class="booking-badge day-before">1 GG PRIMA</span><br>Tee-time via telefono al golf (+689 40 57 40 32). 18 buche, l'unico corso della Polinesia. Mattino o tardo pomeriggio (evita caldo 11-14).</td></tr>
+      </table>
+
+      <h4>🌊 Escursioni via MARE (via concierge resort)</h4>
+      <table class="exc-table actionable-table">
+        <tr><th>Escursione</th><th>Durata</th><th>Prezzo resort</th><th>Fornitore</th><th>⏱️ Quando &amp; come prenotare</th></tr>
+        <tr class="actionable-row"><td><strong>Dolphin watching Ta'apuna</strong></td><td>2 h</td><td>~9.000 XPF</td><td><a href="https://www.activiseas.com/" target="_blank" rel="noopener">Activiseas ↗</a></td><td><span class="booking-badge day-before">1-2 GG PRIMA</span><br>Uscita mattutina 08:00-10:00 (delfini più attivi al mattino). Include snorkel gear. Pick-up in hotel incluso.</td></tr>
+        <tr class="actionable-row"><td>Jet-ski costa ovest</td><td>1-2 h</td><td>15-25.000 XPF</td><td><a href="https://www.activiseas.com/" target="_blank" rel="noopener">Activiseas ↗</a></td><td><span class="booking-badge day-before">1-2 GG PRIMA</span><br>Patente non richiesta (guida in laguna). Briefing 20 min prima. 1 pers per jet o biposto.</td></tr>
+        <tr class="actionable-row"><td>Snorkeling "Aquarium" di Faa'a</td><td>2-3 h</td><td>~9.000 XPF</td><td><a href="https://www.activiseas.com/" target="_blank" rel="noopener">Activiseas ↗</a></td><td><span class="booking-badge same-day">STESSO GIORNO / DAY BEFORE</span><br>Il sito Aquarium è a 10 min in barca. Coralli e relitti WWII. Gruppi piccoli, disponibilità decente anche last-minute.</td></tr>
+        <tr class="actionable-row"><td>Deep-sea fishing (charter privato)</td><td>½ giornata</td><td>80-120.000 XPF</td><td><a href="https://www.tahiti-tourisme.pf/en/things-to-do/deep-sea-fishing/" target="_blank" rel="noopener">Big game charter ↗</a></td><td><span class="booking-badge week-before">1 SETTIMANA PRIMA</span><br>Charter interi, poche barche di livello (Haura Charters, Tahiti Big Game). Partenza 05:30-06:00 dal porto di Papeete. Pesca marlin, mahi-mahi, tonno.</td></tr>
+        <tr class="actionable-row"><td>Giornata Moorea o Bora Bora</td><td>1 gg</td><td>25-60.000 XPF</td><td><a href="https://www.airtahiti.pf/" target="_blank" rel="noopener">Air Tahiti ↗</a></td><td><span class="booking-badge week-before">2+ SETTIMANE PRIMA</span><br>Volo A/R + escursione. In alta stagione i voli mattutini si esauriscono presto. Sconsigliato: fai meglio 2-3 notti sull'isola invece del day-trip.</td></tr>
+      </table>
+
+      <p style="font-size:11px; color:#8a4a1f; margin-top:10px; font-style:italic; text-align:center;">
+        🌐 <a href="https://tahiti.intercontinental.com/" target="_blank" rel="noopener"><strong>tahiti.intercontinental.com ↗</strong></a> · Concierge <strong>+689 40 86 51 68</strong> · <strong>concierge.tahiti@ihg.com</strong>
+      </p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ============ HOTEL 2 · COOK'S BAY MOOREA ============ -->
+    <!-- ============================================================ -->
+    <div class="hotel-section">
+      <div class="hotel-badge cooksbay">🥥 HOTEL 2 · Cook's Bay Hotel &amp; Suites (Moorea)</div>
+      <p class="hotel-tagline">Cook's Bay, Maharepa (Moorea) · fronte laguna, vicino al porto crociere · boutique hotel · partner principali: <strong>Corallina Tours</strong>, <strong>Mana Moorea Tours</strong>, <strong>Voila Moorea</strong>, <strong>Moorea Ocean Adventures</strong></p>
+
+      <h4>✅ Attività GRATUITE — quando e come prenotare</h4>
+      <div class="exc-grid">
+        <div class="exc-card actionable-card">
+          <h5>🛶 Kayak &amp; snorkeling gear</h5>
+          <p>Kayak, maschere e pinne <strong>gratuiti</strong> per esplorare autonomamente Cook's Bay dalla spiaggia del resort.</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge walk-in">FIRST-COME · NO BOOKING</span><br>
+            <strong>Come:</strong> vai al beach shack, firma il registro, prendi kayak/maschera. Deposito documento.<br>
+            <strong>Kayak:</strong> 4-6 disponibili, si esauriscono <strong>tra le 9 e le 11</strong> del mattino nei giorni pieni. Consiglio: <strong>alza le 8:00</strong> per assicurartene uno.<br>
+            <strong>Snorkel gear:</strong> quantità abbondante, sempre disponibile.
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🏊 Piscina infinity Cook's Bay</h5>
+          <p>Piscina infinity affacciata sulla baia iconica, con vista sui monti (Mouaputa, Mount Rotui).</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge walk-in">ACCESSO LIBERO</span><br>
+            <strong>Come:</strong> vai direttamente. Nessuna prenotazione.<br>
+            <strong>Lettini:</strong> ~30 disponibili, si esauriscono tra le 10 e le 15. Se vuoi lettino con vista Cook's Bay, arriva entro le 9.
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🎱 Game room + Le Cooks</h5>
+          <p>Sala giochi interna + il rinomato ristorante-bar <strong>Le Cooks</strong> (cocktail al tramonto).</p>
+          <span class="free">Incluso struttura</span>
+          <div class="booking-info">
+            <span class="booking-badge walk-in">GAME ROOM: LIBERA</span><br>
+            <span class="booking-badge day-before">LE COOKS · CENA: PRENOTA 1 GG PRIMA</span><br>
+            <strong>Come:</strong> per la cena a Le Cooks, prenota al ricevimento o al bar il giorno prima (specialmente per il tavolo con vista sulla baia al tramonto ~18:30).<br>
+            <strong>Cocktail al tramonto:</strong> arrivi 30 min prima del sunset (17:45 in agosto), senza prenotazione.
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🌳 Giardini tropicali + camere con kitchenette</h5>
+          <p>Suite con kitchenette complete = mangi in autonomia risparmiando sui pasti (utile in Moorea).</p>
+          <span class="free">Vantaggio boutique</span>
+          <div class="booking-info">
+            <span class="booking-badge walk-in">NULLA DA PRENOTARE</span><br>
+            <strong>Consiglio:</strong> fai spesa al <strong>Super U di Maharepa</strong> (5 min a piedi dal resort, aperto 8-19 lun-sab, dom mattina). Ci sono anche i <strong>roulottes</strong> serali lungo la costa e il <strong>marché di Paopao</strong> (5 min in auto verso ovest, produce fresco).
+          </div>
+        </div>
+      </div>
+
+      <h4>🌊 Escursioni via MARE (via concierge resort · partner Moorea)</h4>
+      <table class="exc-table actionable-table" style="background:white;">
+        <tr><th style="background:#1a8c5a;">Escursione</th><th style="background:#1a8c5a;">Durata</th><th style="background:#1a8c5a;">Prezzo resort</th><th style="background:#1a8c5a;">Fornitore</th><th style="background:#1a8c5a;">⏱️ Quando &amp; come prenotare</th></tr>
+        <tr class="actionable-row"><td><strong>Lagoon Cruise + rays &amp; sharks</strong></td><td>4 h</td><td>~15.000 XPF</td><td><a href="https://www.corallinatours.com/" target="_blank" rel="noopener">Corallina Tours ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br>Il classico must-do di Moorea. Partenze giornaliere 09:00. In alta stagione (ago) prenota 2-3 giorni prima; su Viator "likely to sell out".</td></tr>
+        <tr class="actionable-row"><td>Sunset catamaran cruise</td><td>2-3 h</td><td>~12.000 XPF</td><td><a href="https://www.voilamoorea.com/" target="_blank" rel="noopener">Voila Moorea ↗</a></td><td><span class="booking-badge day-before">1-2 GG PRIMA</span><br>Partenza 17:00 dal porto di Vaiare. Aperitivo a bordo. Solo condizioni meteo permettendo.</td></tr>
+        <tr class="actionable-row"><td>Tiki Tour outrigger + motu picnic</td><td>full day (~6h)</td><td>~14.000 XPF</td><td><a href="https://www.viator.com/tours/Moorea/Moorea-Tiki-Tour/d4562-6964P84" target="_blank" rel="noopener">Tiki Tour ↗</a></td><td><span class="booking-badge week-before">1 SETTIMANA PRIMA</span><br><strong>Il top-rated di Moorea</strong> (piroga tradizionale, ukulele a bordo, tiki sommersi, cucina locale sul motu). "Likely to sell out" da anni. In agosto prenota subito.</td></tr>
+        <tr class="actionable-row"><td>Jet-ski tour Cook's Bay / Opunohu</td><td>1-2 h</td><td>18-28.000 XPF</td><td><a href="https://www.mooreamititours.com/" target="_blank" rel="noopener">Moorea Miti Tours ↗</a></td><td><span class="booking-badge day-before">1-2 GG PRIMA</span><br>3 partenze/giorno. Solo o biposto. Include tour guidato delle due baie + stop snorkel.</td></tr>
+        <tr class="actionable-row"><td>Diving (immersione singola)</td><td>3 h</td><td>~9.500 XPF</td><td><a href="https://mooreabluediving.com/" target="_blank" rel="noopener">Moorea Blue Diving ↗</a></td><td><span class="booking-badge day-before">1-2 GG PRIMA</span><br>Serve brevetto (OWD minimo). Se non sei brevettato, chiedi il "baptême de plongée" (~11.000 XPF).</td></tr>
+      </table>
+
+      <!-- 5 RISTORANTI · COOK'S BAY MOOREA -->
+      <div class="restaurants-box">
+        <h4>🍽️ 5 posti dove pranzare/cenare · zona Cook's Bay / Maharepa (Moorea)</h4>
+        <p class="rest-intro">Cook's Bay è la zona più densa di ristoranti a Moorea. Molti a piedi o a max 10 min di taxi. Approfitta della kitchenette in camera per colazioni/pranzi leggeri con spesa al Super U di Maharepa.</p>
+        <table class="rest-table actionable-table">
+          <tr><th>Ristorante</th><th>Dove</th><th>Cucina</th><th>Fascia</th><th>Perché</th></tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.facebook.com/TeHonuIti/" target="_blank" rel="noopener">Te Honu Iti (Chez Roger) ↗</a></td>
+            <td>Cook's Bay, fronte laguna (~5 min a piedi)</td>
+            <td>Francese classica</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td><strong>Il preferito degli habitué:</strong> tavoli sull'acqua, guardi razze e squali attirati dalle luci. Cash only = prezzi contenuti per la qualità. Prenotare</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.facebook.com/rudysmoorea" target="_blank" rel="noopener">Restaurant Rudy's ↗</a></td>
+            <td>Maharepa (~5 min a piedi)</td>
+            <td>Francese / seafood</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td>Consigliato in tutti i forum: "The Little Turtle", cucina consistente, servizio caloroso, ambiente accogliente. Prenotazione consigliata</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.tripadvisor.com/Restaurant_Review-g303860-d2450450-Reviews-Moz_Cafe-Maharepa_Moorea_Society_Islands.html" target="_blank" rel="noopener">Moz Café ↗</a></td>
+            <td>Centre Noha, Maharepa (~5 min)</td>
+            <td>Bistrot francese</td>
+            <td><span class="price-tag price-€">€<br><small>1,5–3k XPF</small></span></td>
+            <td>Colazione + pranzo (chiude 14:30). Piatti curati, ottimi caffè, atmosfera moderna. Ideale per una mattinata rilassata</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://casapizzamoorea.com/" target="_blank" rel="noopener">Casa Pizza Moorea ↗</a></td>
+            <td>Maharepa (~5 min)</td>
+            <td>Pizza italiana</td>
+            <td><span class="price-tag price-€">€<br><small>1,5–3k XPF</small></span></td>
+            <td>Pizza al forno a legna, 4.9/5 su 40 recensioni. Piccolo, familiare, take-away possibile. Perfetto per una serata semplice</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.mooreabeachcafe.com/" target="_blank" rel="noopener">Moorea Beach Café ↗</a></td>
+            <td>Costa nord, ~15 min in auto</td>
+            <td>Polinesiana + francese</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td>Fronte laguna, tavoli sulla sabbia, cena con musica dal vivo mar-ven. Partner Air Tahiti Nui. Prenotare (già menzionato nella scheda escursioni)</td>
+          </tr>
+        </table>
+      </div>
+
+      <h4>🚗 Escursioni via TERRA</h4>
+      <table class="exc-table actionable-table">
+        <tr><th>Escursione</th><th>Durata</th><th>Prezzo resort</th><th>Fornitore</th><th>⏱️ Quando &amp; come prenotare</th></tr>
+        <tr class="actionable-row"><td><strong>4×4 Safari Opunohu + Belvedere</strong></td><td>½ gg (~4 h)</td><td>~11.000 XPF</td><td><a href="https://www.viator.com/tours/Moorea/Franckyfranck-Tours-Moorea-Half-Day-Tours/d4562-58193P2" target="_blank" rel="noopener">FranckyFranck ↗</a></td><td><span class="booking-badge week-before">1 SETTIMANA PRIMA</span><br><strong>FranckyFranck ha 858 recensioni 4,9/5</strong>, top operatore Moorea. Sold-out cronico. In agosto prenota via Viator subito. Include ananas plantation + rum distillery.</td></tr>
+        <tr class="actionable-row"><td>ATV Quad tour interno isola</td><td>2-3 h</td><td>18-24.000 XPF</td><td><a href="https://www.albert-transport.net/" target="_blank" rel="noopener">Albert Transport ↗</a></td><td><span class="booking-badge day-before">1-2 GG PRIMA</span><br>Pick-up al porto Vaiare o hotel. Casco fornito. Percorsi fangosi dopo pioggia (agosto = stagione secca, ok).</td></tr>
+        <tr class="actionable-row"><td>Hike Three Coconuts Pass</td><td>3-4 h</td><td>guida ~8.000 XPF</td><td><a href="https://www.uniquetahiti.com/a-hikers-guide-to-tahitis-stunning-trails/" target="_blank" rel="noopener">Tahiti Hiking Tours ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br>Sentiero moderato, panorama su Cook's + Opunohu Bays. Puoi farlo <strong>senza guida gratis</strong> se sei esperto (mappa AllTrails). Con guida include storia e botanica locale.</td></tr>
+        <tr class="actionable-row"><td>Cena Moorea Beach Café</td><td>serata</td><td>~10.000 XPF/pax</td><td><a href="https://www.mooreabeachcafe.com/" target="_blank" rel="noopener">Moorea Beach Café ↗</a></td><td><span class="booking-badge day-before">1-2 GG PRIMA</span><br>Tavoli fronte laguna richiestissimi. Prenota via telefono/email il giorno prima. Cena polinesiana con musica dal vivo (mar-ven).</td></tr>
+      </table>
+
+      <p style="font-size:11px; color:#146945; margin-top:10px; font-style:italic; text-align:center;">
+        🌐 <a href="https://www.mooreacooksbay.com/" target="_blank" rel="noopener"><strong>mooreacooksbay.com ↗</strong></a> · Cook's Bay Hotel &amp; Suites · <strong>+689 40 55 41 00</strong> · a 15 min dal porto Vaiare e dall'aeroporto Temae
+      </p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ============ HOTEL 3 · ROYAL BORA BORA ============ -->
+    <!-- ============================================================ -->
+    <div class="hotel-section">
+      <div class="hotel-badge royalbb">💜 HOTEL 3 · Royal Bora Bora</div>
+      <p class="hotel-tagline">Matira (Bora Bora main island) · giardino tropicale a passi da <strong>Matira Beach</strong> (una delle spiagge pubbliche più belle del mondo) · boutique · nessun trasferimento in barca · partner principali: <strong>Moana Adventure Tours</strong>, <strong>Lagoon Service</strong>, <strong>Reef Discovery</strong></p>
+
+      <h4>✅ Attività GRATUITE — quando e come prenotare</h4>
+      <div class="exc-grid">
+        <div class="exc-card actionable-card">
+          <h5>🛶 Kayak &amp; snorkel gratis</h5>
+          <p>Kayak e attrezzatura da snorkeling <strong>gratuiti</strong> per esplorare la laguna dalla spiaggia dell'hotel. Matira Beach a 5 min a piedi.</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge walk-in">FIRST-COME · NO BOOKING</span><br>
+            <strong>Come:</strong> chiedi al front desk o direttamente al beach staff. Deposito documento.<br>
+            <strong>⚠️ Attenzione Bora Bora:</strong> "Activities on Bora Bora typically fill in advance" (segnalazione Reddit). I <strong>kayak si esauriscono entro le 9-10 del mattino</strong> in alta stagione. Alzati presto.<br>
+            <strong>Snorkel gear:</strong> quantità limitata, meglio portare la propria maschera se sei esigente.
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🚲 Bike rental (incluse e-bike)</h5>
+          <p>Biciclette gratuite per girare l'isola principale. Perfetto per raggiungere ristoranti e il porto di Vaitape (12 km).</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge same-day">PRENOTA LO STESSO MATTINO</span><br>
+            <strong>Come:</strong> chiedi al front desk al mattino per la giornata. Le <strong>e-bike sono molto più richieste</strong> delle tradizionali (Bora Bora ha alcune salite verso Anau) e si esauriscono presto.<br>
+            <strong>Consiglio:</strong> per il giro completo dell'isola (32 km, 3-4h) parti entro le 8. Bevi molto, porta acqua e cappello.
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🏊 Piscina outdoor + Matira Beach</h5>
+          <p>Piscina fronte spiaggia + accesso diretto alla laguna. La spiaggia più bella dell'isola (Matira) è pubblica e gratuita.</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge walk-in">ACCESSO LIBERO</span><br>
+            <strong>Matira Beach:</strong> spiaggia pubblica gratuita, 5 min a piedi dal resort. Zone d'ombra: prime file di palme sul lato ovest. Nessun servizio, porta acqua e telo.<br>
+            <strong>Piscina hotel:</strong> lettini limitati, arriva entro le 9 per assicurartene uno.
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🎶 Musica polinesiana dal vivo</h5>
+          <p>Intrattenimento serale con gruppi di musica tradizionale al bar/ristorante (in date selezionate). "Island Original Travel Badge".</p>
+          <span class="free">Incluso struttura</span>
+          <div class="booking-info">
+            <span class="booking-badge day-before">CENA CON MUSICA: PRENOTA 1 GG PRIMA</span><br>
+            <strong>Come:</strong> chiedi al ricevimento il <em>weekly entertainment schedule</em>. Le serate con musica dal vivo sono <strong>2-3 volte a settimana</strong> (in genere gio-ven-sab). La cena si riempie: <strong>prenota il tavolo il giorno prima</strong>.<br>
+            <strong>Bere qualcosa al bar:</strong> nessuna prenotazione, arrivi 30 min prima dell'inizio (di solito 19:00).
+          </div>
+        </div>
+      </div>
+
+      <h4>🌊 Escursioni via MARE (via tour desk resort)</h4>
+      <table class="exc-table actionable-table" style="background:white;">
+        <tr><th style="background:#6c5aa8;">Escursione</th><th style="background:#6c5aa8;">Durata</th><th style="background:#6c5aa8;">Prezzo resort</th><th style="background:#6c5aa8;">Fornitore</th><th style="background:#6c5aa8;">⏱️ Quando &amp; come prenotare</th></tr>
+        <tr class="actionable-row"><td><strong>Lagoon Safari</strong> (razze, squali, coral garden)</td><td>½ gg (~4h)</td><td>~13.500 XPF</td><td><a href="https://lagoonservice.com/index.html" target="_blank" rel="noopener">Lagoon Service ↗</a> · <a href="https://moanaadventuretours.com/" target="_blank" rel="noopener">Moana ↗</a></td><td><span class="booking-badge week-before">1 SETTIMANA PRIMA</span><br>Il must di Bora Bora. Pick-up al pontile hotel. Include snorkel gear + acqua. In agosto sold-out anche 10 giorni prima.</td></tr>
+        <tr class="actionable-row"><td><strong>Full Day Lagoon + motu picnic</strong> ⭐</td><td>1 gg (~7h)</td><td>~22.000 XPF</td><td><a href="https://lagoonservice.com/index.html" target="_blank" rel="noopener">Lagoon Service ⭐ ↗</a></td><td><span class="booking-badge week-before">2 SETTIMANE PRIMA</span><br><strong>La top experience di Bora Bora.</strong> Outrigger canoe tradizionale, ukulele a bordo, pranzo tahitiano su motu. "Likely to sell out". <strong>Prenota prima di partire dall'Italia</strong>.</td></tr>
+        <tr class="actionable-row"><td>Snorkeling squali limone + stingray</td><td>3-4 h</td><td>~14.000 XPF</td><td><a href="https://reefdiscovery.com/" target="_blank" rel="noopener">Reef Discovery ↗</a></td><td><span class="booking-badge week-before">1 SETTIMANA PRIMA</span><br>Reef Discovery Half Day Group Signature Tour ha <strong>1.007 recensioni ⭐</strong>. Opzione più corta e più economica del Full Day.</td></tr>
+        <tr class="actionable-row"><td>Sunset cruise catamarano</td><td>2 h</td><td>~11.000 XPF</td><td><a href="https://reefdiscovery.com/bora-bora-tours/sunset-cruise/" target="_blank" rel="noopener">Reef Discovery ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br>Partenza 17:00 dal pontile hotel. Cocktail a bordo. Vista Mont Otemanu al tramonto = la classica cartolina Bora Bora.</td></tr>
+        <tr class="actionable-row"><td>Immersione certificati (2 tank)</td><td>4 h</td><td>~18.000 XPF</td><td><a href="https://www.boradiving.com/" target="_blank" rel="noopener">Bora Diving Center ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br>Serve brevetto (OWD minimo + logbook). Se non hai brevetto → aqua safari o helmet dive (riga sotto).</td></tr>
+        <tr class="actionable-row"><td>Aqua safari (helmet dive)</td><td>2 h</td><td>~18.500 XPF</td><td><a href="https://www.aquasafaribora.com/" target="_blank" rel="noopener">Aqua Safari Bora ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br>Cammini sul fondo con casco pressurizzato fino a 3-4 m. No brevetto richiesto, no occhiali/lenti richieste (respiri normalmente). Adatto a chi non è ancora comodo con maschera-boccaglio.</td></tr>
+      </table>
+
+      <!-- 5 RISTORANTI · ROYAL BORA BORA -->
+      <div class="restaurants-box">
+        <h4>🍽️ 5 posti dove pranzare/cenare · zona Royal Bora Bora (Matira Point)</h4>
+        <p class="rest-intro">Matira Point è la zona ristorante più vivace di Bora Bora. Tutti raggiungibili a piedi o con e-bike gratuita dell'hotel. Alternative locali molto più economiche dei ristoranti dei grandi resort sui motu.</p>
+        <table class="rest-table actionable-table">
+          <tr><th>Ristorante</th><th>Dove</th><th>Cucina</th><th>Fascia</th><th>Perché</th></tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="http://www.borabora-beachclub.com/" target="_blank" rel="noopener">Bora Bora Beach Club ↗</a></td>
+            <td>Matira Beach (~5 min a piedi)</td>
+            <td>Polinesiana + francese + seafood</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td><strong>Il migliore per rapporto qualità/prezzo/vista.</strong> Tavoli fronte laguna, sabbia sotto i piedi. Poisson cru + mahi-mahi grigliato. Arriva prima delle 18 per tavolo vista</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.boraboraislandguide.com/bora-bora-cafes.html" target="_blank" rel="noopener">Snack Matira ↗</a></td>
+            <td>Matira, sulla strada principale</td>
+            <td>Tahitiana + burger + poisson cru</td>
+            <td><span class="price-tag price-€">€<br><small>1,5–3k XPF</small></span></td>
+            <td>4.2/5 su 395 recensioni. Porzioni abbondanti, cash preferito. Il posto dove mangiano i locali a pranzo. Chow mein e poisson cru sono il must</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://wanderinparadise.com/restaurants/bora-bora/lucky-house-bora-bora/" target="_blank" rel="noopener">The Lucky House (Fare Manuia) ↗</a></td>
+            <td>Nord di Vaitape (~10 min taxi)</td>
+            <td>Cinese + polinesiana</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td>4.2/5 su 1.586 recensioni (istituzione). Ambiente semplice, cucina consistente. Cook nell'earth oven ahima'a → prenota per esperienza autentica</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.tripadvisor.in/Restaurant_Review-g311415-d1402719-Reviews-Roulotte_Matira-Bora_Bora_Society_Islands.html" target="_blank" rel="noopener">Roulotte Matira ↗</a></td>
+            <td>Virage di Matira</td>
+            <td>Poisson cru, hamburger, tahitiano</td>
+            <td><span class="price-tag price-€">€<br><small>1,5–3k XPF</small></span></td>
+            <td>Il food truck della spiaggia: 1.500-2.500 XPF/piatto. Cash only. Ideale per pranzo o cena veloce sotto le palme. Aperto sera</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.tahititourisme.com/restaurant/aloe-cafe/" target="_blank" rel="noopener">Aloe Café ↗</a></td>
+            <td>Centro Vaitape (~10 min taxi)</td>
+            <td>Bistrot francese + colazione</td>
+            <td><span class="price-tag price-€">€<br><small>1,5–3k XPF</small></span></td>
+            <td>Reddit dice "best crème brûlée I've ever had". Colazioni + pranzo + dolci. Piccolo, cordiale, vera bakery francese</td>
+          </tr>
+        </table>
+      </div>
+
+      <h4>🚗 Escursioni via TERRA</h4>
+      <table class="exc-table actionable-table">
+        <tr><th>Escursione</th><th>Durata</th><th>Prezzo resort</th><th>Fornitore</th><th>⏱️ Quando &amp; come prenotare</th></tr>
+        <tr class="actionable-row"><td><strong>4×4 Safari</strong> (Matira, marae, cannoni WWII)</td><td>½ gg (~3-4h)</td><td>~13.000 XPF</td><td><a href="https://www.viator.com/tours/Bora-Bora/Half-Day-Bora-Bora-4x4-Island-Tour/d5180-6964P4" target="_blank" rel="noopener">4×4 Island Safari ↗</a></td><td><span class="booking-badge week-before">1 SETTIMANA PRIMA</span><br><strong>521 recensioni 5/5 su Viator</strong>. Panorami mozzafiato dalla cima di Anau. In agosto molto richiesta, prenota su Viator con largo anticipo.</td></tr>
+        <tr class="actionable-row"><td>Volo panoramico 30 min (2 pax)</td><td>30 min</td><td>~34.000 XPF</td><td><a href="https://tahitinuihelicopters.com/en/contact-us" target="_blank" rel="noopener">Polynesia Helicopter ↗</a></td><td><span class="booking-badge week-before">1-2 SETTIMANE PRIMA</span><br>1 elicottero su Bora Bora. Voli mattutini (7-9) più stabili. <strong>Prenota via concierge appena arrivi</strong> o online. In agosto sold-out cronico.</td></tr>
+        <tr class="actionable-row"><td>Electric fun car rental (2 pax)</td><td>½ gg</td><td>~13.500 XPF</td><td><a href="https://www.viator.com/tours/Bora-Bora/Bora-Bora-Electric-Fun-Car-Rental/d5180-127789P4" target="_blank" rel="noopener">Electric Fun Car ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br>Piccola auto elettrica scoperta per giro isola (32 km). Patente base valida. Batteria per ~40 km, ricarica a Vaitape. Divertente ma velocità ridotta.</td></tr>
+      </table>
+
+      <p style="font-size:11px; color:#3d2e70; margin-top:10px; font-style:italic; text-align:center;">
+        🌐 <a href="https://www.royalborabora.com/" target="_blank" rel="noopener"><strong>royalborabora.com ↗</strong></a> · Matira · nessun transfer in barca (main island) · Island Original Badge · e-bike a disposizione
+      </p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ============ HOTEL 4 · INTERCONTINENTAL LE MOANA BORA BORA ============ -->
+    <!-- ============================================================ -->
+    <div class="hotel-section">
+      <div class="hotel-badge lemoana">🐚 HOTEL 4 · InterContinental Bora Bora Le Moana Resort</div>
+      <p class="hotel-tagline">Matira Point (Bora Bora main island) · overwater bungalows fronte Mont Otemanu · sister-property di IC Thalasso · partner principali: <strong>Moana Adventure Tours</strong>, <strong>Reef Discovery</strong>, spa a IC Thalasso (Deep Ocean Spa)</p>
+
+      <h4>✅ Attività GRATUITE — quando e come prenotare</h4>
+      <div class="exc-grid">
+        <div class="exc-card actionable-card">
+          <h5>🛶 Kayak + outrigger canoe + SUP</h5>
+          <p>Attrezzatura completa <strong>gratis</strong>: kayak, canoa polinesiana tradizionale, stand-up paddle.</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge same-day">PRENOTA AL MATTINO</span><br>
+            <strong>Come:</strong> water sports center in spiaggia, apre 8:00. Firmare registro + deposito documento. Uscite tipiche 30-90 min per volta.<br>
+            <strong>⚠️ Bora Bora fa presto sold-out:</strong> SUP e outrigger canoe sono richiestissimi. <strong>Arriva entro le 8:30</strong> per assicurartene uno nel picco stagione (agosto).<br>
+            <strong>Kite surf / parasailing:</strong> a pagamento, prenotazione via concierge il giorno prima.
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🐠 Snorkeling reef sotto i bungalow</h5>
+          <p>Coral garden e pesci tropicali <strong>direttamente sotto la scala del bungalow overwater</strong>. Snorkel + mask + fins forniti.</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge walk-in">ACCESSO 24/7</span><br>
+            <strong>Come:</strong> attrezzatura in camera o al water sports center. <strong>Zero prenotazione</strong>: scendi la scala del tuo overwater, sei già in acqua.<br>
+            <strong>Miglior orario:</strong> 8-10 mattina (mare calmo, sole basso non abbaglia, pesci attivi al feeding). Evita 12-14 (sole verticale abbaglia sul fondo bianco).<br>
+            <strong>Tip:</strong> il coral garden migliore è tra la Concierge Lounge e i bungalow n. 400. Portati scarpine da scoglio.
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🏓 Giochi indoor (ping pong, biliardo)</h5>
+          <p>Sala giochi per i pomeriggi piovosi. Attività per famiglie e coppie.</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge walk-in">ACCESSO LIBERO</span><br>
+            <strong>Come:</strong> game room aperta 9-21, first-come first-serve. Sono 1 tavolo ping pong + 1 biliardo, quindi in ore di picco (16-18) attesa possibile.<br>
+            <strong>Racchette/palline:</strong> incluse.
+          </div>
+        </div>
+        <div class="exc-card actionable-card">
+          <h5>🎨 Handicraft demonstrations</h5>
+          <p>Dimostrazioni di artigianato polinesiano (intreccio pareu, monoi, ukulele). Calendario in reception.</p>
+          <span class="free">GRATIS ospiti</span>
+          <div class="booking-info">
+            <span class="booking-badge same-day">ISCRIVITI IL GIORNO STESSO</span><br>
+            <strong>Come:</strong> weekly activity sheet al check-in. Iscrizione al concierge lo stesso giorno (mattino) per l'attività del pomeriggio.<br>
+            <strong>Capienza:</strong> gruppi ~10 pax. Le classi più popolari (<em>pareu tying</em>, <em>monoi making</em>) si esauriscono entro le 11.<br>
+            <strong>Tip:</strong> combina la classe di intreccio pareu con l'acquisto di uno all'hotel gift shop.
+          </div>
+        </div>
+      </div>
+
+      <h4>🌊 Escursioni via MARE (via concierge resort)</h4>
+      <table class="exc-table actionable-table" style="background:white;">
+        <tr><th style="background:#006d8f;">Escursione</th><th style="background:#006d8f;">Durata</th><th style="background:#006d8f;">Prezzo resort</th><th style="background:#006d8f;">Fornitore</th><th style="background:#006d8f;">⏱️ Quando &amp; come prenotare</th></tr>
+        <tr class="actionable-row"><td><strong>Private half-day boat tour</strong> (shark feeding + coral garden + picnic)</td><td>½ gg</td><td>~55.000 XPF/barca</td><td><a href="https://moanaadventuretours.com/" target="_blank" rel="noopener">Moana Adventure ↗</a></td><td><span class="booking-badge week-before">2 SETTIMANE PRIMA</span><br>Barca privata per gruppo (fino a 6 pax). Massima flessibilità di itinerario. Prezzo per barca, non per persona → conviene se siete in 4-6.</td></tr>
+        <tr class="actionable-row"><td>Shared lagoon tour (razze + squali)</td><td>½ gg</td><td>~15.000 XPF</td><td><a href="https://reefdiscovery.com/" target="_blank" rel="noopener">Reef Discovery ↗</a></td><td><span class="booking-badge week-before">1 SETTIMANA PRIMA</span><br>Alternativa condivisa più economica al private tour. Gruppo 10-12 pax. Sold-out cronico in agosto.</td></tr>
+        <tr class="actionable-row"><td>Guided jet-ski tour laguna</td><td>2 h</td><td>~28.000 XPF</td><td><a href="https://www.viator.com/tours/Bora-Bora/Half-Day-Guided-Jet-Ski-Tour-in-Bora-Bora/d5180-6964P26" target="_blank" rel="noopener">Jet-Ski Guided ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br>Giro completo della laguna con stop coral garden. Patente non richiesta. Briefing 20 min.</td></tr>
+        <tr class="actionable-row"><td>Sunset cruise catamarano</td><td>2 h</td><td>~13.500 XPF</td><td><a href="https://reefdiscovery.com/bora-bora-tours/sunset-cruise/" target="_blank" rel="noopener">Reef Discovery ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br>Vista Mont Otemanu al tramonto. Include cocktail. Se stai a Le Moana su motu Piti Aau: pick-up al tuo pontile.</td></tr>
+        <tr class="actionable-row"><td><strong>Helmet dive / Subscooter / Submarine</strong></td><td>1-2 h</td><td>18-40.000 XPF</td><td><a href="https://www.aquasafaribora.com/" target="_blank" rel="noopener">Aqua Safari Bora ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br><strong>3 opzioni diverse:</strong> helmet dive (3-4 m, no brevetto) · subscooter (scooter sub 5-8 m) · submarine (fino a 50 m, esperienza esclusiva più cara). Adatte a non-swimmers.</td></tr>
+        <tr class="actionable-row"><td>Diving (immersione singola)</td><td>3 h</td><td>~11.000 XPF</td><td><a href="https://www.topdive.com/" target="_blank" rel="noopener">TOP Dive ↗</a></td><td><span class="booking-badge day-before">2-3 GG PRIMA</span><br>TOP Dive è la catena riferimento Polinesia (anche a Moorea + Rangiroa). Serve brevetto + logbook.</td></tr>
+        <tr class="actionable-row"><td>Deep-sea fishing charter privato</td><td>½ gg</td><td>90-140.000 XPF</td><td><a href="https://www.tahiti-tourisme.pf/en/things-to-do/deep-sea-fishing/" target="_blank" rel="noopener">Big game charter ↗</a></td><td><span class="booking-badge week-before">1-2 SETTIMANE PRIMA</span><br>Charter interi. Partenza 05:30 alba. Pesca marlin, mahi-mahi, tonno. Poche barche di livello a Bora Bora.</td></tr>
+      </table>
+
+      <!-- 5 RISTORANTI · IC LE MOANA BORA BORA -->
+      <div class="restaurants-box">
+        <h4>🍽️ 5 posti dove pranzare/cenare · zona IC Le Moana (Matira Point)</h4>
+        <p class="rest-intro">Le Moana condivide la zona con Royal Bora Bora (entrambi su Matira Point). La lista è mirata a chi cerca opzioni più "resort-adjacent" e valide sia per pranzo che per cena con vista.</p>
+        <table class="rest-table actionable-table">
+          <tr><th>Ristorante</th><th>Dove</th><th>Cucina</th><th>Fascia</th><th>Perché</th></tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://lemoana.intercontinental.com/dine/vini-vini-bar-restaurant" target="_blank" rel="noopener">Vini Vini ↗</a></td>
+            <td>Dentro Le Moana (poolside)</td>
+            <td>Cucina polinesiana + international</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td>Ristorante interno "casual" del tuo resort. Alternativa al più formale principale. Pizza + poisson cru + burger. Prenotazione non necessaria</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="http://www.borabora-beachclub.com/" target="_blank" rel="noopener">Bora Bora Beach Club ↗</a></td>
+            <td>Matira Beach (~5 min a piedi)</td>
+            <td>Polinesiana + seafood</td>
+            <td><span class="price-tag price-€€">€€<br><small>3,5–7k XPF</small></span></td>
+            <td>Migliore fusione qualità/prezzo/vista tra tutte le opzioni Matira. Fronte laguna, atmosfera rilassata, prezzi ragionevoli per Bora. Arriva prima delle 18</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.facebook.com/yachtclubborabora/" target="_blank" rel="noopener">Bora Bora Yacht Club ↗</a></td>
+            <td>Vaitape nord (~15 min taxi)</td>
+            <td>Francese + fresh seafood</td>
+            <td><span class="price-tag price-€€">€€-€€€<br><small>5–10k XPF</small></span></td>
+            <td>4.4/5 su 1.559 recensioni. Terrazza sul molo, tramonto spettacolare. Serate DJ. Prenota per weekend. Fine ma non ostentato</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://saintjamesborabora.com/index.html" target="_blank" rel="noopener">Saint James Bora Bora ↗</a></td>
+            <td>Centre Helen's Bay (~10 min taxi)</td>
+            <td>Francese raffinata</td>
+            <td><span class="price-tag price-€€€">€€€<br><small>8–15k XPF</small></span></td>
+            <td>4.5/5 su 1.354 recensioni. Cena speciale se vuoi qualcosa di più formale ma senza il livello Villa Mahana. Ottima carta vini. Prenota giorni prima</td>
+          </tr>
+          <tr class="actionable-row">
+            <td class="rest-name"><a href="https://www.boraboraislandguide.com/bora-bora-cafes.html" target="_blank" rel="noopener">Snack Matira ↗</a></td>
+            <td>Matira, strada principale (~5 min)</td>
+            <td>Tahitiana + burger + poisson cru</td>
+            <td><span class="price-tag price-€">€<br><small>1,5–3k XPF</small></span></td>
+            <td>Il pranzo "quick and cheap" tra un'escursione e l'altra. Cash, veloce, autentico. 1.500-2.500 XPF/piatto</td>
+          </tr>
+        </table>
+      </div>
+
+      <h4>🚗 Escursioni via TERRA</h4>
+      <table class="exc-table actionable-table">
+        <tr><th>Escursione</th><th>Durata</th><th>Prezzo resort</th><th>Fornitore</th><th>⏱️ Quando &amp; come prenotare</th></tr>
+        <tr class="actionable-row"><td><strong>Jeep Safari 4×4</strong> (cannoni WWII, marae)</td><td>½ gg</td><td>~14.000 XPF</td><td><a href="https://www.viator.com/tours/Bora-Bora/Half-Day-Bora-Bora-4x4-Island-Tour/d5180-6964P4" target="_blank" rel="noopener">Vavau Land ↗</a></td><td><span class="booking-badge week-before">1 SETTIMANA PRIMA</span><br>Stesso tour del Royal (unica isola). Sold-out cronico in agosto. Prenota su Viator prima della partenza.</td></tr>
+        <tr class="actionable-row"><td>Helicopter tour 30 min (2 pax)</td><td>30 min</td><td>~34.000 XPF</td><td><a href="https://tahitinuihelicopters.com/en/contact-us" target="_blank" rel="noopener">Polynesia Helicopter ↗</a></td><td><span class="booking-badge week-before">1-2 SETTIMANE PRIMA</span><br>Solo 1 elicottero disponibile. Voli mattutini più stabili. Concierge Le Moana ha canale privilegiato.</td></tr>
+        <tr class="actionable-row"><td><strong>Deep Ocean Spa</strong> (sister IC Thalasso)</td><td>1-3 h</td><td>15-40.000 XPF</td><td><a href="https://www.algotherm.com/en/pages/bora-bora-deep-ocean-spa" target="_blank" rel="noopener">Deep Ocean Spa ↗</a></td><td><span class="booking-badge day-before">1-2 GG PRIMA</span><br><strong>Esclusiva ospiti IHG</strong>: shuttle gratuito Le Moana → Thalasso, poi trattamenti con acqua di profondità (500m). Best-seller "Deep Sea Water Wrap". Prenota via concierge Le Moana.</td></tr>
+      </table>
+
+      <div class="exc-warn" style="margin-top:12px;">
+        <strong>⚠️ Nota Le Moana:</strong> essendo un IHG resort su Matira Point (main island, non su motu), <strong>non serve transfer in barca</strong> come per la sister property IC Thalasso (su motu). Vantaggio pratico: puoi andare a piedi/e-bike ai ristoranti locali di Matira, cosa impossibile dai resort su motu.
+      </div>
+
+      <p style="font-size:11px; color:#006d8f; margin-top:10px; font-style:italic; text-align:center;">
+        🌐 <a href="https://lemoana.intercontinental.com/" target="_blank" rel="noopener"><strong>lemoana.intercontinental.com ↗</strong></a> · Resort: <strong>+689 40 60 49 00</strong> · Reservation: +689 40 86 51 78 · gsc.borabora.lemoana@ihg.com
+      </p>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ============ SEZIONE COMUNE · CONVIENE FUORI? ============ -->
+    <!-- ============================================================ -->
+    <div class="hotel-section">
+      <h4>💰 Conviene prenotare FUORI dal resort? Quasi sempre SÌ (vale per tutti e 4)</h4>
+
+      <div class="exc-savings">
+        <strong>🟢 Risparmio tipico prenotando fuori:</strong> 20-40% sulla maggior parte delle escursioni. Per una coppia con 5-6 escursioni tipiche sui 4 hotel: <strong>risparmio totale 500-800 €</strong> (circa il costo di 1 notte overwater a Bora Bora).
+      </div>
+
+      <p style="font-size:14px; margin:10px 0 8px;"><strong>Le 4 opzioni migliori dove prenotare fuori (valide per Tahiti + Moorea + Bora Bora):</strong></p>
+
+      <div class="exc-grid">
+        <div class="exc-card actionable-card">
+          <h5>1. ⭐ <a href="https://www.viator.com/Tahiti/d25-ttd" target="_blank" rel="noopener" style="color:#8a4a1f;">Viator ↗</a></h5>
+          <p>Piattaforma internazionale, cancellazione flessibile 24h prima, recensioni verificate. Anche <a href="https://www.getyourguide.com/bora-bora-l32139/" target="_blank" rel="noopener" style="color:#8a4a1f;">GetYourGuide ↗</a>.</p>
+          <p style="font-size:12px;"><strong>Tahiti:</strong></p>
+          <p style="font-size:12px;">• <a href="https://www.viator.com/tours/Papeete/Albert-Tours-Excursion-4x4-Safari/d5181-58193P17" target="_blank" rel="noopener">ALBERT TOURS 4×4 Safari ↗</a>: <span class="price">50 €</span> (vs 140 € resort)</p>
+          <p style="font-size:12px;">• <a href="https://www.viator.com/tours/Papeete/Small-Group-Te-Mana-Tahiti-Tours-4x4-Tahiti-Papenoo-Cross-Island-Safari/d5181-181862P1" target="_blank" rel="noopener">Te Mana 4×4 Papenoo ↗</a>: <span class="price">~120 €</span></p>
+
+          <p style="font-size:12px;"><strong>Moorea:</strong></p>
+          <p style="font-size:12px;">• <a href="https://www.viator.com/tours/Moorea/Moorea-Tiki-Tour/d4562-6964P84" target="_blank" rel="noopener">Tiki Tour full day outrigger ↗</a>: <span class="price">~126 $</span></p>
+          <p style="font-size:12px;">• <a href="https://www.viator.com/tours/Moorea/Alex-Lagoon-Tour/d4562-58193P4" target="_blank" rel="noopener">Alex Lagoon Tours (6 pax) ↗</a>: <span class="price">~114 $</span></p>
+          <p style="font-size:12px;">• <a href="https://www.viator.com/tours/Moorea/Franckyfranck-Tours-Moorea-Half-Day-Tours/d4562-58193P2" target="_blank" rel="noopener">FranckyFranck 4×4 Safari ↗</a>: <span class="price">65 $</span></p>
+          <p style="font-size:12px;"><strong>Bora Bora:</strong></p>
+          <p style="font-size:12px;">• <a href="https://www.viator.com/tours/Bora-Bora/Reef-Discovery-Half-Day-Group-Signature-Tour/d5180-6964P8" target="_blank" rel="noopener">Reef Discovery Half Day ↗</a> (1.007 rec ⭐): <span class="price">~139 $</span></p>
+          <p style="font-size:12px;">• <a href="https://www.viator.com/tours/Bora-Bora/Half-Day-Bora-Bora-4x4-Island-Tour/d5180-6964P4" target="_blank" rel="noopener">4×4 Half Day Island Safari ↗</a>: <span class="price">~104 $</span></p>
+          <p style="font-size:12px;">• <a href="https://www.viator.com/tours/Bora-Bora/Small-Group-Bora-Bora-Snorkel-Cruise-by-Traditional-Polynesian-Outrigger-Canoe-with-BBQ-Island-Lunch/d5180-6964P12" target="_blank" rel="noopener">Eco Snorkel Cruise ↗</a>: <span class="price">~116 $</span></p>
+          <p style="font-size:12px;">• <a href="https://www.getyourguide.com/bora-bora-l32139/bora-bora-full-day-lagoon-safari-lunch-on-a-motu-st-t515529/" target="_blank" rel="noopener">Lagoon Service Full Day + motu ⭐ ↗</a>: <span class="price">~177 $</span></p>
+        </div>
+
+        <div class="exc-card actionable-card">
+          <h5>2. Operatori diretti (sito ufficiale)</h5>
+          <p><strong>Tahiti:</strong> <a href="https://maramatours.com/en/activities-excursions-tahiti/" target="_blank" rel="noopener" style="color:#8a4a1f;">maramatours.com ↗</a> — sconto 15-25%</p>
+          <p><strong>Moorea:</strong> <a href="https://www.corallinatours.com/" target="_blank" rel="noopener" style="color:#8a4a1f;">Corallina Tours ↗</a>, <a href="https://moorea-ocean-adventures.com/" target="_blank" rel="noopener" style="color:#8a4a1f;">Moorea Ocean Adventures ↗</a>.</p>
+          <p><strong>Bora Bora:</strong> <a href="https://lagoonservice.com/index.html" target="_blank" rel="noopener" style="color:#8a4a1f;"><strong>Lagoon Service ↗</strong></a> (operatore di riferimento, "likely to sell out"), <a href="https://reefdiscovery.com/" target="_blank" rel="noopener" style="color:#8a4a1f;">Reef Discovery ↗</a>, <a href="https://moanaadventuretours.com/" target="_blank" rel="noopener" style="color:#8a4a1f;">Moana Adventure ↗</a>.</p>
+        </div>
+
+        <div class="exc-card actionable-card">
+          <h5>3. Operatori locali specializzati</h5>
+          <p><strong>Tahiti:</strong> <a href="https://farandawayadventures.com/south-pacific/french-polynesia/tahiti/" target="_blank" rel="noopener" style="color:#8a4a1f;">Far and Away Adventures ↗</a>, <a href="https://tahitibycarl.com/" target="_blank" rel="noopener" style="color:#8a4a1f;">Tahiti by Carl ↗</a>.</p>
+          <p><strong>Moorea:</strong> <a href="https://www.viator.com/tours/Moorea/Franckyfranck-Tours-Moorea-Half-Day-Tours/d4562-58193P2" target="_blank" rel="noopener" style="color:#8a4a1f;">FranckyFranck ↗</a> (858 rec · 4,9/5), <a href="https://www.tahititourisme.com/equipment/enjoy-boat-tours-moorea/" target="_blank" rel="noopener" style="color:#8a4a1f;">Enjoy Boat ↗</a>, <a href="https://www.viator.com/tours/Moorea/Tama-Tours-Half-Day-Snorkeling/d4562-58193P5" target="_blank" rel="noopener" style="color:#8a4a1f;">Tama Tours ↗</a>.</p>
+          <p><strong>Bora Bora:</strong> <a href="https://lagoonservice.com/index.html" target="_blank" rel="noopener" style="color:#8a4a1f;"><strong>Lagoon Service ↗</strong></a> outrigger tradizionale con ukulele, guide native, motu lunch fronte Otemanu.</p>
+        </div>
+
+        <div class="exc-card actionable-card">
+          <h5>4. Booking in loco / porto</h5>
+          <p><strong>Papeete:</strong> <a href="https://www.tahiti-tourisme.pf/en/dining-shopping/marche-de-papeete-papeete-market/" target="_blank" rel="noopener" style="color:#8a4a1f;">Marché de Papeete ↗</a>, cash XPF, sconti last-minute.</p>
+          <p><strong>Moorea:</strong> <a href="https://www.albert-transport.net/" target="_blank" rel="noopener" style="color:#8a4a1f;">Albert Transport ↗</a> al porto di Vaiare + banchi tour al ferry.</p>
+          <p><strong>Bora Bora:</strong> Quai de Vaitape (porto principale), tour desk indipendenti al pontile crocieristi.</p>
+        </div>
+      </div>
+
+      <div class="exc-warn">
+        <strong>⚠️ Quando invece conviene passare dal concierge:</strong>
+        <ul style="margin:6px 0 0 18px; padding:0; font-size:13.5px;">
+          <li><strong>Attività resort-specifiche già gratuite</strong> (tartarughe IC Tahiti, kayak Cook's Bay/Royal, snorkeling reef Le Moana)</li>
+          <li><strong>Charter privati premium</strong> (elicottero, big-game fishing, submarine dive Le Moana) → i resort hanno accordi con operatori selezionati</li>
+          <li><strong>Alta stagione + resort sold-out</strong>: se il tour è "likely to sell out" (Lagoon Service Bora, Tiki Tour Moorea), il concierge ha spesso posti riservati</li>
+          <li><strong>Boutique hotel</strong> come Cook's Bay e Royal Bora Bora: ottimi rapporti con operatori locali di piccola scala, tour più autentici</li>
+        </ul>
+      </div>
+
+      <div class="exc-savings" style="border-left-color:#006d8f; background:#e8f4fb;">
+        <strong>💡 Raccomandazione operativa per il tuo viaggio (4 hotel):</strong>
+        <ol style="margin:6px 0 0 18px; padding:0; font-size:13.5px;">
+          <li><strong>Tahiti (IC Tahiti):</strong> gratis tartarughe + Fare l'a Reserve. 4×4 su Viator (Albert Tours 50 €).</li>
+          <li><strong>Moorea (Cook's Bay):</strong> gratis kayak e snorkeling. Tiki Tour su Viator (~126 $). Kitchenette in camera per risparmiare sui pasti (Super U Maharepa a 5 min).</li>
+          <li><strong>Bora Bora (Royal):</strong> gratis kayak + bike + Matira Beach a piedi. Per il lagoon: <strong>Lagoon Service</strong> full day (177 $) è la top esperienza dell'isola.</li>
+          <li><strong>Bora Bora (Le Moana):</strong> gratis snorkeling reef sotto i bungalow + SUP + canoa. Se cerchi qualcosa di iconico e non troppo caro: <strong>Reef Discovery half day</strong> (139 $, 1.007 recensioni). Per il "wow": <strong>submarine dive</strong> al concierge (esclusiva).</li>
+          <li><strong>REGOLA GENERALE:</strong> non prenotare mai escursioni per un'isola diversa da quella dove alloggi (markup doppio). Prenota <em>on-island</em>.</li>
+        </ol>
+      </div>
+
+      <p style="font-size:11px; color:#5a6b78; margin-top:12px; font-style:italic; text-align:center;">
+        Prezzi indicativi 2026 in XPF (1 € ≈ 119 XPF, cambio fisso). Viator prezzi in USD/EUR.
+      </p>
+    </div>
+  </div>
+
+  <!-- ====== FERRY MONITOR (in cima a tutto) ====== -->
+  <div class="ferry-monitor">
+    <div class="ferry-head">
+      <div class="ferry-title">⛴️ Monitoraggio traghetto Aremiti · Tahiti ↔ Moorea</div>
+      <div>
+        <span class="ferry-pill">Operativo</span>
+        <span class="ferry-meta" style="margin-left:8px;">Settimana 3 – 9 agosto 2026 · ⭐ Partenza ven 7</span>
+      </div>
+    </div>
+
+    <h4>🚢 AREMITI · l'operatore di riferimento sulla tratta</h4>
+    <img src="screenshot_aremiti_agosto.png" alt="Screenshot calendario settimanale Aremiti 3-9 agosto 2026">
+
+    <div class="ferry-note">
+      <strong>Stato Aremiti:</strong> servizio <strong>regolare</strong> nella settimana della tua traversata (venerdì 7 agosto partenza da Bologna via Zurigo + San Francisco → arrivo a Papeete sabato 8/8 sera → <strong>traghetto Tahiti-Moorea programmato per MERCOLEDÌ 12 AGOSTO</strong> secondo la tua agenda). Flotta operativa: <strong>Aremiti 5</strong> (697 passeggeri + 30 auto, ~30 min) e <strong>Aremiti 6</strong> (capacità maggiore, ~30 min). Frequenza feriale (lun-ven) di circa <strong>10 corse/giorno per senso</strong>, dalle 05:15 alle 17:30 da Tahiti, dalle 05:10 alle 17:15 da Moorea. Sabato e <strong>domenica orari ridotti</strong> (7-9 corse: prima 07:00, ultima 19:00). Biglietti validi 360 giorni, utilizzabili su entrambe le navi. <em>Fonte: aremitiexpress.com</em>. <strong>✅ Operatore: Aremiti</strong> — biglietto aperto 360 gg x2 già acquistato, procedura giorno G nella guida traghetti v.15.
+    </div>
+
+    <h4>📈 Occupazione stimata · settimana 3-9 agosto 2026 (la tua, con partenza da Bologna venerdì 7 + stopover SF)</h4>
+
+    <div class="occ-disclaimer">
+      <strong>⚠️ Nota metodologica:</strong> i siti dei traghetti polinesiani <strong>non espongono pubblicamente</strong> la % di occupazione in tempo reale (mostrano solo "disponibile / pieno" al checkout). I dati sotto sono <strong>stime</strong> basate su pattern storici di alta stagione (luglio-agosto), report di TripAdvisor/Reddit 2025, capacità nominale delle navi e finestra Heiva. Considerali un'<strong>indicazione di tendenza</strong>, non un dato ufficiale.
+    </div>
+
+    <p style="font-size:13px; color:#5a6b78; margin:8px 0;"><strong>Aremiti — passeggeri a piedi · tratta Tahiti → Moorea</strong></p>
+    <div class="occupancy-grid">
+
+      <div class="occupancy-day">
+        <div class="day-label">Lun 3 ago <span class="day-pct" style="color:#e07a30;">70%</span></div>
+        <div class="occ-bar"><div class="occ-fill occ-high" style="width:70%;"></div></div>
+        <div class="occ-label-row"><span>Picco: 10:30 e 17:30</span><span>Pieno effetto Heiva</span></div>
+      </div>
+
+      <div class="occupancy-day">
+        <div class="day-label">Mar 4 ago <span class="day-pct" style="color:#e07a30;">73%</span></div>
+        <div class="occ-bar"><div class="occ-fill occ-high" style="width:73%;"></div></div>
+        <div class="occ-label-row"><span>Picco: 11:30 e 16:25</span><span>Crocieristi MSC in scalo</span></div>
+      </div>
+
+      <div class="occupancy-day">
+        <div class="day-label">Mer 5 ago <span class="day-pct" style="color:#e07a30;">75%</span></div>
+        <div class="occ-bar"><div class="occ-fill occ-high" style="width:75%;"></div></div>
+        <div class="occ-label-row"><span>Picco: 10:30, 12:25, 17:30</span><span>Media settimanale</span></div>
+      </div>
+
+      <div class="occupancy-day">
+        <div class="day-label">Gio 6 ago <span class="day-pct" style="color:#e07a30;">78%</span></div>
+        <div class="occ-bar"><div class="occ-fill occ-high" style="width:78%;"></div></div>
+        <div class="occ-label-row"><span>Picco: 10:30 e 15:30</span><span>In risalita verso weekend</span></div>
+      </div>
+
+      <div class="occupancy-day" style="border:2px solid #ffb84d; background:#fff7e6;">
+        <div class="day-label" style="color:#8a5a00;">⭐ VEN 7 AGO · PARTENZA BLQ→ZRH→SFO <span class="day-pct" style="color:#b03b3b;">85%</span></div>
+        <div class="occ-bar"><div class="occ-fill occ-full" style="width:85%;"></div></div>
+        <div class="occ-label-row"><span style="color:#8a5a00;"><strong>Volo LX 1669 BLQ→ZRH poi LX 38 ZRH→SFO</strong></span><span>Arrivo Papeete sabato 8 sera (UA 115)</span></div>
+      </div>
+
+      <div class="occupancy-day">
+        <div class="day-label">Sab 8 ago · Arrivo PPT <span class="day-pct" style="color:#b03b3b;">90%</span></div>
+        <div class="occ-bar"><div class="occ-fill occ-full" style="width:90%;"></div></div>
+        <div class="occ-label-row"><span>Solo 7 corse (orari ridotti)</span><span>Sold-out su 09:00 e 12:45</span></div>
+      </div>
+
+      <div class="occupancy-day">
+        <div class="day-label">Dom 9 ago · Notte 1 InterCon Tahiti <span class="day-pct" style="color:#b03b3b;">82%</span></div>
+        <div class="occ-bar"><div class="occ-fill occ-full" style="width:82%;"></div></div>
+        <div class="occ-label-row"><span>Solo 9 corse (orari ridotti)</span><span>Riposo post jet-lag</span></div>
+      </div>
+
+    </div>
+
+    <p style="font-size:13px; color:#5a6b78; margin:14px 0 6px;"><strong>Aremiti — corsie auto (posti veicoli)</strong></p>
+    <div class="occupancy-grid">
+      <div class="occupancy-day">
+        <div class="day-label">Lun-Gio 3-6 ago <span class="day-pct" style="color:#b03b3b;">85-92%</span></div>
+        <div class="occ-bar"><div class="occ-fill occ-full" style="width:90%;"></div></div>
+        <div class="occ-label-row"><span>Prenotare 48-72h prima</span><span>Aremiti 5 più stretto, Aremiti 6 preferibile</span></div>
+      </div>
+      <div class="occupancy-day" style="border:2px solid #ffb84d; background:#fff7e6;">
+        <div class="day-label" style="color:#8a5a00;">Ven-Dom 7-9 ago · ⭐ <span class="day-pct" style="color:#7a1f1f;">95-100%</span></div>
+        <div class="occ-bar"><div class="occ-fill occ-full" style="width:100%;"></div></div>
+        <div class="occ-label-row"><span style="color:#b03b3b;"><strong>QUASI SOLD-OUT</strong></span><span>Prenotare almeno 5-7 giorni prima della partenza</span></div>
+      </div>
+    </div>
+
+    <div class="occupancy-legend">
+      <span><i style="background:#1ea84f;"></i> 0-50% libero</span>
+      <span><i style="background:#ffb84d;"></i> 50-65% medio</span>
+      <span><i style="background:#e07a30;"></i> 65-85% affollato</span>
+      <span><i style="background:#b03b3b;"></i> 85-100% quasi pieno</span>
+      <span><i style="background:#7a1f1f;"></i> sold-out probabile</span>
+    </div>
+
+    <div class="ferry-note" style="border-left-color:#1a7a3a;">
+      <strong>✅ Il tuo biglietto Aremiti è già acquistato (x2 persone):</strong> è un <strong>biglietto aperto valido 360 giorni</strong>, utilizzabile su qualsiasi corsa di Aremiti 5 o Aremiti 6, in entrambe le direzioni. <em>Non serve prenotare orario/posto</em>: Aremiti non lo consente per i passeggeri pedoni (solo per veicoli). Ti presenti al terminale 30-45 min prima della corsa che vuoi prendere, mostri il QR e sali.<br><br>
+      <strong>📅 Traversata CONFERMATA dall'agenda utente: MERCOLEDÌ 12 AGOSTO</strong> (feriale, dopo 4 notti a Tahiti — jet-lag ampiamente smaltito). <strong>Corse consigliate mattina:</strong> 09:15 (Aremiti 6, più veloce, ~30 min) o 12:25 (A5/A6). Occupazione mercoledì storicamente ~55-70% per pedoni — <em>non c'è rischio "posto esaurito"</em>.<br><br>
+      <strong>⚠️ Se qualcuno viaggia con auto:</strong> per i <strong>veicoli</strong> l'occupazione è invece 85-92% ven-dom → in quel caso <em>sì</em>, servirebbe prenotazione veicolo online. Per te (a piedi), zero preoccupazioni.<br><br>
+      <strong>💡 Prossima azione:</strong> vedi <em>guida_check_traghetti.html</em> v.7 (aggiornata oggi) con procedura giorno G + orari 10-16 agosto + coordinamento transfer hotel.
+    </div>
+  </div>
+
+  <!-- ====== HEADER STILE QUOTIDIANO ====== -->
+  <header class="newspaper">
+    <div class="nameplate">
+      <div class="title">Le Daily Tahiti 🌺<br><small>Daily brief Polinesia Francese · Pre-trip edition</small></div>
+      <div class="date">Martedì<br>4 agosto 2026<br>N° 21 · Anno I</div>
+    </div>
+    <p class="lead"><strong>🗓️ AGENDA UFFICIALE UTENTE:</strong> partenza <strong>Bologna BLQ</strong> venerdì 7 agosto via Zurigo (Swiss LX 1669 + LX 38) + San Francisco (stopover 1 notte al Francisco Bay Inn), arrivo Papeete sabato 8/8 alle 18:55 con United UA 115. Soggiorno di 23 giorni fino al 30 agosto: <strong>IC Tahiti 4 notti (8-12/8)</strong> → ferry Aremiti Tahiti-Moorea mercoledì 12/8 → <strong>Cook's Bay Hotel Moorea 6 notti (12-18/8)</strong> → volo Air Moana NM918 martedì 18/8 → <strong>Royal Bora Bora 6 notti (18-24/8)</strong> → trasferimento a Matira Point → <strong>IC Le Moana 2 notti overwater (24-26/8)</strong> → volo Air Moana NM914 mercoledì 26/8 → <strong>IC Tahiti 2° soggiorno 2 notti (26-28/8)</strong>. Rientro triplo UA 114 → LH 455 → LH 286 (28-30/8). <strong>Countdown 3 giorni alla partenza.</strong></p>
+  </header>
+
+  <!-- ====== COUNTDOWN ====== -->
+  <div class="countdown">
+    <div>
+      <div class="big">3</div>
+      <div class="lbl">Giorni alla partenza · 7 agosto</div>
+    </div>
+    <div>
+      <div class="big">25°</div>
+      <div class="lbl">Mare a Moorea oggi</div>
+    </div>
+    <div>
+      <div class="big">99%</div>
+      <div class="lbl">Hotel Bora Bora già pieni ad agosto</div>
+    </div>
+    <div>
+      <div class="big">3</div>
+      <div class="lbl">Giorni di pioggia attesi ad agosto</div>
+    </div>
+  </div>
+
+  <!-- ====== ITINERARIO UFFICIALE UTENTE ====== -->
+  <section style="background: linear-gradient(180deg,#eaf7ee 0%, #fff 100%); border:2px solid #1a7a3a; border-radius:14px; padding:24px 26px;">
+    <h2 style="color:#1a5c2a; border-bottom:3px solid #1a7a3a; padding-bottom:6px; margin-top:0;">🗓️ IL TUO ITINERARIO ESATTO · 7-30 agosto 2026 (23 giorni · 22 notti)</h2>
+    <p style="font-size:13.5px; color:#5a6b78; margin:8px 0 16px;">Fonte: agenda ufficiale utente aggiornata al 30 dicembre 2025. Voli, hotel, ferry e transfer confermati. Nel workspace tutti i documenti sono ora ricalibrati su questa timeline.</p>
+
+    <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
+      <thead>
+        <tr style="background:#1a7a3a; color:white;">
+          <th style="padding:8px 10px; text-align:left; border:1px solid #146030;">Data</th>
+          <th style="padding:8px 10px; text-align:left; border:1px solid #146030;">Spostamento / Attività</th>
+          <th style="padding:8px 10px; text-align:left; border:1px solid #146030;">Hotel / Notte</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff7e6;">
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>⭐ VEN 7/8</strong></td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">🛫 <strong>LX 1669</strong> BLQ 10:25 → ZRH 11:40 · 🛫 <strong>LX 38</strong> ZRH 13:15 → SFO 16:15</td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>Francisco Bay Inn</strong> (San Francisco)</td>
+        </tr>
+        <tr style="background:#fff7e6;">
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>⭐ SAB 8/8</strong></td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">🛫 <strong>UA 115</strong> SFO 13:25 → PPT 18:55 · Arrivo a Tahiti sera</td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>InterContinental Tahiti Resort &amp; Spa</strong> (Faa'a)</td>
+        </tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">DOM 9/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>TAHITI 1</strong> · Giornata resort · adattamento jet-lag</td><td style="padding:8px 10px; border:1px solid #d4d9e0;">IC Tahiti</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">LUN 10/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>TAHITI</strong> · esplorazione libera</td><td style="padding:8px 10px; border:1px solid #d4d9e0;">IC Tahiti</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">MAR 11/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>TAHITI</strong> · esplorazione libera</td><td style="padding:8px 10px; border:1px solid #d4d9e0;">IC Tahiti</td></tr>
+        <tr style="background:#eaf3fb;">
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>MER 12/8</strong></td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">⛴️ <strong>Ferry Boat Aremiti Tahiti → Moorea</strong> (25 min) · biglietto x2 già acquistato · vedi guida traghetti</td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>Cook's Bay Hotel &amp; Suites</strong> (Moorea)</td>
+        </tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">GIO 13/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>MOOREA</strong></td><td style="padding:8px 10px; border:1px solid #d4d9e0;">Cook's Bay</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">VEN 14/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>MOOREA</strong></td><td style="padding:8px 10px; border:1px solid #d4d9e0;">Cook's Bay</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">SAB 15/8 (Ferragosto)</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>MOOREA</strong> · giorno di festa nazionale</td><td style="padding:8px 10px; border:1px solid #d4d9e0;">Cook's Bay</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">DOM 16/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>MOOREA</strong></td><td style="padding:8px 10px; border:1px solid #d4d9e0;">Cook's Bay</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">LUN 17/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>MOOREA</strong> · ultimo giorno pieno</td><td style="padding:8px 10px; border:1px solid #d4d9e0;">Cook's Bay</td></tr>
+        <tr style="background:#eaf3fb;">
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>MAR 18/8</strong></td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">🛫 <strong>Air Moana NM918</strong> Moorea (MOZ) 10:35 → Bora Bora (BOB) 11:25 · 50 min</td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>Royal Bora Bora</strong></td>
+        </tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">MER 19/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>BORA BORA 0</strong> · primo giorno pieno</td><td style="padding:8px 10px; border:1px solid #d4d9e0;">Royal Bora Bora</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">GIO 20/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>BORA BORA 1</strong></td><td style="padding:8px 10px; border:1px solid #d4d9e0;">Royal Bora Bora</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">VEN 21/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>BORA BORA</strong></td><td style="padding:8px 10px; border:1px solid #d4d9e0;">Royal Bora Bora</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">SAB 22/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>BORA BORA</strong></td><td style="padding:8px 10px; border:1px solid #d4d9e0;">Royal Bora Bora</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">DOM 23/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>BORA BORA</strong></td><td style="padding:8px 10px; border:1px solid #d4d9e0;">Royal Bora Bora</td></tr>
+        <tr style="background:#fff7e6;"><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>LUN 24/8</strong></td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>TRASFERIMENTO tra hotel</strong> Royal → IC Le Moana (stessa isola, entrambi a Matira Point, ~5-10 min taxi ~1.500 XPF)</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>InterContinental Bora Bora Le Moana</strong> (notte 1 di 2)</td></tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">MAR 25/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;">BORA BORA · giornata al IC Le Moana · overwater experience</td><td style="padding:8px 10px; border:1px solid #d4d9e0;">IC Le Moana (notte 2 di 2)</td></tr>
+        <tr style="background:#eaf3fb;">
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>MER 26/8</strong></td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">🛫 <strong>Air Moana NM914</strong> Bora Bora (BOB) 15:15 → Papeete (PPT) · 50 min</td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>InterContinental Tahiti</strong> (2° soggiorno)</td>
+        </tr>
+        <tr><td style="padding:8px 10px; border:1px solid #d4d9e0;">GIO 27/8</td><td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>TAHITI 2</strong> · ultimo giorno pieno in Polinesia</td><td style="padding:8px 10px; border:1px solid #d4d9e0;">IC Tahiti</td></tr>
+        <tr style="background:#faeaea;">
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>⭐ VEN 28/8</strong></td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">🛫 <strong>UA 114</strong> PPT 21:10 → SFO 08:15 (+1)</td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">In volo notturno</td>
+        </tr>
+        <tr style="background:#faeaea;">
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>SAB 29/8</strong></td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">🛫 <strong>LH 455</strong> SFO 14:40 → FRA 10:25 (+1) · attraversamento data line</td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">In volo notturno</td>
+        </tr>
+        <tr style="background:#faeaea;">
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;"><strong>DOM 30/8</strong></td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">🛫 <strong>LH 286</strong> FRA 16:20 → BLQ 17:50 · <strong>RIENTRO A BOLOGNA</strong></td>
+          <td style="padding:8px 10px; border:1px solid #d4d9e0;">🏠 Casa</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="background:#fff4d6; border-left:4px solid #d4941a; padding:12px 16px; border-radius:8px; margin-top:16px; font-size:13.5px;">
+      <strong>✅ NOTA · Ferry Tahiti-Moorea del 12 agosto:</strong> operatore <strong>Aremiti</strong>. Il biglietto aperto Aremiti 360 gg x2 (già acquistato) va usato mercoledì 12 agosto. Vedi <em>guida_check_traghetti.html</em> per procedura giorno G e orari corse.</div>
+
+    <div style="background:#eaf3fb; border-left:4px solid #1a5aa8; padding:12px 16px; border-radius:8px; margin-top:12px; font-size:13.5px;">
+      <strong>🔍 VERIFICA ORARI VOLI (ricontrollata il 28/7 con FlightRadar/Planemapper):</strong>
+      <ul style="margin:6px 0 0 20px; padding:0;">
+        <li><strong>LX 1669 BLQ→ZRH del 7/8:</strong> la tua agenda dice "10:45 10:25 – 12:00 11:40" (sembra correzione dell'utente). I dati Planemapper per lo stesso volo nelle settimane 25/7-12/8 mostrano <strong>orario standard 10:40 → 11:55 (Airbus A220-300)</strong>. La differenza di ~15 min è nella tolleranza normale. <strong>Verifica sulla tua carta di imbarco definitiva</strong>: se dice 10:25→11:40, quello vale; se dice 10:40→11:55, quello vale. In ogni caso, arriva a BLQ 2h prima (8:30-8:45).</li>
+        <li><strong>Transit ZRH:</strong> se LX 1669 arriva alle 11:40-11:55 e LX 38 parte alle 13:15 → transit di 1h20-1h35. Stretto se BLQ→ZRH ritarda. Se sei Star Alliance Gold, usa il fast track per i controlli USA-bound.</li>
+        <li><strong>UA 115 SFO→PPT sabato 8/8:</strong> 13:25→18:55 (8h30 di volo, arrivo notturno a Papeete). Confermato standard United.</li>
+        <li><strong>Air Moana NM918 MOZ→BOB del 18/8:</strong> 10:35→11:25 (50 min) — confermato dai database aerei wego/trip.com per il martedì.</li>
+        <li><strong>Air Moana NM914 BOB→PPT del 26/8:</strong> 15:15→~16:15 (50 min) — orario da tua agenda, verifica su airmoana.pf o app 3 giorni prima.</li>
+        <li><strong>UA 114 PPT→SFO ven 28/8:</strong> 21:10→8:15 (+1) — attraversamento data line, atterri al mattino di sabato 29.</li>
+        <li><strong>LH 455 SFO→FRA sab 29/8:</strong> 14:40→10:25 (+1). Attesa a SFO 6h15 — <strong>lounge Star Alliance United Club consigliata</strong> (accesso incluso con Business, con status Gold, o 59 USD day pass).</li>
+        <li><strong>LH 286 FRA→BLQ dom 30/8:</strong> 16:20→17:50 (1h30 di volo). Attesa FRA 5h55 — lunga ma gestibile con la lounge Lufthansa.</li>
+      </ul>
+    </div>
+
+    <div style="background:#eaf3fb; border-left:4px solid #1a5aa8; padding:12px 16px; border-radius:8px; margin-top:10px; font-size:13.5px;">
+      <strong>💡 Considerazioni operative sull'itinerario:</strong>
+      <ul style="margin:6px 0 0 20px; padding:0;">
+        <li><strong>SFO stopover 7-8 agosto:</strong> aggiunge un livello di jet-lag ma dà 1 notte di riposo prima del volo lungo su Papeete. Ottima scelta strategica. Ricorda l'<strong>ESTA obbligatoria</strong> per l'ingresso USA (~21 USD, esta.cbp.dhs.gov). Il Francisco Bay Inn è al 1501 Lombard Street, vicino al Golden Gate, ~30 min taxi SFO airport → hotel.</li>
+        <li><strong>Volo UA 115 SFO→PPT sabato 8:</strong> 8h 30min di volo, arrivo alle 18:55 locali (buio già calato in Polinesia). Cena leggera in hotel + sonno subito.</li>
+        <li><strong>Itinerario "3 isole + doppia Tahiti":</strong> Tahiti 4 notti → Moorea 6 → Bora Bora 8 (7 Royal + 1 Le Moana) → Tahiti 2. È un ottimo bilanciamento: Tahiti sia in ingresso (jet-lag + Salon Rentrée) sia in uscita (relax pre-volo lungo).</li>
+        <li><strong>Volo Moorea → Bora Bora 18/8:</strong> Air Moana NM918 in orario confermato dai database wego/trip.com (partenza lunedì regolare 10:35, arrivo 11:25). ETA transfer Cook's Bay → aeroporto Moorea (Temae) = ~30 min taxi.</li>
+        <li><strong>IC Le Moana 2 notti 24-26/8:</strong> due notti overwater bungalow a Matira Point come conclusione del soggiorno a Bora Bora. Il trasferimento dal Royal è la sera del 24/8 (lunedì) — ~5-10 min di taxi (~1.500 XPF) tra i due hotel vicini. IC Le Moana ha accesso diretto alla laguna con bungalow su palafitte — sarà l'apoteosi del viaggio.</li>
+        <li><strong>Rientro via SFO + Francoforte:</strong> 3 tratte totali (PPT-SFO 8h + SFO-FRA 11h + FRA-BLQ 1h30). ~40 ore in movimento con 2 attese aeroportuali (SFO 6h15, FRA 5h55). Sconsigliato prendere hotel a FRA: passa nella lounge Star Alliance.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====== PRIMA PAGINA / SUMMARY (versione snella) ====== -->
+  <div class="summary">
+    <h2>★ Prima pagina – aggiornamenti operativi del 4 agosto</h2>
+
+    <p style="font-size:13.5px; color:#5a6b78; margin-bottom:14px;"><em>Sezione focalizzata solo sulle informazioni operative utili al tuo viaggio. Cronaca e politica polinesiana escluse per snellezza.</em></p>
+
+    <h3 style="color:#8a5a00; margin-top:14px; border-bottom:2px solid #f0d9a8; padding-bottom:4px;">📅 Milestone imminenti pre-partenza</h3>
+    <p style="margin:8px 0;"><strong>Giovedì 6 agosto - domenica 9 agosto: SALON DE LA RENTRÉE, SPORTS &amp; LOISIRS al Parc Expo Mamao (Papeete).</strong> Coincide col tuo arrivo sabato 8/8 sera. Ottima immersione culturale non impegnativa per <strong>domenica 9 agosto</strong> (giorno di adattamento jet-lag). Consigliato tardo pomeriggio 16-19h. <em>Il Nu'uroa Fest del 31/7-1/8 è ormai concluso.</em></p>
+    <p style="margin:8px 0;"><strong>Giovedì 6 agosto - domenica 9 agosto: SALON DE LA RENTRÉE, DES SPORTS &amp; DES LOISIRS al Parc Expo Mamao a Papeete.</strong> Coincide con il tuo arrivo sabato 8 sera. Ottima immersione culturale non impegnativa per la <strong>domenica 9 agosto</strong> (giorno di adattamento jet-lag). Consigliato tardo pomeriggio 16-19h.</p>
+    <p style="margin:8px 0;"><strong>Venerdì 7 agosto (T-0): LA TUA PARTENZA DA BOLOGNA ✈️</strong> — BLQ 10:25 → ZRH → SFO 16:15. Prima notte al <strong>Francisco Bay Inn</strong>, poi sabato 8 UA 115 SFO 13:25 → PPT 18:55.</p>
+    <p style="margin:8px 0;"><strong>Sabato 15 agosto (Ferragosto):</strong> festa dell'Assunzione, festa nazionale francese anche in Polinesia. Sarai a Moorea. Molti negozi/uffici chiusi la mattina, aperti dal pomeriggio. Buon giorno per una giornata rilassata in laguna o al Belvédère di Opunohu (aperto).</p>
+
+    <h3 style="color:#5a6b78; margin-top:14px; border-bottom:2px solid #d9e3e8; padding-bottom:4px;">📋 Stato operativo (aggiornamenti routine)</h3>
+    <ul style="margin:8px 0 0 20px;">
+      <li style="margin-bottom:10px;"><strong>🌤️ Meteo:</strong> settimo giorno consecutivo di tempo stabile sulle Society. Alisei di E-SE regolari a 15-20 km/h, sole prevalente, temperature 25-26°C. Nessuna vigilanza meteo attiva. Il pattern di alta stagione secca è pienamente installato — meteo ideale attesa per il tuo soggiorno del 7-30 agosto.</li>
+      <li style="margin-bottom:10px;"><strong>⛴️ Traghetto Aremiti:</strong> ✅ biglietto x2 già in mano (aperto 360gg, nessuna prenotazione posto per pedoni). Traversata mercoledì 12/8 confermata da agenda. Guida traghetti v.13 con orari verificati, procedura giorno G, transfer hotel.</li>
+      <li style="margin-bottom:10px;"><strong>✈️ Voli:</strong> tutti i voli in agenda (LX 1669, LX 38, UA 115, NM918, NM914, UA 114, LH 455, LH 286) confermati sui pattern storici. Verifica orari nel box "🔍 Verifica orari voli" più sotto.</li>
+      <li style="margin-bottom:10px;"><strong>🍽️ Newrest (catering voli):</strong> produzione a Faa'a operativa, catering voli internazionali garantito. Nessuna preoccupazione per il tuo UA 115 dell'8/8.</li>
+    </ul>
+  </div>
+
+  <!-- ====== METEO ====== -->
+  <section>
+    <h2 class="section-title"><span class="tag tag-meteo">Meteo</span> Bollettino del 4 agosto e outlook viaggio</h2>
+
+    <div class="ok"><strong>✅ Settimo giorno consecutivo di tempo stabile sulle Society Islands.</strong> Il pattern di <strong>alta stagione secca</strong> è pienamente installato e sta funzionando in modo esemplare — l'unico "colpo di coda" delle intemperie di metà luglio è ormai completamente archiviato. Alisei di E-SE dominanti a 15-20 km/h, cielo prevalentemente sereno con velature deboli sui rilievi interni nel pomeriggio, mare da poco mosso a leggermente mosso, temperature diurne stabili intorno a 25-26°C, notti a 21-22°C. La settimana <strong>28 luglio - 3 agosto</strong> è prevista con lo stesso identico profilo — Météo France Polynésie non segnala alcun sistema perturbato in avvicinamento dal Pacifico Sud fino ai primi di agosto. <em>Nessuna vigilanza meteo attiva su alcun arcipelago delle Society Islands.</em></div>
+
+    <p><strong>Oggi 28 luglio · panoramica arcipelagi (fonte Météo France Polynésie):</strong></p>
+    <ul style="font-size:14px; margin:6px 0 12px;">
+      <li><strong>Tahiti (Papeete, Faa'a, Punaauia, Teahupoo):</strong> sole prevalente per tutta la giornata, qualche cumulo sui rilievi interni (Aorai, Mont Marau) dal pomeriggio. Vento moderato E-SE 15-20 km/h (aliseo tipico). Mare poco mosso da SE. Temperature 25-26°C il giorno, 21-22°C la notte. UV indice 10 (estremo) al picco solare tra 11:00 e 15:00.</li>
+      <li><strong>Moorea:</strong> stesse condizioni di Tahiti. Fenomeno tipico dell'alta stagione: <em>nuvole si addensano sui rilievi Belvédère di Opunohu</em> nel pomeriggio ma il cielo lagunare resta limpido. Ideale per giornate in spiaggia.</li>
+      <li><strong>Bora Bora / Sottovento (Raiatea, Tahaa, Huahine, Maupiti):</strong> tempo sereno, aliseo E-SE 15-20 km/h. Mare poco mosso nella laguna, moderato all'esterno del reef. <strong>Lagoon tour operativi al 100%.</strong> Condizioni eccellenti per snorkeling nel Coral Garden e visita ai motu.</li>
+      <li><strong>Tuamotu:</strong> tempo secco e ventilato su tutto l'arcipelago. L'instabilità dei giorni scorsi (Manihi-Fangatau-Reao) si è dissipata.</li>
+      <li><strong>Australi (Rapa, Rurutu, Tubuai):</strong> sole e freschezza (~20°C il giorno, 15-16°C la notte). Vento moderato SE. Da notare che è la <strong>stagione delle megattere</strong> anche qui, con Rurutu tra i punti più densi di avvistamenti da terra.</li>
+      <li><strong>Marchesi (Nuku Hiva, Hiva Oa, Ua Huka):</strong> soleggiato con ambiente più asciutto e fresco. Aliseo leggero.</li>
+    </ul>
+    <p>Tramonto a Papeete: <strong>17:56</strong>. Alba: <strong>06:15</strong>. Mare a Moorea: 25°C. <strong>Tahiti oggi:</strong> 25-26°/22°, sereno con aliseo, mare 25°C. <strong>Domani (29 luglio, mercoledì):</strong> conferma del trend, condizioni identiche. Prossimi 10 giorni (28/7 - 7/8): stabilità confermata fino alla tua partenza da Bologna (7 agosto), aliseo regolare, nessun sistema perturbato in avvicinamento. Il tuo arrivo a Papeete sabato 8 agosto avverrà quasi certamente sotto un cielo prevalentemente sereno con temperature 25-27°C — condizioni ideali per il primo bagno in laguna.</p>
+
+    <p style="font-size:13px; color:#5a6b78; font-style:italic; background:#f7fbfd; padding:10px; border-radius:8px; margin:12px 0;">💡 <strong>Prospettiva per il tuo viaggio (7-30 agosto, T-3 alla partenza):</strong> agosto è statisticamente il <strong>mese più asciutto e ventilato dell'anno</strong> in Polinesia francese. Il pattern climatologico prevede ~3-4 giorni di pioggia in tutto il mese (concentrati in piovaschi brevi pomeridiani), aliseo dominante di SE a 15-25 km/h, mare 25-26°C, UV indice 9-10 al picco. <strong>Zero rischio cicloni</strong> (stagione ciclonica va da novembre ad aprile). Le intemperie del 15-17/7 sono state <em>l'ultimo colpo di coda della transizione stagionale</em>, non l'inizio di una tendenza. La proiezione per il tuo soggiorno è <strong>meteo ideale con predominanza di sole</strong>. Il consiglio: porta una felpa leggera per le sere sulla veranda del bungalow (a Bora Bora l'aliseo di sera fa "fresco") e un k-way ultraleggero per gli eventuali piovaschi pomeridiani.</p>
+
+    <div class="weather-row">
+      <div class="wbox"><div class="num">26°</div><div class="lbl">Papeete oggi</div></div>
+      <div class="wbox"><div class="num">27°</div><div class="lbl">Moorea oggi</div></div>
+      <div class="wbox"><div class="num">28°</div><div class="lbl">Bora Bora oggi</div></div>
+      <div class="wbox"><div class="num">25°</div><div class="lbl">T° mare</div></div>
+      <div class="wbox"><div class="num">SE 18</div><div class="lbl">Vento km/h</div></div>
+      <div class="wbox"><div class="num">UV 8</div><div class="lbl">Indice UV</div></div>
+    </div>
+
+    <h3>Outlook agosto 2026</h3>
+    <table>
+      <tr><th>Isola</th><th>Max / Min</th><th>Pioggia mensile</th><th>Vento</th><th>Sensazione</th></tr>
+      <tr><td>Papeete</td><td>26° / 22°</td><td>~65–93 mm (3 gg)</td><td>Aliseo SE 15–20</td><td>Ottimo</td></tr>
+      <tr><td>Moorea</td><td>27° / 22°</td><td>~70 mm</td><td>SE 15–25</td><td>Ottimo</td></tr>
+      <tr><td>Bora Bora</td><td>28–29° / 23°</td><td>~40–60 mm</td><td>E/SE, fino 35</td><td>Perfetto</td></tr>
+    </table>
+
+    <div class="ok"><strong>Trend confermato:</strong> agosto resta storicamente il mese più asciutto e ventilato dell'anno, zero rischio cicloni. La settimana passata di giugno è stata coerente con le medie.</div>
+
+    <div class="infographic">
+      <img src="infografica_meteo.png" alt="Infografica meteo agosto 2026 in Polinesia Francese">
+      <div class="caption">Fig. 1 – Dashboard meteo agosto 2026 per le tre isole principali</div>
+    </div>
+  </section>
+
+  <!-- ====== SALUTE · KIT & RETE OSPEDALI (versione snella) ====== -->
+  <section>
+    <h2 class="section-title"><span class="tag tag-salute">Salute</span> Kit medico &amp; rete ospedali (info operative)</h2>
+
+    <p style="font-size:13.5px; color:#5a6b78;">Sezione ridotta all'essenziale per il viaggio: rete sanitaria delle isole del tuo itinerario, numeri di emergenza, kit medico da preparare, note vaccinazioni.</p>
+
+    <h3 style="margin-top:18px;">🏥 Rete sanitaria delle tue isole (Tahiti · Moorea · Bora Bora)</h3>
+    <table>
+      <tr><th>Isola</th><th>Struttura</th><th>Capacità</th></tr>
+      <tr><td><strong>Tahiti</strong></td><td>CHPF Taaone (Pirae)</td><td>Ospedale di riferimento, urgenze 24/7, tutte le specialità</td></tr>
+      <tr><td>Tahiti</td><td>Clinique Cardella + Clinique Paofai (private, Papeete)</td><td>Cliniche private, buon livello, accettano assicurazioni viaggio</td></tr>
+      <tr><td><strong>Moorea</strong></td><td>Hôpital Afareaitu</td><td>Piccolo, urgenze base + medicina generale. Trasferimenti rapidi a Tahiti via ferry o elicottero</td></tr>
+      <tr><td><strong>Bora Bora</strong></td><td>Hôpital Vaitape</td><td>Centro medico essenziale, urgenze base. Casi gravi evacuati a Tahiti via volo (~50 min)</td></tr>
+    </table>
+
+    <div class="info">
+      <strong>Numeri utili 24/7:</strong> <strong>15</strong> SAMU (urgenze mediche) · <strong>17</strong> Gendarmerie · <strong>18</strong> Pompieri · <strong>112</strong> numero europeo unico. Farmacie di guardia consultabili su <em>tahitipharmacie.pf</em>. La maggior parte dei resort ha medico convenzionato in 30 min.
+    </div>
+
+    <div class="warn" style="margin-top:12px;">
+      <strong>Assicurazione viaggio:</strong> per patologie gravi/complesse (infarto, ictus, traumi maggiori) è probabile un'<strong>evac sanitaria verso Nuova Zelanda, Australia o Francia</strong>. Verifica di avere copertura evacuazione &gt;500.000 €.
+    </div>
+
+    <h3 style="margin-top:22px;">💊 Cosa mettere nel kit medico</h3>
+    <ul class="actionable">
+      <li>Repellente DEET 30%+ o icaridina 20% (più efficace di prodotti locali)</li>
+      <li>Sunscreen reef-safe SPF 50+ (Stream2Sea, Badger, Manda — comprato in Italia, costa 3x in loco)</li>
+      <li>After-sun aloe / doposole calmante</li>
+      <li>Antistaminico orale (punture insetti, eventuale ciguatera lieve)</li>
+      <li>Antinfiammatorio + paracetamolo (NB: in caso sospetta dengue <strong>solo paracetamolo</strong>, NO ibuprofene/aspirina)</li>
+      <li>Antidiarroico + sali reidratanti</li>
+      <li>Cerotti impermeabili (essenziali se cammini in valli o cascate)</li>
+      <li>Disinfettante per ferite (soprattutto se ti graffi su corallo)</li>
+      <li>Crema cortisonica leggera (punture, eruzioni)</li>
+      <li>Eventuali farmaci cronici in quantità doppia, prescrizione in inglese/francese</li>
+    </ul>
+
+    <div class="alert">
+      <strong>Vaccinazioni:</strong> nessuna obbligatoria. <em>Raccomandate</em>: antitetanica aggiornata, epatite A. <strong>Febbre gialla obbligatoria</strong> solo se transiti &gt;12h in paese a rischio (non è il tuo caso — scalo USA).
+    </div>
+  </section>
+
+  <!-- ====== AGENDA EVENTI ====== -->
+  <section>
+    <h2 class="section-title"><span class="tag tag-eventi">Agenda</span> Eventi di agosto 2026</h2>
+
+    <p style="font-size:13.5px; color:#5a6b78;">Focus sugli eventi del mese del tuo viaggio.</p>
+
+    <table>
+      <tr><th>Data</th><th>Evento</th><th>Dove</th></tr>
+      <tr><td>31 lug - 1 ago</td><td>Nu'uroa Fest (artigianato, musica, cucina tradizionale)</td><td>Punaauia (Tahiti) · Musée de Tahiti et des Îles</td></tr>
+      <tr><td>2 ago</td><td>Chiusura Heiva i Bora Bora (fine sport tradizionali) — <em>sarai a Bora Bora dal 18/8, troppo tardi per vederlo</em></td><td>Bora Bora</td></tr>
+      <tr style="background:#eaf7ee;"><td><strong>6-9 ago</strong></td><td><strong>Salon de la Rentrée, des Sports &amp; des Loisirs</strong> (coincide col tuo arrivo a Tahiti sabato 8/8!)</td><td>Papeete · Parc Expo Mamao</td></tr>
+      <tr style="background:#fff7e6;"><td><strong>⭐ VEN 7 AGO</strong></td><td><strong>LA TUA PARTENZA da BOLOGNA (BLQ)</strong> · LX 1669 10:25 → ZRH 11:40 · LX 38 ZRH 13:15 → SFO 16:15 · notte a Francisco Bay Inn</td><td>Bologna → Zurigo → San Francisco</td></tr>
+      <tr style="background:#fff7e6;"><td><strong>⭐ SAB 8 AGO</strong></td><td><strong>UA 115 SFO 13:25 → PPT 18:55</strong> · Arrivo a Papeete di sera · check-in InterContinental Tahiti</td><td>San Francisco → Faa'a (Tahiti)</td></tr>
+      <tr><td>DOM 9 AGO</td><td>TAHITI 1 · Recupero jet-lag · giornata resort + eventuale visita Salon Mamao pomeriggio</td><td>IC Tahiti</td></tr>
+      <tr><td>LUN 10 AGO</td><td>TAHITI · giornata libera esplorazione (Papeete, Punaauia)</td><td>IC Tahiti</td></tr>
+      <tr><td>MAR 11 AGO</td><td>TAHITI · giornata libera (Tahiti Iti, Teahupoo, cascate Faarumai)</td><td>IC Tahiti</td></tr>
+      <tr style="background:#eaf3fb;"><td><strong>MER 12 AGO</strong></td><td>⛴️ <strong>Ferry Boat Tahiti → Moorea</strong> 25 min · check-in Cook's Bay Hotel</td><td>Vaiare (Moorea)</td></tr>
+      <tr><td>13-17 AGO</td><td>MOOREA (5 giorni pieni) · include <strong>FERRAGOSTO sabato 15/8</strong> (festa nazionale, molti negozi/uffici chiusi mattina)</td><td>Cook's Bay</td></tr>
+      <tr style="background:#eaf3fb;"><td><strong>MAR 18 AGO</strong></td><td>🛫 <strong>Air Moana NM918 MOZ 10:35 → BOB 11:25</strong> · check-in Royal Bora Bora</td><td>Bora Bora</td></tr>
+      <tr><td>19-23 AGO</td><td>BORA BORA al Royal (5 giorni pieni) · lagoon tour, snorkeling, Matira Beach, cene al motu</td><td>Royal Bora Bora</td></tr>
+      <tr style="background:#fff7e6;"><td><strong>LUN 24 AGO</strong></td><td>Trasferimento tra hotel · Royal → IC Le Moana (stessa isola, entrambi Matira Point)</td><td>IC Le Moana (2 notti · overwater)</td></tr>
+      <tr><td>MAR 25 AGO</td><td>Giornata al IC Le Moana · overwater experience, ultima full-day a Bora Bora</td><td>IC Le Moana</td></tr>
+      <tr style="background:#eaf3fb;"><td><strong>MER 26 AGO</strong></td><td>🛫 <strong>Air Moana NM914 BOB 15:15 → PPT</strong> · check-in IC Tahiti (2° soggiorno)</td><td>IC Tahiti</td></tr>
+      <tr><td>GIO 27 AGO</td><td>TAHITI 2 · ultimo giorno pieno · shopping perle nere, ultimo bagno in laguna</td><td>IC Tahiti</td></tr>
+      <tr style="background:#faeaea;"><td><strong>⭐ VEN 28 AGO</strong></td><td>🛫 <strong>UA 114 PPT 21:10 → SFO 08:15 (+1)</strong> · volo notturno</td><td>In volo</td></tr>
+      <tr style="background:#faeaea;"><td><strong>SAB 29 AGO</strong></td><td>🛫 <strong>LH 455 SFO 14:40 → FRA 10:25 (+1)</strong> · attraversamento data line</td><td>In volo</td></tr>
+      <tr style="background:#faeaea;"><td><strong>DOM 30 AGO</strong></td><td>🛫 <strong>LH 286 FRA 16:20 → BLQ 17:50</strong> · <strong>RIENTRO A BOLOGNA</strong></td><td>🏠 Casa</td></tr>
+    </table>
+  </section>
+
+  <!-- ====== TIP DEL GIORNO ====== -->
+  <section>
+    <h2 class="section-title"><span class="tag tag-tip">Tip del giorno</span> Cosa fare oggi per il tuo viaggio</h2>
+    <ol class="actionable">
+      <li><strong>❌ ETIS: non è più richiesto</strong> (era il modulo sanitario COVID, disattivato dal 28 marzo 2022). Per cittadini italiani/UE nessuna registrazione online per la Polinesia. <strong>Attenzione:</strong> se il volo transita negli USA, serve l'<strong>ESTA</strong> (~21 USD, esta.cbp.dhs.gov).</li>
+      <li><strong>Verificare le date del Multi-Island Air Tahiti Pass</strong>: il "Bora Bora Pass" copre Moorea + Huahine + Raiatea/Tahaa + Bora Bora e va prenotato in coordinamento con il volo intercontinentale.</li>
+      <li><strong>Comprare sunscreen reef-safe</strong>: in Polinesia le creme con oxybenzone/octinoxate sono <em>vietate</em> per legge. Marche ok: Stream2Sea, Badger, Manda.</li>
+    </ol>
+  </section>
+
+  <!-- ====== KIT ANTI-ZANZARE · COMPLETATO ====== -->
+  <section>
+    <h2 class="section-title"><span class="tag tag-salute">Kit pre-partenza</span> ✅ Repellenti · KIT COMPLETATO</h2>
+    <div class="ok" style="margin:6px 0;">
+      <strong>✅ Repellenti anti-zanzare acquistati:</strong> l'utente conferma di aver acquistato i 5 prodotti selezionati (Jungle Formula spray + roll-on, Autan Tropical, Foille Extra Strong, Alontan Extreme). Sezione dettaglio prodotti <strong>rimossa</strong> dal daily brief perché non più operativa.
+    </div>
+    <div class="info" style="margin-top:10px;">
+      <strong>💡 Promemoria d'uso in Polinesia:</strong>
+      <ul class="actionable" style="margin:6px 0 0 18px; padding:0; font-size:13.5px;">
+        <li>Applica <strong>SOLO DOPO</strong> la crema solare reef-safe (aspetta ~15 min di assorbimento)</li>
+        <li>Riapplica ogni 4-8 ore (più frequentemente dopo bagno o sudorazione intensa)</li>
+        <li>Evita contorno occhi, bocca, ferite. Per il viso applica con le mani, non spray diretto</li>
+        <li>Roll-on Jungle Formula è l'unico OK bagaglio a mano (non spray). Gli altri vanno in stiva.</li>
+        <li>Braccialetti citronella e ultrasuoni sono <strong>scientificamente inutili</strong> contro zanzare tropicali</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====== 30 CONSIGLI PERSONALI ====== -->
+  <section style="background: linear-gradient(180deg,#fff9ec 0%, #fff 100%); border:2px solid #d4941a;">
+    <h2 class="section-title"><span class="tag" style="background:#8a5a00;">Consigli finali</span> 🎁 30 consigli personali per il tuo viaggio (T-3 · itinerario 23 giorni)</h2>
+    <p style="font-size:14px; color:#5a6b78;">Selezione riscritta ex-novo il 4 agosto 2026 dopo aver ricevuto l'agenda esatta. Ordinata sul <strong>tuo itinerario reale</strong>: Bologna → Zurigo → San Francisco (1 notte) → Papeete → Tahiti (4 notti) → Moorea (6) → Bora Bora (7 Royal + 1 Le Moana) → Tahiti (2) → San Francisco → Francoforte → Bologna. Ogni consiglio è pensato per far risparmiare tempo, denaro, o per rendere l'esperienza più autentica.</p>
+
+    <h3 style="color:#8a5a00; margin-top:20px; border-bottom:2px solid #f0d9a8; padding-bottom:6px;">🗓️ Blocco 1 · Ultimi 3 giorni pre-partenza (4-6 agosto)</h3>
+    <ol class="actionable" style="padding-left:22px;">
+      <li style="margin-bottom:12px;"><strong>ORA: verifica l'ESTA</strong> loggando su esta.cbp.dhs.gov. Ne hai bisogno per TRE ingressi USA (SFO andata, SFO ritorno, transito). L'ESTA è valida per multiple entrate — un'unica richiesta copre tutto il viaggio. Costo: 21 USD, validità 2 anni. Se lo status è "Authorization Approved", stampa 2 copie (una in valigia, una in cabin bag) e salva PDF sul telefono.</li>
+      <li style="margin-bottom:12px;"><strong>Prenota transfer per il Francisco Bay Inn</strong>: l'hotel è al 1501 Lombard Street (Marina District). Da SFO: taxi ~30 min / 55-70 USD, oppure Uber/Lyft ~40-50 USD, oppure BART + bus ~5 USD ma 90 min. Consiglio: <strong>Uber</strong> — dopo 11 ore di volo intercontinentale non hai voglia di combattere col trasporto pubblico. Prenota Uber quando atterri (SFO ha rete WiFi pubblica gratuita).</li>
+      <li style="margin-bottom:12px;"><strong>Compra 300 € in franchi polinesiani + 200 USD in contanti PRIMA DI PARTIRE.</strong> Servono USD per: taxi SFO airport, cene a SF, mance americane obbligatorie 18-20%. Servono XPF per: taxi Faa'a-IC Tahiti, roulottes Place Vaiete, mance polinesiane opzionali. In Italia: banca 3-5 giorni lavorativi per XPF (ultimo momento utile: mercoledì 29/7). USD facili anche in aeroporto ma cambio pessimo — meglio in banca.</li>
+      <li style="margin-bottom:12px;"><strong>Scarica offline le mappe di Google Maps</strong>: San Francisco (Marina District + Golden Gate), Papeete/Faa'a/Punaauia, Moorea intera, Bora Bora intera. Totale ~700 MB. In Polinesia molte zone hanno segnale mobile debole; a SF nel Marina District il segnale è ottimo ma è comunque utile in caso di roaming spento.</li>
+      <li style="margin-bottom:12px;"><strong>eSIM strategy per 23 giorni</strong>: Airalo/Holafly per USA (~5-8 USD per 7 giorni, 5 GB — copre solo Days 1-2) + eSIM Polinesia (~35-45 € per 30 giorni, 10 GB). Attiva la prima il 6 agosto sera, la seconda l'8 agosto in volo SFO-PPT. NON attivare il roaming Vodafone/TIM: costa 5 €/giorno × 23 giorni = 115 € contro 40-50 € totali delle eSIM.</li>
+      <li style="margin-bottom:12px;"><strong>Prenota transfer per l'InterContinental Tahiti</strong> scrivendo a <em>concierge.tahiti@ihg.com</em> con oggetto "Airport transfer request - Guest [nome cognome] - arriving UA115 8 August 18:55". Costo transfer standard 2 pax + bagagli: ~6.000-8.000 XPF (~50-65 €). Alternativa: taxi normale ~3.500 XPF (~30 €) dai marciapiedi Faa'a. Con 11h volo + già stanchezza di 1 notte a SF, il transfer prenotato vale.</li>
+      <li style="margin-bottom:12px;"><strong>Scrivi ORA a Cook's Bay Hotel &amp; Suites Moorea</strong> (+689 40 55 41 00) per: 1) transfer Vaiare → hotel mercoledì 12/8 pomeriggio (~2.500 XPF); 2) transfer Cook's Bay → aeroporto Temae martedì 18/8 mattina (~3.000 XPF, distanza 25 km). L'ultimo è critico perché il volo NM918 parte alle 10:35 — devi essere in aeroporto entro le 09:30 = partire dall'hotel alle 08:45 max.</li>
+      <li style="margin-bottom:12px;"><strong>Scrivi al Royal Bora Bora</strong> per confermare pickup dall'aeroporto di Bora Bora martedì 18/8 alle 11:25 (arrivo NM918). Bora Bora ha aeroporto sul <strong>Motu Mute</strong> — un motu separato dall'isola principale — quindi il transfer include una <strong>navetta in barca</strong> ~15 min + transfer terrestre ~15 min. Total time da aeroporto a Royal ~40-50 min. Costo: spesso incluso nel resort (verifica), altrimenti ~5.000-7.000 XPF a persona.</li>
+      <li style="margin-bottom:12px;"><strong>Scrivi all'IC Le Moana Bora Bora</strong> (+689 40 60 49 00) per organizzare il trasferimento Royal Bora Bora → IC Le Moana martedì 25/8. I due hotel sono vicini (entrambi a Matira Point), ~5-10 min taxi = ~1.500 XPF. Chiedi conferma bungalow overwater assegnato (è l'unica notte, vale la pena controllare che sia il bungalow migliore possibile).</li>
+      <li style="margin-bottom:12px;"><strong>Assicurazione viaggio VERIFICATA</strong> per 23 giorni + copertura USA (importante: assicurazioni base italiane spesso escludono o riducono copertura in USA per spese sanitarie elevate). Copertura consigliata: medico &gt; 500.000 €, evacuazione &gt; 200.000 €. Marche buone: Nobis Filo Diretto, AXA Assistance, World Nomads. Se hai già acquistato: verifica documento e portalo con te (PDF sul telefono).</li>
+    </ol>
+
+    <h3 style="color:#8a5a00; margin-top:20px; border-bottom:2px solid #f0d9a8; padding-bottom:6px;">✈️ Blocco 2 · Volo Bologna → San Francisco → Papeete (7-8 agosto)</h3>
+    <ol class="actionable" start="11" style="padding-left:22px;">
+      <li style="margin-bottom:12px;"><strong>Venerdì 7/8 mattina: arrivo BLQ 2h prima del volo</strong>, cioè entro le 08:25 per LX 1669 delle 10:25. Il volo è codeshare United/Swiss (Star Alliance) — check-in Swiss al desk BLQ. Bagaglio in stiva 23 kg, cabin bag 8 kg + personale. Se sei United MileagePlus o Star Alliance Gold, priorità check-in disponibile.</li>
+      <li style="margin-bottom:12px;"><strong>Zurigo (ZRH) tra le 11:40 e le 13:15 (arrivo LX 1669 + partenza LX 38) = 1h35min di transit</strong>. Non è tantissimo se il volo BLQ-ZRH arriva in ritardo (Swiss spesso puntuale ma non sempre). Prendi il People Mover dal terminal E al terminal A se hai gate diversi. Controlli sicurezza aggiuntivi USA-bound: 20-30 min. <strong>Se hai priorità Sky Priority/Star Alliance Gold, usala.</strong> Snack veloce (barretta, panino) in cabina o al gate prima di imbarcare per SFO.</li>
+      <li style="margin-bottom:12px;"><strong>LX 38 ZRH → SFO (11h30 di volo)</strong>. Direzione ovest = viaggi contro il fuso, giornata "infinita". Alla partenza da ZRH sono le 13:15, all'arrivo a SFO le 16:15 stesso giorno. Consumi molte ore di jet-lag. Strategia: <strong>NON dormire durante il volo</strong> (dormirai la notte a SF con jet-lag 9 ore, meglio se sei stanco). Guarda film, mangia normalmente ai pasti, bevi acqua ogni ora.</li>
+      <li style="margin-bottom:12px;"><strong>All'arrivo a SFO: controllo immigration USA</strong> con ESTA. Fai la fila "Visitors" (non "US Residents"). Tempo attesa: 30-60 min a seconda dell'orario (le 16-17 è ora di punta). L'ufficiale può chiederti: dove alloggi (Francisco Bay Inn), scopo (turismo), quanto resti (1 notte + volo per Tahiti). Rispondi breve e sicuro. Verrà scattata foto + impronte 4 dita.</li>
+      <li style="margin-bottom:12px;"><strong>SFO airport: prendi Uber al livello Departures</strong> (non Arrivals dove ci sono le lunghe code taxi). Salire di 1 piano con l'ascensore, uscire dal terminale, dirigersi al "Ride Share pickup". Prezzo Uber standard SFO → Marina District: 45-55 USD. Tempo tragitto: 25-35 min a seconda del traffico.</li>
+      <li style="margin-bottom:12px;"><strong>Francisco Bay Inn: check-in veloce, cena veloce, dormi.</strong> L'hotel è in Marina District, zona pedonale bella, ristoranti aperti fino tardi. Consigliato per cena veloce: <em>Lucca Delicatessen</em> (deli italiano, sandwich 12-15 USD), <em>Delarosa</em> (pizza italiana, 20-25 USD), oppure Whole Foods Market (self-service, 15 USD). Non uscire per "vedere il Golden Gate": sei distrutto, meglio dormire e magari alzarti presto la mattina di sabato 8 per una passeggiata di 30 min alla Marina Green (5 min a piedi dall'hotel, vista Golden Gate incorniciata).</li>
+      <li style="margin-bottom:12px;"><strong>Sabato 8/8 mattina a SF: check-out entro le 11:00</strong>. Se il volo UA 115 parte alle 13:25 devi essere in SFO entro le 11:15-11:30 (2h prima per international). Uber 25-35 min dal Marina District. Timing: sveglia 07:30, colazione hotel o café vicino 08:00-09:00, passeggiata Marina Green 09:00-10:00 (foto Golden Gate mattina è la migliore per luce), check-out 10:30, Uber verso SFO 10:45, arrivo 11:15. Non tirare troppo.</li>
+      <li style="margin-bottom:12px;"><strong>UA 115 SFO → PPT (8h30 di volo)</strong>. Volo diurno per te (partenza 13:25 ora SF = 22:25 ora Italia). Cerca di dormire almeno 4-5 ore: sei già stanco dal jet-lag, all'arrivo a PPT saranno le 18:55 locali = 06:55 in Italia (hai perso una notte intera). Dormire in volo aiuta l'atterraggio più vivo. Mangia normalmente ai pasti, no alcol, bevi acqua ogni ora.</li>
+      <li style="margin-bottom:12px;"><strong>Sbarco a PPT sabato 8/8 alle 18:55.</strong> Sole calato da ~1 ora (tramonto Papeete ~17:56 in agosto). Controllo passaporto rapido (sei UE cittadino francese in territorio francese = fila EU/FR = 5-10 min). Ritiro bagagli 15-25 min. Cambio USD leftovers → XPF all'ATM (o meglio: usa il resto di USD per l'ultimo volo). Transfer InterContinental Tahiti prenotato ti aspetta all'uscita.</li>
+      <li style="margin-bottom:12px;"><strong>All'IC Tahiti sabato 8/8 sera: cena leggera in camera + sonno immediato.</strong> Sono le 22:00 tue nelle Polinesia, ma il tuo corpo è a ~08:00 del mattino successivo in Italia (fuso UTC-10 + jet-lag ~35 ore di viaggio). Non cercare di "iniziare il viaggio" la prima sera. Room service, doccia, sonno. Sveglia domenica 9/8 spontanea (magari alle 05:00 con jet-lag inverso — è normale, esci per il sunrise sulla laguna).</li>
+    </ol>
+
+    <h3 style="color:#8a5a00; margin-top:20px; border-bottom:2px solid #f0d9a8; padding-bottom:6px;">🌴 Blocco 3 · Tahiti giorni 1-4 (9-12 agosto)</h3>
+    <ol class="actionable" start="21" style="padding-left:22px;">
+      <li style="margin-bottom:12px;"><strong>Domenica 9/8: giornata resort + Salon Mamao pomeriggio.</strong> Mattina rilassa in piscina infinity dell'IC Tahiti (colazione buffet inclusa 07:00-10:30, ottima), pranzo leggero al Te Tiare (ristorante spiaggia, poisson cru consigliato ~2.500 XPF). Pomeriggio 16:00-19:00 taxi al Parc Expo Mamao per il Salon de la Rentrée. Cena roulottes Place Vaiete (~4-5.000 XPF x 2). Rientro IC 22:00, sonno 23:00.</li>
+      <li style="margin-bottom:12px;"><strong>Lunedì 10/8: circle island tour di Tahiti con auto a noleggio.</strong> Ritiri l'auto a Faa'a airport (5 min dal resort), Avis/Europcar ~60-80 € al giorno. Giro in senso orario: Punaauia (Museo di Tahiti opzionale), Papara (Vaipahi Gardens), Papeari, Tautira, Teahupoo, Vairao, Taravao, Papenoo, Point Venus, ritorno IC Tahiti al tramonto. Circa 150 km, 5-7 ore con soste + pranzo poisson cru a Tautira.</li>
+      <li style="margin-bottom:12px;"><strong>Martedì 11/8: giornata più tranquilla.</strong> Mattina in laguna, snorkeling libero dalla spiaggia dell'IC (buoni coralli, pesci pappagallo). Pranzo poolside. Pomeriggio taxi in Papeete (~2.500 XPF), Marché de Papeete (aperto fino alle 17-18), acquisto souvenir/perle nere (attenzione: contratta educatamente, chiedi sempre certificato per perle), Bougainville Park a piedi. Aperitivo al Retro Bar (bel dehors, cocktails 1.500-2.000 XPF). Cena a Meherio Tahitian Bistro (Punaauia, cucina locale rivisitata, ~8-10.000 XPF x 2).</li>
+      <li style="margin-bottom:12px;"><strong>Mercoledì 12/8: mattinata leggera + ferry per Moorea.</strong> Colazione, check-out 11:00, taxi al Papeete Ferry Terminal (Motu Uta, 15 min, ~2.500 XPF). Fai la corsa Aremiti delle <strong>12:25</strong> (Aremiti 6, arriva Vaiare 12:55). Cook's Bay Hotel transfer da Vaiare (già prenotato). Pomeriggio: check-in Cook's Bay 14:00 circa, aperitivo al bar hotel guardando il fiordo di Cook's Bay al tramonto (uno dei più belli al mondo — Herman Melville lo descrisse in "Omoo"). Cena hotel prima sera.</li>
+    </ol>
+
+    <h3 style="color:#8a5a00; margin-top:20px; border-bottom:2px solid #f0d9a8; padding-bottom:6px;">🏝️ Blocco 4 · Moorea giorni 5-10 (13-17 agosto)</h3>
+    <ol class="actionable" start="25" style="padding-left:22px;">
+      <li style="margin-bottom:12px;"><strong>Sei giorni sono TANTI per Moorea</strong> (isola piccola: 17 km × 12 km). Vantaggio: puoi rallentare, alternare 2-3 attività "grosse" con 3-4 giorni "lenti". Attività da prenotare/fare: <em>lagoon tour ATV entroterra</em> (mezza giornata, ~10.000 XPF x 2), <em>Belvédère di Opunohu al tramonto</em> (2h serali, taxi ~3.000 XPF x 2), <em>snorkeling con razze e squali pinna nera a Ta'ahiamanu Beach</em> (gratis se sei in autonomia, ~5.000 XPF con guida), <em>Tiki Village culturale</em> (opzionale, ~8.000 XPF), <em>hike al Trois Cocotiers</em> (4h, gratuito, difficoltà media).</li>
+      <li style="margin-bottom:12px;"><strong>SABATO 15/8 · FERRAGOSTO in Polinesia:</strong> giorno di festa nazionale (Assunzione). Molti negozi/uffici chiusi la mattina, aperti dal pomeriggio. Ristoranti operativi. Buona giornata per: <em>hike Trois Cocotiers</em> (mattino presto, prima del caldo), <em>giornata in laguna</em>, <em>giro dell'isola con auto noleggiata</em> (circa 60 km, 3-4 ore con soste — noleggio Avis o Europcar all'aeroporto Temae). NON è un problema logistico: è invece un'occasione per vedere i polinesiani in festa (messa al Sacré-Cœur di Papeete via TV, famiglie in spiaggia).</li>
+      <li style="margin-bottom:12px;"><strong>Osservazione balene da Moorea: agosto è peak.</strong> Segui i consigli edizioni precedenti: 1) associazione Oceania (sessioni gratuite da terra, scrivi <em>contact@asso-oceania.com</em>), 2) belvederi costa nord (Toatea, Temae, Opunohu), 3) semplice binocolo dalla spiaggia di Ta'ahiamanu. Con 6 giorni a Moorea hai ampio margine — anche se un giorno non le vedi, riprovi il giorno dopo. <strong>NON prendere escursione in barca commerciale dopo la sentenza del TA del 25/7</strong>: rischio operatori esclusi che cercano di venderti "tour privati".</li>
+      <li style="margin-bottom:12px;"><strong>Lunedì 17/8 sera: check-out preparation + valigie.</strong> Domani (18/8) volo NM918 alle 10:35 — devi essere in aeroporto Temae entro le 09:30 = partenza hotel alle 08:45. Verifica bagaglio Air Moana: <strong>franchigia 10 kg + 5 kg cabin</strong> (molto meno di Air France 23 kg!). Se hai eccedenza, ~1.500 XPF/kg extra. Fai valigia "smart": leggero, riduci scarpe, evita eccesso souvenir Moorea (li porti a Bora Bora ma poi Bora Bora → Papeete NM914 stessa franchigia stretta).</li>
+    </ol>
+
+    <h3 style="color:#8a5a00; margin-top:20px; border-bottom:2px solid #f0d9a8; padding-bottom:6px;">🌊 Blocco 5 · Bora Bora giorni 11-18 (18-25 agosto) + IC Le Moana notte overwater (25-26)</h3>
+    <ol class="actionable" start="29" style="padding-left:22px;">
+      <li style="margin-bottom:12px;"><strong>SEI notti al Royal Bora Bora + DUE notti IC Le Moana</strong> = 8 giorni a Bora Bora, davvero il cuore del viaggio. Distribuzione consigliata attività: Days 1-2 relax post-volo (spiaggia Matira, lagoon interna); Day 3 <em>lagoon tour completo</em> mezza giornata (Lagoon Service o Reef Discovery, ~11-13.000 XPF x 2); Day 4 relax; Day 5 <em>4×4 tour Monte Pahia + bunker WWII</em> (~10.000 XPF x 2); Days 6-7 relax + eventuali <em>immersioni TopDive</em> (~15-20.000 XPF/immersione); Day 7 (24/8, lunedì) trasferimento a IC Le Moana per DUE notti overwater "premio" (24-26/8).</li>
+      <li style="margin-bottom:12px;"><strong>Le DUE NOTTI OVERWATER al IC Le Moana (24-26 agosto, arrivo lunedì trasferimento sera dal Royal) sono il momento culminante del viaggio.</strong> Preparati bene: 1) fai arrivare la valigia grande direttamente al bungalow (evita valigia in area comune), 2) prova subito la scala per la laguna DAL BUNGALOW (accesso privato all'acqua tramite scaletta in legno), 3) cena romantica al ristorante Vini Vini dell'IC (~15.000 XPF x 2 con vino, prenotare), 4) tramonto sulla veranda del bungalow con champagne (bottiglia da 5.000 XPF acquistabile in resort o portata da fuori). La mattina del 26/8 fai colazione DAL BUNGALOW (opzione "breakfast on canoe" spesso disponibile, ~4.000 XPF x 2 extra ma vale la pena). La mattina del 26/8 (mercoledì): breakfast on canoe sul bungalow, ultima nuotata nella laguna dal deck, check-out 11:00-12:00, transfer aeroporto Motu Mute (via barca navetta ~15 min + terrestre ~15 min) per volo NM914 delle 15:15.</li>
+    </ol>
+
+    <div style="background:#eaf3fb; border-left:4px solid #1a5aa8; padding:14px 18px; border-radius:8px; margin-top:20px;">
+      <strong>🎁 Bonus finale — la sintesi filosofica (aggiornata per itinerario 23 giorni):</strong>
+      <ol style="margin:8px 0 0 20px; padding:0;">
+        <li style="margin-bottom:8px;"><strong>Il tuo itinerario è ricco e ben bilanciato:</strong> 4 giorni Tahiti (assorbi cultura, jet-lag), 6 Moorea (natura, lentezza), 8 Bora Bora (mare, lusso), 2 Tahiti finali (souvenir, relax pre-volo). Vent'anni di viaggi ai Tropici dicono che questo è <em>il</em> ritmo giusto — non correre di più.</li>
+        <li style="margin-bottom:8px;"><strong>Il "premio finale" è la notte overwater al IC Le Moana (25/8).</strong> Rendila speciale: cena Vini Vini, champagne, mattino colazione dal bungalow. Sarà il ricordo che porterete a casa e racconterete per anni.</li>
+        <li style="margin-bottom:8px;"><strong>Il rientro è lungo (28-30 agosto, ~40h in movimento).</strong> Preparati mentalmente: parte 21:10 da PPT venerdì, arrivo BLQ 17:50 domenica. Assecondalo, non combatterlo. Dormi al ritorno più che nell'andata (hai jet-lag inverso da assorbire, +12 ore). Lunedì 31/8 preparati a essere zombie in ufficio (se lavori il lunedì, prendi almeno 1 giorno di ferie extra).</li>
+      </ol>
+    </div>
+
+    <p style="font-size:12px; color:#5a6b78; margin-top:14px; font-style:italic; text-align:center;">
+      Consigli redatti dal daily brief · <strong>martedì 4 agosto 2026 · T-3 alla partenza</strong> · sulla base dell'agenda ufficiale utente.<br>
+      Suggerimenti basati su: agenda utente ufficiale, guide operative Tahiti Tourisme, thread Reddit r/Tahiti (2023-2026), Miss Tourist Tahiti Guide, wego.com e trip.com per orari Air Moana verificati, INSPQ Santé Voyage, CDC Traveler Health, associazione Oceania Moorea, esperienze concierge InterContinental Tahiti + Cook's Bay Hotel + Royal Bora Bora + IC Le Moana, sentenza TA Papeete 25/7 su whale watching.
+    </p>
+  </section>
+
+  <footer>
+    Daily Brief aggiornato il <strong>4 agosto 2026</strong> · Edizione <strong>N°21 · SNELLITA OPERATIVA</strong>. Modifiche v.21 vs v.20-QUINQUIES: 🔄 <strong>aggiornamento countdown a T-3</strong> (dalla partenza del 7 agosto) · date pre-partenza allineate. Contenuto stabile: 1) itinerario 23 giorni (7-30 agosto); 2) partenza da <strong>Bologna BLQ</strong> via Zurigo + San Francisco; 3) 5 hotel (Francisco Bay Inn, IC Tahiti 4+2, Cook's Bay 6, Royal Bora 6, IC Le Moana 2); 4) Ferry Aremiti 12/8 (biglietto aperto x2 già acquistato); 5) guida traghetti v.15; 6) sistema checkbox multi-stato (vuoto → ✓ fatto → ❤ mi piace → ✗ non mi piace); 7) 30 consigli personali; 8) meteo agosto; 9) 20 escursioni terra + 20 mare + 20 ristoranti tutti spuntabili e linkati; 10) sezioni Cronaca / Politica / Bollettino epidemiologico / Focus malattie <strong>rimosse</strong>. Disponibile anche <strong>versione smartphone</strong> (<code>report_polinesia_mobile.html</code>) con layout mobile-first e senza blocchi notizie. Fonti operative: agenda utente, Meteo France Polynésie, Aremiti Express, wego.com, trip.com, siti hotel ufficiali.<br>
+    Prossima edizione attesa a T-1 (giovedì 6 agosto) per il check finale pre-partenza (voli, meteo, ferry, ultime prenotazioni escursioni).<br>
+    🗓️ <strong>Partenza: venerdì 7 agosto 2026 · rientro: domenica 30 agosto 2026 · 23 giorni totali (di cui 20 in Polinesia + 1 a San Francisco + 2 in volo) · countdown ufficiale a 3 giorni</strong>
+  </footer>
+
+</div>
+
+
+
+
+<script>
+(function() {
+  'use strict';
+
+  function ready(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+
+  ready(function() {
+    const items = document.querySelectorAll('ul.actionable > li, ol.actionable > li, .actionable-card, .actionable-table tr.actionable-row');
+    if (!items.length) return;
+
+    // Stati possibili: '' (vuoto), 'd' (done), 'l' (like), 'x' (dislike)
+    const STATES = ['', 'd', 'l', 'x'];
+    const STATE_CLASS = {'d':'done', 'l':'like', 'x':'dislike'};
+    const STATE_LABEL = {'d':'✓ Fatto', 'l':'❤ Mi piace', 'x':'✗ Non mi piace'};
+
+    // Hash function per ID stabile
+    function hashCode(str) {
+      let h = 0;
+      for (let i = 0; i < str.length; i++) {
+        h = ((h << 5) - h) + str.charCodeAt(i);
+        h |= 0;
+      }
+      return Math.abs(h).toString(36);
+    }
+
+    // Assegna ID stabile a ogni item
+    items.forEach((el, idx) => {
+      const txt = (el.textContent || '').trim().substring(0, 200);
+      const id = 'a' + hashCode(txt + '|' + idx);
+      el.dataset.checkid = id;
+    });
+
+    // Legge stato dall'URL (formato: #s=id1:d,id2:l,id3:x)
+    function getStateFromUrl() {
+      const map = new Map();
+      const hash = window.location.hash;
+      // Vecchio formato #done=id1,id2,... → migro come done
+      const oldMatch = hash.match(/done=([^&]+)/);
+      if (oldMatch) {
+        decodeURIComponent(oldMatch[1]).split(',').filter(Boolean).forEach(id => map.set(id, 'd'));
+      }
+      // Nuovo formato #s=id1:d,id2:l,id3:x
+      const newMatch = hash.match(/[#&]s=([^&]+)/);
+      if (newMatch) {
+        decodeURIComponent(newMatch[1]).split(',').filter(Boolean).forEach(entry => {
+          const [id, state] = entry.split(':');
+          if (id && ['d','l','x'].includes(state)) map.set(id, state);
+        });
+      }
+      return map;
+    }
+
+    // Salva stato in URL
+    function setStateInUrl(stateMap) {
+      const entries = [];
+      stateMap.forEach((state, id) => {
+        if (state) entries.push(id + ':' + state);
+      });
+      const encoded = entries.join(',');
+      const newHash = encoded ? '#s=' + encodeURIComponent(encoded) : '';
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search + newHash);
+      } else {
+        window.location.hash = newHash;
+      }
+    }
+
+    // Applica stato UI
+    function applyState(stateMap) {
+      items.forEach(el => {
+        // Rimuovi tutte le classi di stato
+        el.classList.remove('done', 'like', 'dislike');
+        const state = stateMap.get(el.dataset.checkid);
+        if (state && STATE_CLASS[state]) {
+          el.classList.add(STATE_CLASS[state]);
+        }
+      });
+      updateProgress(stateMap);
+    }
+
+    // Aggiorna barra progresso multi-colore
+    function updateProgress(stateMap) {
+      const total = items.length;
+      let done = 0, like = 0, dislike = 0;
+      stateMap.forEach((state) => {
+        if (state === 'd') done++;
+        else if (state === 'l') like++;
+        else if (state === 'x') dislike++;
+      });
+      const todo = total - done - like - dislike;
+
+      // Barra segmentata
+      const progressBar = document.getElementById('checkbox-progress');
+      if (progressBar) {
+        const w = pct => (total > 0 ? (pct * 100 / total) : 0) + '%';
+        progressBar.innerHTML =
+          '<div class="segment done" style="width:' + w(done) + '"></div>' +
+          '<div class="segment like" style="width:' + w(like) + '"></div>' +
+          '<div class="segment dislike" style="width:' + w(dislike) + '"></div>';
+      }
+
+      // Label multi-stat
+      const label = document.getElementById('checkbox-progress-label');
+      if (label) {
+        label.innerHTML =
+          '<span class="stat stat-todo">' + todo + ' da fare</span>' +
+          '<span class="stat stat-done">✓ ' + done + '</span>' +
+          '<span class="stat stat-like">❤ ' + like + '</span>' +
+          '<span class="stat stat-dislike">✗ ' + dislike + '</span>';
+      }
+    }
+
+    // Ciclo stato al click: '' → 'd' → 'l' → 'x' → ''
+    function cycleState(id, stateMap) {
+      const current = stateMap.get(id) || '';
+      const idx = STATES.indexOf(current);
+      const next = STATES[(idx + 1) % STATES.length];
+      if (next) {
+        stateMap.set(id, next);
+      } else {
+        stateMap.delete(id);
+      }
+      return next;
+    }
+
+    // Handler click
+    items.forEach(el => {
+      el.addEventListener('click', function(e) {
+        // Non spuntare se click su link, bottone, input
+        if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' ||
+            e.target.tagName === 'INPUT' || e.target.closest('a')) return;
+
+        const stateMap = getStateFromUrl();
+        const newState = cycleState(el.dataset.checkid, stateMap);
+        setStateInUrl(stateMap);
+        applyState(stateMap);
+
+        // Feedback visivo temporaneo con toast
+        showToast(newState);
+      });
+    });
+
+    // Toast di feedback
+    let toastTimer = null;
+    function showToast(state) {
+      let toast = document.getElementById('checkbox-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'checkbox-toast';
+        toast.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.85);color:white;padding:8px 16px;border-radius:20px;font-size:13px;font-weight:600;z-index:10000;transition:opacity 0.3s;opacity:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 4px 12px rgba(0,0,0,0.3);';
+        document.body.appendChild(toast);
+      }
+      const labels = {'d':'✓ Fatto', 'l':'❤ Mi piace', 'x':'✗ Non mi piace', '':'○ Vuoto'};
+      const label = labels[state] || '';
+      const colors = {'d':'#1a7a3a', 'l':'#d93a68', 'x':'#6a6a70', '':'#4a5a68'};
+      toast.textContent = label;
+      toast.style.background = colors[state] || 'rgba(0,0,0,0.85)';
+      toast.style.opacity = '1';
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => { toast.style.opacity = '0'; }, 1200);
+    }
+
+    // Crea UI globale
+    const progress = document.createElement('div');
+    progress.id = 'checkbox-progress';
+    document.body.insertBefore(progress, document.body.firstChild);
+
+    const label = document.createElement('div');
+    label.id = 'checkbox-progress-label';
+    document.body.appendChild(label);
+
+    const shareBtn = document.createElement('button');
+    shareBtn.id = 'checkbox-share-btn';
+    shareBtn.textContent = '🔗 Copia link';
+    shareBtn.addEventListener('click', function() {
+      const url = window.location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+          shareBtn.textContent = '✅ Copiato!';
+          setTimeout(() => shareBtn.textContent = '🔗 Copia link', 2000);
+        });
+      } else {
+        prompt('Copia questo link:', url);
+      }
+    });
+    document.body.appendChild(shareBtn);
+
+    const resetBtn = document.createElement('button');
+    resetBtn.id = 'checkbox-reset-btn';
+    resetBtn.textContent = '🗑️ Reset';
+    resetBtn.addEventListener('click', function() {
+      if (!confirm('Rimuovere tutte le spunte (fatto/mi piace/non mi piace)? Non recuperabili.')) return;
+      setStateInUrl(new Map());
+      applyState(new Map());
+    });
+    document.body.appendChild(resetBtn);
+
+    // Hint iniziale (una tantum) con legenda dei 4 stati
+    if (!localStorage.getItem('polinesia-hint-seen')) {
+      const hint = document.createElement('div');
+      hint.className = 'actionable-hint show';
+      hint.innerHTML = '<span class="close">✕</span><strong>💡 Come funzionano le spunte:</strong><br>Click ripetuti ciclano tra:<br>○ vuoto → <span style="color:#5cff8a">✓ fatto</span> → <span style="color:#ff8ab0">❤ mi piace</span> → <span style="color:#ccc">✗ non mi piace</span> → vuoto<br><span style="opacity:0.7;font-size:11px;">(le spunte si salvano nell\'URL)</span>';
+      document.body.appendChild(hint);
+      hint.querySelector('.close').addEventListener('click', function() {
+        hint.classList.remove('show');
+        localStorage.setItem('polinesia-hint-seen', '1');
+      });
+      // Auto-hide dopo 15 sec
+      setTimeout(() => {
+        hint.classList.remove('show');
+        localStorage.setItem('polinesia-hint-seen', '1');
+      }, 15000);
+    }
+
+    // Applica stato iniziale
+    applyState(getStateFromUrl());
+
+    // Sync tra tab
+    window.addEventListener('hashchange', function() {
+      applyState(getStateFromUrl());
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

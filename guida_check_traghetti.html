@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Guida Aremiti · Biglietto Aperto Tahiti–Moorea (nessuna prenotazione posto)</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; background: linear-gradient(180deg, #eaf4f8 0%, #f7fbfd 100%);
+    color: #1c2b3a; line-height: 1.55;
+  }
+  .container { max-width: 920px; margin: 0 auto; padding: 28px 24px 70px; }
+
+  header {
+    background: linear-gradient(135deg, #006d8f, #00aac1);
+    color: white; padding: 28px 30px; border-radius: 14px;
+    margin-bottom: 24px; box-shadow: 0 8px 24px rgba(0, 109, 143, 0.2);
+  }
+  header .kicker {
+    font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.9;
+  }
+  header h1 { margin: 6px 0 8px; font-size: 26px; line-height: 1.25; }
+  header p { margin: 0; opacity: 0.95; font-size: 15px; }
+
+  .fix-banner {
+    background: #ffeaea; border: 2px solid #b03b3b;
+    padding: 16px 20px; border-radius: 10px; margin-bottom: 22px;
+  }
+  .fix-banner .title { color: #7a1f1f; font-weight: 800; font-size: 15px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+  .fix-banner .body { color: #4a1c1c; font-size: 14px; }
+
+  section {
+    background: white; border-radius: 12px; padding: 22px 26px;
+    margin-bottom: 18px; box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  }
+  section h2 {
+    margin: 0 0 14px; color: #006d8f; font-size: 20px;
+    border-bottom: 2px solid #e6f4f8; padding-bottom: 8px;
+  }
+  section h3 { color: #00738d; margin: 18px 0 8px; font-size: 16px; }
+
+  .callout-ok {
+    background: #eaf7ee; border-left: 4px solid #1a7a3a;
+    padding: 14px 18px; border-radius: 8px; margin: 12px 0; font-size: 14px;
+  }
+  .callout-info {
+    background: #eaf3fb; border-left: 4px solid #1a5aa8;
+    padding: 14px 18px; border-radius: 8px; margin: 12px 0; font-size: 14px;
+  }
+  .callout-warn {
+    background: #fff4d6; border-left: 4px solid #d4941a;
+    padding: 14px 18px; border-radius: 8px; margin: 12px 0; font-size: 14px;
+  }
+
+  .link-btn {
+    display: inline-block;
+    background: #006d8f; color: white !important;
+    padding: 10px 16px; border-radius: 8px;
+    text-decoration: none; font-size: 13.5px; font-weight: 600;
+    margin: 6px 6px 6px 0;
+    transition: background 0.2s;
+  }
+  .link-btn:hover { background: #00889b; }
+  .link-btn.phone { background: #1a7a3a; }
+  .link-btn.email { background: #8a5a00; }
+  .link-btn.big { padding: 14px 24px; font-size: 15px; }
+
+  ol.steps { padding-left: 20px; }
+  ol.steps li { margin-bottom: 8px; font-size: 14px; }
+
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13.5px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid #e6eef2; vertical-align: top; }
+  th { background: #f0f7fa; color: #006d8f; font-weight: 600; }
+
+  .price-box {
+    display: inline-block; background: #f0f7fa; color: #006d8f;
+    padding: 4px 10px; border-radius: 12px; font-weight: 700; font-size: 13px;
+  }
+
+  .worksheet {
+    background: #fefdf5; border: 1px dashed #d4941a;
+    padding: 16px 20px; border-radius: 10px; margin-top: 14px;
+    font-family: "Courier New", monospace; font-size: 13px;
+    white-space: pre-wrap;
+  }
+
+  footer {
+    text-align: center; font-size: 12px; color: #5a6b78;
+    padding: 20px; border-top: 1px solid #d9e3e8; margin-top: 20px;
+  }
+
+  .countdown-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #b6446a, #e67a3a);
+    color: white; padding: 6px 14px; border-radius: 20px;
+    font-weight: 700; font-size: 14px;
+    box-shadow: 0 3px 10px rgba(230,122,58,0.3);
+  }
+  .schedule-table td { font-family: "Courier New", monospace; }
+  .schedule-table .day { font-weight: 700; color: #006d8f; }
+  .schedule-table .weekend { background: #fff7e6; }
+  .highlight-time {
+    background: #d4f4dd; color: #1a5c2a; padding: 2px 6px; border-radius: 5px; font-weight: 700;
+  }
+
+  
+  /* === UI GLOBALE CHECKBOX (barra progresso + bottoni) === */
+  #checkbox-progress {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: rgba(0,0,0,0.05);
+    z-index: 9999;
+    display: flex;
+  }
+  #checkbox-progress-label {
+    position: fixed;
+    top: 12px; right: 16px;
+    background: white;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex; gap: 4px;
+  }
+  #checkbox-share-btn {
+    position: fixed;
+    top: 54px; right: 16px;
+    background: #006d8f;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  #checkbox-share-btn:hover { background: #00889b; }
+  #checkbox-reset-btn {
+    position: fixed;
+    top: 88px; right: 16px;
+    background: #b03b3b;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    opacity: 0.7;
+  }
+  #checkbox-reset-btn:hover { opacity: 1; }
+
+  /* Base per liste e card actionable (comune ai 3 stati) */
+  ul.actionable, ol.actionable {
+    list-style: none;
+    padding-left: 8px !important;
+  }
+  ul.actionable > li, ol.actionable > li {
+    position: relative;
+    padding: 6px 8px 6px 34px;
+    margin-bottom: 8px;
+    border-left: 3px solid transparent;
+    border-radius: 6px;
+    transition: background 0.2s, border-color 0.2s;
+    cursor: pointer;
+  }
+  ul.actionable > li::before, ol.actionable > li::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #8a5a00;
+    border-radius: 4px;
+    background: white;
+    transition: all 0.2s;
+  }
+  ul.actionable > li:hover:not(.done):not(.like):not(.dislike),
+  ol.actionable > li:hover:not(.done):not(.like):not(.dislike) {
+    background: #fff9ec;
+    border-left-color: #d4941a;
+  }
+
+  .actionable-card {
+    position: relative !important;
+    padding-left: 40px !important;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .actionable-card::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #8a5a00;
+    border-radius: 5px;
+    background: white;
+    transition: all 0.2s;
+    z-index: 2;
+  }
+  .actionable-card:hover:not(.done):not(.like):not(.dislike) {
+    background: #fff9ec !important;
+    border-color: #d4941a !important;
+  }
+
+  .actionable-table tr.actionable-row {
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .actionable-table tr.actionable-row > td:first-child {
+    position: relative;
+    padding-left: 32px !important;
+  }
+  .actionable-table tr.actionable-row > td:first-child::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #8a5a00;
+    border-radius: 4px;
+    background: white;
+    transition: all 0.2s;
+  }
+  .actionable-table tr.actionable-row:hover:not(.done):not(.like):not(.dislike) {
+    background: #fff9ec;
+  }
+
+  @media print {
+    #checkbox-progress, #checkbox-progress-label,
+    #checkbox-share-btn, #checkbox-reset-btn, .actionable-hint { display: none; }
+  }
+
+  /* === CHECKBOX MULTI-STATO (vuoto → fatto → mi piace → non mi piace → vuoto) === */
+
+  /* ─── Stato FATTO (verde) ─── */
+  ul.actionable > li.done, ol.actionable > li.done {
+    background: linear-gradient(90deg, #d4f4dd 0%, #f0fff5 100%);
+    border-left-color: #1a7a3a;
+    opacity: 0.75;
+  }
+  ul.actionable > li.done::before, ol.actionable > li.done::before {
+    background: #1a7a3a;
+    border-color: #1a7a3a;
+  }
+  ul.actionable > li.done::after, ol.actionable > li.done::after {
+    content: "✓";
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1;
+  }
+  ul.actionable > li.done > *:not(.check-badge), ol.actionable > li.done > *:not(.check-badge) {
+    text-decoration: line-through;
+    text-decoration-color: rgba(26,122,58,0.5);
+    text-decoration-thickness: 1.5px;
+  }
+
+  /* ─── Stato MI PIACE (rosa/rosso cuore) ─── */
+  ul.actionable > li.like, ol.actionable > li.like {
+    background: linear-gradient(90deg, #ffe6ed 0%, #fff5f8 100%);
+    border-left: 3px solid #d93a68;
+  }
+  ul.actionable > li.like::before, ol.actionable > li.like::before {
+    background: #d93a68;
+    border-color: #d93a68;
+  }
+  ul.actionable > li.like::after, ol.actionable > li.like::after {
+    content: "❤";
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  /* ─── Stato NON MI PIACE (grigio/barrato) ─── */
+  ul.actionable > li.dislike, ol.actionable > li.dislike {
+    background: linear-gradient(90deg, #e8e8e8 0%, #f5f5f5 100%);
+    border-left: 3px solid #6a6a70;
+    opacity: 0.55;
+  }
+  ul.actionable > li.dislike::before, ol.actionable > li.dislike::before {
+    background: #6a6a70;
+    border-color: #6a6a70;
+  }
+  ul.actionable > li.dislike::after, ol.actionable > li.dislike::after {
+    content: "✗";
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1;
+  }
+  ul.actionable > li.dislike > *:not(.check-badge), ol.actionable > li.dislike > *:not(.check-badge) {
+    text-decoration: line-through;
+    text-decoration-color: rgba(106,106,112,0.6);
+    text-decoration-thickness: 1.5px;
+    color: #7a7a80;
+  }
+
+  /* ─── Variante ACTIONABLE-LIGHT per bonus finale (blu) ─── */
+  ul.actionable-light > li.done::before, ol.actionable-light > li.done::before {
+    background: #1a5aa8;
+    border-color: #1a5aa8;
+  }
+
+  /* ═══════════════════════════════════════════════════════ */
+  /* CARD (attività gratuite) — stessi 3 stati              */
+  /* ═══════════════════════════════════════════════════════ */
+  .actionable-card.done {
+    background: linear-gradient(90deg, #d4f4dd 0%, #f0fff5 100%) !important;
+    border-color: #1a7a3a !important;
+    opacity: 0.75;
+  }
+  .actionable-card.done::before {
+    background: #1a7a3a;
+    border-color: #1a7a3a;
+  }
+  .actionable-card.done::after {
+    content: "✓";
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1;
+    z-index: 3;
+  }
+  .actionable-card.done h5,
+  .actionable-card.done p:not(.booking-info):not(.booking-badge) {
+    text-decoration: line-through;
+    text-decoration-color: rgba(26,122,58,0.5);
+    text-decoration-thickness: 1.5px;
+  }
+
+  .actionable-card.like {
+    background: linear-gradient(90deg, #ffe6ed 0%, #fff5f8 100%) !important;
+    border-color: #d93a68 !important;
+  }
+  .actionable-card.like::before {
+    background: #d93a68;
+    border-color: #d93a68;
+  }
+  .actionable-card.like::after {
+    content: "❤";
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    color: white;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 1;
+    z-index: 3;
+  }
+
+  .actionable-card.dislike {
+    background: linear-gradient(90deg, #e8e8e8 0%, #f5f5f5 100%) !important;
+    border-color: #6a6a70 !important;
+    opacity: 0.55;
+  }
+  .actionable-card.dislike::before {
+    background: #6a6a70;
+    border-color: #6a6a70;
+  }
+  .actionable-card.dislike::after {
+    content: "✗";
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1;
+    z-index: 3;
+  }
+  .actionable-card.dislike h5,
+  .actionable-card.dislike p:not(.booking-info):not(.booking-badge) {
+    text-decoration: line-through;
+    color: #7a7a80;
+  }
+
+  /* ═══════════════════════════════════════════════════════ */
+  /* RIGHE TABELLA — stessi 3 stati                         */
+  /* ═══════════════════════════════════════════════════════ */
+  .actionable-table tr.actionable-row.done {
+    background: linear-gradient(90deg, #d4f4dd 0%, #f0fff5 100%);
+    opacity: 0.75;
+  }
+  .actionable-table tr.actionable-row.done > td:first-child::before {
+    background: #1a7a3a;
+    border-color: #1a7a3a;
+  }
+  .actionable-table tr.actionable-row.done > td:first-child::after {
+    content: "✓";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .actionable-table tr.actionable-row.done > td {
+    text-decoration: line-through;
+    text-decoration-color: rgba(26,122,58,0.5);
+    text-decoration-thickness: 1.2px;
+  }
+
+  .actionable-table tr.actionable-row.like {
+    background: linear-gradient(90deg, #ffe6ed 0%, #fff5f8 100%);
+  }
+  .actionable-table tr.actionable-row.like > td:first-child::before {
+    background: #d93a68;
+    border-color: #d93a68;
+  }
+  .actionable-table tr.actionable-row.like > td:first-child::after {
+    content: "❤";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .actionable-table tr.actionable-row.dislike {
+    background: linear-gradient(90deg, #e8e8e8 0%, #f5f5f5 100%);
+    opacity: 0.55;
+  }
+  .actionable-table tr.actionable-row.dislike > td:first-child::before {
+    background: #6a6a70;
+    border-color: #6a6a70;
+  }
+  .actionable-table tr.actionable-row.dislike > td:first-child::after {
+    content: "✗";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .actionable-table tr.actionable-row.dislike > td {
+    text-decoration: line-through;
+    text-decoration-color: rgba(106,106,112,0.6);
+    color: #7a7a80;
+  }
+
+  /* ═══════════════════════════════════════════════════════ */
+  /* BADGE PROGRESS (aggiornato per mostrare 3 conteggi)   */
+  /* ═══════════════════════════════════════════════════════ */
+  #checkbox-progress-label {
+    display: flex;
+    gap: 6px;
+    padding: 4px 8px !important;
+  }
+  #checkbox-progress-label .stat {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+  }
+  #checkbox-progress-label .stat-done { background: #1a7a3a; color: white; }
+  #checkbox-progress-label .stat-like { background: #d93a68; color: white; }
+  #checkbox-progress-label .stat-dislike { background: #6a6a70; color: white; }
+  #checkbox-progress-label .stat-todo { background: white; color: #4a5a68; border: 1px solid #d9e3e8; }
+
+  /* Progress bar segmented */
+  #checkbox-progress {
+    display: flex;
+    align-items: stretch;
+  }
+  #checkbox-progress .segment {
+    height: 100%;
+    transition: width 0.3s ease-out;
+  }
+  #checkbox-progress .segment.done { background: #1a7a3a; }
+  #checkbox-progress .segment.like { background: #d93a68; }
+  #checkbox-progress .segment.dislike { background: #6a6a70; }
+
+  /* Tooltip suggerimento click */
+  .actionable-hint {
+    position: fixed;
+    bottom: 20px; right: 16px;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.4;
+    max-width: 260px;
+    z-index: 9998;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: none;
+  }
+  .actionable-hint.show { display: block; animation: hintFadeIn 0.3s; }
+  @keyframes hintFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .actionable-hint .close {
+    position: absolute; top: 4px; right: 6px;
+    cursor: pointer; opacity: 0.7; font-size: 14px;
+  }
+
+</style>
+</head>
+<body>
+<div class="container">
+
+<div style="background:linear-gradient(135deg,#eaf7ee 0%,#fff5f8 50%,#f5f5f5 100%); border:2px solid #1a7a3a; border-radius:10px; padding:14px 20px; margin:14px 0; font-size:13.5px; color:#1a5c2a;">
+  <strong>✨ SPUNTE MULTI-STATO (novità):</strong> tutte le voci con il pallino a sinistra ciclano tra 4 stati con click ripetuti:
+  <div style="display:flex; gap:10px; margin:8px 0; flex-wrap:wrap;">
+    <span style="background:white; border:2px solid #8a5a00; padding:4px 10px; border-radius:16px; font-size:12px;"><strong>○ Vuoto</strong> — da valutare</span>
+    <span style="background:#1a7a3a; color:white; padding:4px 10px; border-radius:16px; font-size:12px;"><strong>✓ Fatto</strong> — completato</span>
+    <span style="background:#d93a68; color:white; padding:4px 10px; border-radius:16px; font-size:12px;"><strong>❤ Mi piace</strong> — voglio farlo/rifarlo</span>
+    <span style="background:#6a6a70; color:white; padding:4px 10px; border-radius:16px; font-size:12px;"><strong>✗ Non mi piace</strong> — da escludere</span>
+  </div>
+  <span style="color:#5a6b78; font-size:12.5px;">Il ciclo click è: <em>vuoto → fatto → mi piace → non mi piace → vuoto</em>. Le spunte si salvano <strong>nell'URL della pagina</strong>: usa <em>🔗 Copia link</em> in alto a destra per condividere lo stato con chi ti accompagna. In alto vedi <strong>barra progresso multi-colore</strong> e <strong>contatori per ogni stato</strong>.</span>
+</div>
+<header>
+    <div class="kicker">Toolkit autonomo · v.15 aggiornata al martedì 4 agosto 2026 · Operatore: <strong>Aremiti</strong></div>
+    <h1>⛴️ Ferry Aremiti Tahiti ↔ Moorea · Guida per il traghetto di mercoledì 12 agosto 2026</h1>
+    <p><span class="countdown-badge">T-8 giorni</span> al traghetto (mercoledì 12 agosto 2026) · <span class="countdown-badge">T-3 giorni</span> alla partenza da Bologna (venerdì 7 agosto 2026).</p>
+
+    <div style="background:#eaf7ee; border:2px solid #1a7a3a; border-radius:10px; padding:16px 20px; margin-top:16px;">
+      <h3 style="color:#1a5c2a; margin-top:0;">⛴️ Operatore Aremiti · biglietto aperto già acquistato</h3>
+      <p style="margin:6px 0; font-size:14px;">La tua traversata Tahiti → Moorea del <strong>mercoledì 12 agosto 2026</strong> viaggia con Aremiti (rotta Papeete → Vaiare, ~25-30 min). Flotta operativa: Aremiti 5 (697 pax + 30 auto) e Aremiti 6 (capacità maggiore). Frequenza feriale ~10 corse/giorno per senso.</p>
+      <p style="margin:6px 0; font-size:14px;">Il tuo <strong>biglietto aperto Aremiti x2</strong> (validità 360 giorni) va utilizzato mercoledì 12 agosto — segui la procedura giorno G qui sotto. Non serve prenotare il posto (traversata per pedoni, non auto): basta presentarsi al terminal 30 min prima della corsa scelta.</p>
+    </div>
+  </header>
+
+  <!-- ============ CORREZIONE IMPORTANTE ============ -->
+  <div class="fix-banner">
+    <div class="title">⚠️ Correzione operativa vs versioni precedenti di questa guida</div>
+    <div class="body">
+      Nelle versioni v.3–v.6 di questa guida ho ripetuto "<em>prenota la corsa specifica su aremitiexpress.com</em>": era <strong>sbagliato per il tuo caso</strong>. Aremiti <strong>non offre prenotazione con posto/orario riservato</strong> per i passeggeri pedoni: la biglietteria online vende solo <strong>biglietti aperti validi 360 giorni</strong> — ed è esattamente quello che hai comprato. Il "posto" si prende in <strong>modalità first-come, first-served</strong> il giorno stesso al terminale. La riprova è nella FAQ ufficiale e in tutti i thread Reddit/miss-tourist: <em>"No reservations are needed"</em> (fonti: <a href="https://misstourist.com/tahiti-to-moorea-ferry/" target="_blank" rel="noopener">Miss Tourist</a>, <a href="https://www.reddit.com/r/Tahiti/comments/1c1hiei/trying_to_buy_ferry_tickets_to_moorea_online_its/" target="_blank" rel="noopener">Reddit r/Tahiti</a>).
+      <br><br>
+      <strong>👉 Bottom line: hai già tutto quello che ti serve.</strong> Il tuo biglietto x2 è valido per qualsiasi corsa di Aremiti 5 o Aremiti 6, in entrambe le direzioni, entro 360 giorni. Non c'è nessun altro portale su cui "prenotare il posto".
+    </div>
+  </div>
+
+  <!-- ============ COSA SIGNIFICA "BIGLIETTO APERTO" ============ -->
+  <section>
+    <h2>🎫 Cosa significa "biglietto aperto Aremiti" (quello che hai in mano)</h2>
+    <table>
+      <tr><th>Caratteristica</th><th>Dettaglio</th></tr>
+      <tr><td>Validità</td><td><strong>360 giorni</strong> dalla data di acquisto</td></tr>
+      <tr><td>Navi utilizzabili</td><td><strong>Aremiti 5</strong> (697 pax + 30 auto) e <strong>Aremiti 6</strong> (capienza maggiore, tempi leggermente più rapidi)</td></tr>
+      <tr><td>Direzione</td><td>A/R oppure singola tratta a seconda del biglietto acquistato (verifica il PDF/QR)</td></tr>
+      <tr><td>Orario riservato?</td><td><strong>NO</strong>. Ti presenti al terminale per la corsa che vuoi</td></tr>
+      <tr><td>Posto assegnato?</td><td><strong>NO</strong>. Posti liberi a bordo, prendi quello che trovi</td></tr>
+      <tr><td>Come si valida</td><td>Al gate d'imbarco mostri il <strong>QR code / PDF del biglietto</strong> (stampato o su smartphone)</td></tr>
+    </table>
+    <div class="callout-info">
+      <strong>💡 La logica Aremiti:</strong> è un traghetto pendolare urbano (come il vaporetto di Venezia o il tender di Napoli), non un traghetto di lunga percorrenza tipo Grimaldi. Le navi sono grandi rispetto al traffico medio, quindi non c'è quasi mai il problema del "posto esaurito" per i pedoni. La prenotazione online serve solo per <strong>auto e veicoli</strong> (dove i posti sono limitati).
+    </div>
+  </section>
+
+  <!-- ============ ORARI ============ -->
+  <section>
+    <h2>🕐 Orari Aremiti · giorno della tua traversata (MERCOLEDÌ 12 AGOSTO 2026)</h2>
+    <p style="font-size:14px;">La tua traversata Tahiti → Moorea è confermata dall'agenda per <strong>mercoledì 12 agosto</strong> (giorno feriale standard, dopo 4 notti di adattamento jet-lag all'InterContinental Tahiti). Ecco gli orari validi lun–ven:</p>
+
+    <h3>Tahiti (Papeete / Motu Uta) → Moorea (Vaiare) · <em>la tua tratta</em></h3>
+    <table class="schedule-table">
+      <tr><th>Giorno</th><th>Aremiti 5 (~30 min)</th><th>Aremiti 6 (~30 min, più veloce)</th></tr>
+      <tr>
+        <td class="day">Feriale standard lun-ven</td>
+        <td>05:15 · 06:10 · 08:00 · 10:30 · 12:25 · 14:25 · 15:30 · 16:25 · 17:30</td>
+        <td>07:00 · 09:15 · 12:25 · 14:25 · 16:25 · 18:25</td>
+      </tr>
+      <tr style="background:#fff7e6;">
+        <td class="day"><strong>⭐ MER 12 AGO<br>(la tua traversata)</strong></td>
+        <td colspan="2">Stessi orari feriali standard. <strong>Corse consigliate</strong> (post check-out IC Tahiti alle 11:00): <span class="highlight-time">12:25 (A5 o A6)</span> · <span class="highlight-time">14:25 (A5 o A6)</span> · <span class="highlight-time">15:30 (A5)</span>. Consiglio: prendi la <strong>12:25</strong> per arrivare a Moorea nel primo pomeriggio, check-in Cook's Bay entro le 15:00.</td>
+      </tr>
+    </table>
+
+    <h3>Moorea (Vaiare) → Tahiti (Papeete) · <em>tratta opposta, non ti serve</em></h3>
+    <p style="font-size:13px; color:#5a6b78;">Non farai questa tratta: dopo Moorea voli direttamente Bora Bora dall'<strong>aeroporto di Moorea Temae</strong> (Air Moana NM918 martedì 18/8 · MOZ 10:35 → BOB 11:25), non torni a Tahiti. Orari per completezza:</p>
+    <table class="schedule-table">
+      <tr><th>Giorno</th><th>Aremiti 5</th><th>Aremiti 6</th></tr>
+      <tr>
+        <td class="day">Lun–Gio (standard)</td>
+        <td>05:10 · 06:15 · 07:00 · 09:00 · 11:35 · 13:25 · 15:25 · 16:15 · 17:15</td>
+        <td>06:00 · 08:00 · 10:15 · 13:25 · 15:25 · 17:25</td>
+      </tr>
+    </table>
+
+    <div class="callout-info">
+      <strong>📊 Fonte:</strong> orari letti da <a href="https://www.aremitiexpress.com/en/home/" target="_blank" rel="noopener">aremitiexpress.com</a> · <strong>ricontrolla a T-1 (giovedì 6 agosto)</strong> per conferma finale del calendario 10-16 agosto.
+    </div>
+  </section>
+
+  <!-- ============ PROCEDURA GIORNO G ============ -->
+  <section>
+    <h2>📅 Cosa fare il giorno del traghetto (procedura passo-passo)</h2>
+
+    <div class="callout-ok">
+      <strong>⏱️ Regola d'oro:</strong> arriva al terminale <strong>30-45 minuti prima</strong> della corsa che vuoi prendere. È sufficiente anche a Ferragosto, non serve di più. In caso di corsa piena (raro per i pedoni), aspetti semplicemente la successiva (frequenza ~1,5-2h).
+    </div>
+
+    <h3>Papeete Ferry Terminal (Motu Uta)</h3>
+    <ol class="steps actionable">
+      <li><strong>Trasferimento dall'InterContinental Tahiti Resort &amp; Spa</strong> → taxi ~15-20 min, ~2.500–3.500 XPF (~20-30 €). Puoi farlo prenotare dal concierge la sera prima (+689 40 86 51 68).</li>
+      <li><strong>Arrivo al terminale</strong> 30-45 min prima della corsa target. Il terminale è sul waterfront di Papeete, ~10 min a piedi dal centro.</li>
+      <li><strong>Nessun check-in richiesto</strong>. Ti dirigi direttamente al <strong>gate della corsa</strong> indicata sui monitor (Aremiti 5 o Aremiti 6).</li>
+      <li><strong>Al gate mostri il QR / PDF del biglietto</strong> (dal telefono va benissimo). L'addetto lo scansiona e ti fa passare.</li>
+      <li><strong>Imbarco:</strong> sali con i bagagli. Nessun costo extra per valigie standard.</li>
+      <li><strong>A bordo:</strong> posti liberi. Per il tramonto (rientro Moorea → Tahiti pomeriggio) il posto migliore è il <strong>ponte superiore poppa</strong>. Aria condizionata nel salone interno (freddo, porta una felpa).</li>
+      <li><strong>🐋 BONUS OSSERVAZIONE BALENE (agosto è peak):</strong> stai sul ponte superiore col binocolo/telefono pronto. Il canale tra Tahiti e Moorea è <strong>attraversato quotidianamente dalle megattere in agosto</strong>: se hai fortuna vedi il getto d'acqua (blow) o addirittura una coda emergere. Zero costi, zero impatto sulle balene — al contrario delle escursioni commerciali (5 operatori appena esclusi dal tribunale con sentenza del 25/7, motivi di sovraffollamento). Consiglio del capitano Aremiti: se una balena viene avvistata, riduce la velocità (regole di legge = 100 m di distanza).</li>
+      <li><strong>Snack bar</strong> a bordo — pagamento in XPF, cash o carta Visa/Mastercard.</li>
+      <li><strong>Traversata:</strong> 30–45 min a seconda della nave (A6 più veloce).</li>
+      <li><strong>Sbarco a Vaiare (Moorea):</strong> troverai taxi in attesa (o navetta hotel se prenotata). Cook's Bay è a ~20-25 min / 2.500 XPF di taxi.</li>
+    </ol>
+
+    <h3>Vaiare Terminal (Moorea) — solo arrivo, no rientro</h3>
+    <p style="font-size:13.5px;">Il tuo itinerario prevede l'arrivo a Vaiare mercoledì 12/8 con Aremiti, poi <strong>voli direttamente da Moorea a Bora Bora</strong> martedì 18/8 dall'aeroporto di Moorea Temae (Air Moana NM918). Non serve tornare in ferry a Tahiti.</p>
+    <ol class="steps actionable">
+      <li><strong>Cook's Bay Hotel &amp; Suites</strong> (+689 40 55 41 00) organizza transfer <em>Vaiare → hotel</em> su richiesta. Chiedi al check-in (email prima della partenza) di prenotare la navetta per il giorno del tuo arrivo (12/8).</li>
+      <li>Alternativa: taxi a Vaiare, ~20-25 min per Cook's Bay, ~2.500 XPF.</li>
+      <li>Per il volo del 18/8 (Moorea → Bora Bora): transfer Cook's Bay → aeroporto Temae (~10 min in taxi, ~1.500 XPF) — organizzabile dal concierge dell'hotel.</li>
+    </ol>
+  </section>
+
+  <!-- ============ AZIONI RESIDUE ============ -->
+  <section>
+    <h2>✅ Azioni residue prima della partenza</h2>
+    <table>
+      <tr><th>Quando</th><th>Cosa fare</th></tr>
+      <tr>
+        <td><strong>OGGI (T-3 · martedì 4 agosto)</strong></td>
+        <td>
+          <strong>Screenshot del biglietto</strong> sul telefono (PDF o QR salvato in foto).<br>
+          <strong>Backup:</strong> mail a te stesso, così hai una seconda copia offline.<br>
+          <strong>Verifica orari</strong> aggiornati su <em>aremitiexpress.com</em> per mercoledì 12 agosto.
+        </td>
+      </tr>
+      <tr>
+        <td>T-1 (giovedì 6 agosto)</td>
+        <td>Identifica una <strong>corsa di backup ±2 h</strong> nel caso quella target salti. Salva PDF orari offline.</td>
+      </tr>
+      <tr>
+        <td>T+2 (domenica 9 agosto · a Tahiti)</td>
+        <td>Coordina con Concierge InterContinental Tahiti la <strong>navetta per il ferry</strong> del mercoledì 12/8 (~15 min da IC Tahiti al Papeete Ferry Terminal).</td>
+      </tr>
+      <tr>
+        <td>T+4 (martedì 11 agosto · a Tahiti)</td>
+        <td>Coordina con <strong>Cook's Bay Hotel</strong> il transfer <em>Vaiare → hotel</em> all'arrivo a Moorea del 12/8.</td>
+      </tr>
+      <tr>
+        <td><strong>Giorno G · MERCOLEDÌ 12 AGOSTO</strong></td>
+        <td>Check-out IC Tahiti entro le 11:00. Presentati al terminale <strong>30-45 min prima</strong> della corsa scelta. Il biglietto lo hai già (aperto x2).</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ============ CONTATTI ============ -->
+  <section>
+    <h2>📞 Contatti Aremiti (per assicurazione)</h2>
+    <a href="https://www.aremitiexpress.com/en/home/" target="_blank" rel="noopener" class="link-btn">🌐 aremitiexpress.com (orari)</a>
+    <a href="tel:+68940501616" class="link-btn phone">☎️ +689 40 50 16 16</a>
+    <a href="mailto:contact@aremiti.pf" class="link-btn email">✉️ contact@aremiti.pf</a>
+    <p style="font-size:13.5px; margin-top:10px;">Customer service disponibile <strong>lun-ven 07:30-16:30</strong> ora locale (Tahiti = UTC-10, quindi <strong>lun-ven 19:30-04:30 ora italiana</strong> — chiamate mattina presto o dopo cena).</p>
+
+    <h3>Se al ritorno vuoi cambiare la corsa</h3>
+    <p style="font-size:14px;">Non serve cambiare nulla: il biglietto aperto è per definizione flessibile. Ti presenti alla corsa che ti conviene, e sei a posto. L'unico caso in cui il servizio clienti serve è se il biglietto ha problemi tecnici (QR non scansiona) o smarrimento.</p>
+  </section>
+
+  <!-- ============ WORKSHEET ============ -->
+  <section>
+    <h2>📋 Foglio operativo · da appuntarti</h2>
+    <div class="worksheet">📅 PARTENZA DA BOLOGNA (BLQ) : venerdì 7 agosto 2026
+    LX 1669 BLQ 10:25 → ZRH 11:40
+    LX 38   ZRH 13:15 → SFO 16:15
+🛌 NOTTE 1 (7-8 ago)         : Francisco Bay Inn, San Francisco
+
+📅 SABATO 8/8: UA 115 SFO 13:25 → PPT 18:55
+🛬 ARRIVO A PAPEETE          : sabato 8 agosto ore 18:55
+🏨 NOTTI 2-5 (8-12 ago)      : InterContinental Tahiti Resort & Spa (Faa'a)
+
+🏝️ TRAVERSATA TAHITI → MOOREA · MERCOLEDÌ 12 AGOSTO 2026
+   (con biglietto Aremiti aperto 360gg x2 già acquistato · agenda utente confermata 28/7)
+
+Corsa target         : ___________________ (consigliata 09:15 A6 o 12:25 A5)
+Corsa di backup      : ___________________ (±2h dalla target)
+QR / PDF biglietto   : [ ] salvato offline sul telefono
+                     : [ ] copia mail a me stesso
+                     : [ ] operatore Aremiti confermato ✓ (agenda utente 28/7)
+
+Transfer IC Tahiti → Motu Uta (Papeete Ferry Terminal):
+  Distanza    : ~15-20 min taxi
+  Costo       : ~2.500-3.500 XPF (~20-30 €)
+  Prenotazione: concierge IC Tahiti (+689 40 86 51 68) sera prima
+
+Da Vaiare (Moorea) → Cook's Bay Hotel:
+  Distanza    : ~20-25 min
+  Costo       : ~2.500 XPF
+  Prenotazione: Cook's Bay Hotel (+689 40 55 41 00) — chiedi navetta hotel
+
+🏨 NOTTI 6-11 (12-18 ago)    : Cook's Bay Hotel & Suites (Moorea)
+
+📅 MARTEDÌ 18/8: Air Moana NM918 MOZ 10:35 → BOB 11:25
+   (NON ferry, ma volo · richiedi transfer Cook's Bay → aeroporto Temae)
+
+🏨 NOTTI 12-17 (18-24 ago)   : Royal Bora Bora (6 notti)
+🏨 NOTTI 18-19 (24-26 ago)   : InterContinental Bora Bora Le Moana (2 notti overwater!)
+
+📅 MERCOLEDÌ 26/8: Air Moana NM914 BOB 15:15 → PPT
+🏨 NOTTI 20-21 (26-28 ago)   : InterContinental Tahiti (2° soggiorno)
+
+📅 VENERDÌ 28/8: UA 114 PPT 21:10 → SFO 8:15 (+1)
+📅 SABATO 29/8:  LH 455 SFO 14:40 → FRA 10:25 (+1)
+📅 DOMENICA 30/8: LH 286 FRA 16:20 → BLQ 17:50 🏠
+    </div>
+  </section>
+
+  <footer>
+    Guida <strong>v.15</strong> aggiornata il <strong>4 agosto 2026</strong> · Allegato al Daily Brief Polinesia Francese · Edizione N°21<br>
+    Modifiche v.15: rimossi riferimenti storici obsoleti, testo semplificato e focalizzato sul solo operatore effettivo <strong>Aremiti</strong>. Contenuto stabile: procedura giorno G, orari corse feriali/weekend, contatti Aremiti, checklist bagaglio, indicazioni transfer Papeete Ferry Terminal + Vaiare (Moorea). Distribuzione Bora Bora invariata: <strong>Royal 6 notti (18-24/8) + IC Le Moana 2 notti overwater (24-26/8)</strong>. Countdown al ferry: T-8 giorni (dal 4/8 al 12/8).<br>
+    🗓️ <strong>Partenza da Bologna: venerdì 7 agosto 2026 · Ferry Aremiti Tahiti-Moorea: mercoledì 12 agosto · Rientro a Bologna: domenica 30 agosto 2026 · countdown 3 giorni alla partenza (venerdì 7 agosto) / 8 giorni al ferry (mercoledì 12 agosto)</strong>
+  </footer>
+
+</div>
+
+
+
+
+<script>
+(function() {
+  'use strict';
+
+  function ready(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+
+  ready(function() {
+    const items = document.querySelectorAll('ul.actionable > li, ol.actionable > li, .actionable-card, .actionable-table tr.actionable-row');
+    if (!items.length) return;
+
+    // Stati possibili: '' (vuoto), 'd' (done), 'l' (like), 'x' (dislike)
+    const STATES = ['', 'd', 'l', 'x'];
+    const STATE_CLASS = {'d':'done', 'l':'like', 'x':'dislike'};
+    const STATE_LABEL = {'d':'✓ Fatto', 'l':'❤ Mi piace', 'x':'✗ Non mi piace'};
+
+    // Hash function per ID stabile
+    function hashCode(str) {
+      let h = 0;
+      for (let i = 0; i < str.length; i++) {
+        h = ((h << 5) - h) + str.charCodeAt(i);
+        h |= 0;
+      }
+      return Math.abs(h).toString(36);
+    }
+
+    // Assegna ID stabile a ogni item
+    items.forEach((el, idx) => {
+      const txt = (el.textContent || '').trim().substring(0, 200);
+      const id = 'a' + hashCode(txt + '|' + idx);
+      el.dataset.checkid = id;
+    });
+
+    // Legge stato dall'URL (formato: #s=id1:d,id2:l,id3:x)
+    function getStateFromUrl() {
+      const map = new Map();
+      const hash = window.location.hash;
+      // Vecchio formato #done=id1,id2,... → migro come done
+      const oldMatch = hash.match(/done=([^&]+)/);
+      if (oldMatch) {
+        decodeURIComponent(oldMatch[1]).split(',').filter(Boolean).forEach(id => map.set(id, 'd'));
+      }
+      // Nuovo formato #s=id1:d,id2:l,id3:x
+      const newMatch = hash.match(/[#&]s=([^&]+)/);
+      if (newMatch) {
+        decodeURIComponent(newMatch[1]).split(',').filter(Boolean).forEach(entry => {
+          const [id, state] = entry.split(':');
+          if (id && ['d','l','x'].includes(state)) map.set(id, state);
+        });
+      }
+      return map;
+    }
+
+    // Salva stato in URL
+    function setStateInUrl(stateMap) {
+      const entries = [];
+      stateMap.forEach((state, id) => {
+        if (state) entries.push(id + ':' + state);
+      });
+      const encoded = entries.join(',');
+      const newHash = encoded ? '#s=' + encodeURIComponent(encoded) : '';
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search + newHash);
+      } else {
+        window.location.hash = newHash;
+      }
+    }
+
+    // Applica stato UI
+    function applyState(stateMap) {
+      items.forEach(el => {
+        // Rimuovi tutte le classi di stato
+        el.classList.remove('done', 'like', 'dislike');
+        const state = stateMap.get(el.dataset.checkid);
+        if (state && STATE_CLASS[state]) {
+          el.classList.add(STATE_CLASS[state]);
+        }
+      });
+      updateProgress(stateMap);
+    }
+
+    // Aggiorna barra progresso multi-colore
+    function updateProgress(stateMap) {
+      const total = items.length;
+      let done = 0, like = 0, dislike = 0;
+      stateMap.forEach((state) => {
+        if (state === 'd') done++;
+        else if (state === 'l') like++;
+        else if (state === 'x') dislike++;
+      });
+      const todo = total - done - like - dislike;
+
+      // Barra segmentata
+      const progressBar = document.getElementById('checkbox-progress');
+      if (progressBar) {
+        const w = pct => (total > 0 ? (pct * 100 / total) : 0) + '%';
+        progressBar.innerHTML =
+          '<div class="segment done" style="width:' + w(done) + '"></div>' +
+          '<div class="segment like" style="width:' + w(like) + '"></div>' +
+          '<div class="segment dislike" style="width:' + w(dislike) + '"></div>';
+      }
+
+      // Label multi-stat
+      const label = document.getElementById('checkbox-progress-label');
+      if (label) {
+        label.innerHTML =
+          '<span class="stat stat-todo">' + todo + ' da fare</span>' +
+          '<span class="stat stat-done">✓ ' + done + '</span>' +
+          '<span class="stat stat-like">❤ ' + like + '</span>' +
+          '<span class="stat stat-dislike">✗ ' + dislike + '</span>';
+      }
+    }
+
+    // Ciclo stato al click: '' → 'd' → 'l' → 'x' → ''
+    function cycleState(id, stateMap) {
+      const current = stateMap.get(id) || '';
+      const idx = STATES.indexOf(current);
+      const next = STATES[(idx + 1) % STATES.length];
+      if (next) {
+        stateMap.set(id, next);
+      } else {
+        stateMap.delete(id);
+      }
+      return next;
+    }
+
+    // Handler click
+    items.forEach(el => {
+      el.addEventListener('click', function(e) {
+        // Non spuntare se click su link, bottone, input
+        if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' ||
+            e.target.tagName === 'INPUT' || e.target.closest('a')) return;
+
+        const stateMap = getStateFromUrl();
+        const newState = cycleState(el.dataset.checkid, stateMap);
+        setStateInUrl(stateMap);
+        applyState(stateMap);
+
+        // Feedback visivo temporaneo con toast
+        showToast(newState);
+      });
+    });
+
+    // Toast di feedback
+    let toastTimer = null;
+    function showToast(state) {
+      let toast = document.getElementById('checkbox-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'checkbox-toast';
+        toast.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.85);color:white;padding:8px 16px;border-radius:20px;font-size:13px;font-weight:600;z-index:10000;transition:opacity 0.3s;opacity:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;box-shadow:0 4px 12px rgba(0,0,0,0.3);';
+        document.body.appendChild(toast);
+      }
+      const labels = {'d':'✓ Fatto', 'l':'❤ Mi piace', 'x':'✗ Non mi piace', '':'○ Vuoto'};
+      const label = labels[state] || '';
+      const colors = {'d':'#1a7a3a', 'l':'#d93a68', 'x':'#6a6a70', '':'#4a5a68'};
+      toast.textContent = label;
+      toast.style.background = colors[state] || 'rgba(0,0,0,0.85)';
+      toast.style.opacity = '1';
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => { toast.style.opacity = '0'; }, 1200);
+    }
+
+    // Crea UI globale
+    const progress = document.createElement('div');
+    progress.id = 'checkbox-progress';
+    document.body.insertBefore(progress, document.body.firstChild);
+
+    const label = document.createElement('div');
+    label.id = 'checkbox-progress-label';
+    document.body.appendChild(label);
+
+    const shareBtn = document.createElement('button');
+    shareBtn.id = 'checkbox-share-btn';
+    shareBtn.textContent = '🔗 Copia link';
+    shareBtn.addEventListener('click', function() {
+      const url = window.location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+          shareBtn.textContent = '✅ Copiato!';
+          setTimeout(() => shareBtn.textContent = '🔗 Copia link', 2000);
+        });
+      } else {
+        prompt('Copia questo link:', url);
+      }
+    });
+    document.body.appendChild(shareBtn);
+
+    const resetBtn = document.createElement('button');
+    resetBtn.id = 'checkbox-reset-btn';
+    resetBtn.textContent = '🗑️ Reset';
+    resetBtn.addEventListener('click', function() {
+      if (!confirm('Rimuovere tutte le spunte (fatto/mi piace/non mi piace)? Non recuperabili.')) return;
+      setStateInUrl(new Map());
+      applyState(new Map());
+    });
+    document.body.appendChild(resetBtn);
+
+    // Hint iniziale (una tantum) con legenda dei 4 stati
+    if (!localStorage.getItem('polinesia-hint-seen')) {
+      const hint = document.createElement('div');
+      hint.className = 'actionable-hint show';
+      hint.innerHTML = '<span class="close">✕</span><strong>💡 Come funzionano le spunte:</strong><br>Click ripetuti ciclano tra:<br>○ vuoto → <span style="color:#5cff8a">✓ fatto</span> → <span style="color:#ff8ab0">❤ mi piace</span> → <span style="color:#ccc">✗ non mi piace</span> → vuoto<br><span style="opacity:0.7;font-size:11px;">(le spunte si salvano nell\'URL)</span>';
+      document.body.appendChild(hint);
+      hint.querySelector('.close').addEventListener('click', function() {
+        hint.classList.remove('show');
+        localStorage.setItem('polinesia-hint-seen', '1');
+      });
+      // Auto-hide dopo 15 sec
+      setTimeout(() => {
+        hint.classList.remove('show');
+        localStorage.setItem('polinesia-hint-seen', '1');
+      }, 15000);
+    }
+
+    // Applica stato iniziale
+    applyState(getStateFromUrl());
+
+    // Sync tra tab
+    window.addEventListener('hashchange', function() {
+      applyState(getStateFromUrl());
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
