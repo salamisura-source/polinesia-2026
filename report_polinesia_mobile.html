@@ -541,21 +541,23 @@
     color: #999;
   }
 
-  /* ============ TAB NAV STICKY IN CIMA (sempre visibile) ============ */
+  /* ============ TAB NAV FISSA IN BASSO (pollice-friendly) ============ */
   .m-nav-quick {
     display: flex;
     gap: 6px;
     overflow-x: auto;
-    padding: 10px 12px;
-    background: rgba(255, 255, 255, 0.96);
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: saturate(180%) blur(12px);
     -webkit-backdrop-filter: saturate(180%) blur(12px);
-    border-bottom: 1px solid #e0e5eb;
-    box-shadow: 0 2px 8px rgba(12, 91, 122, 0.06);
+    border-top: 1px solid #e0e5eb;
+    box-shadow: 0 -2px 8px rgba(12, 91, 122, 0.10);
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 100;
   }
   .m-nav-quick::-webkit-scrollbar { display: none; }
