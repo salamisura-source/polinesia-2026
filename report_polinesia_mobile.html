@@ -15,7 +15,7 @@
   html { font-size: 16px; }
   body {
     margin: 0;
-    padding: 0 0 80px 0;
+    padding: 0 0 130px 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background: #f5f6f8;
     color: #1a1d24;
@@ -448,7 +448,7 @@
   /* ============ PROGRESS BAR (SISTEMA CHECKBOX GLOBALE) ============ */
   #checkbox-progress-container {
     position: sticky;
-    top: 52px; /* subito sotto il nav carosello sticky */
+    top: 0; /* il carosello ora sta in basso */
     z-index: 90;
     background: white;
     padding: 8px 12px;
@@ -491,7 +491,7 @@
   /* Bottom action bar */
   #action-bar {
     position: fixed;
-    bottom: 0;
+    bottom: calc(56px + env(safe-area-inset-bottom)); /* sopra il carosello in basso */
     left: 0;
     right: 0;
     background: white;
@@ -518,7 +518,7 @@
   /* Toast */
   #toast {
     position: fixed;
-    bottom: 80px;
+    bottom: 140px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(20,25,35,0.95);
@@ -603,6 +603,10 @@
     color: #7a1f1f; font-size: 12.5px;
   }
 
+
+  /* ============ MINI VOCABOLARIO ============ */
+  .m-item .word { font-size: 15.5px; font-weight: 800; color: #164a6b; }
+
 </style>
 </head>
 <body>
@@ -633,6 +637,7 @@
   <a href="#consigli">🎁 30 consigli</a>
   <a href="#sanita">🚑 Sanità</a>
   <a href="#cibo">🍽️ Cibo</a>
+  <a href="#vocabolario">🗣️ Parla</a>
 </nav>
 
 <!-- ============ PROGRESS BAR CHECKBOX ============ -->
@@ -1977,6 +1982,243 @@
     </div>
   </div>
 
+
+  <!-- ============ MINI VOCABOLARIO ============ -->
+  <div class="m-card" id="vocabolario">
+    <h2>🗣️ Mini vocabolario tahitiano</h2>
+    <p style="font-size:13px; color:#5a6b78;">45 parole &amp; frasi per farti voler bene dai locali. Pronuncia scritta all'italiana; la ' (okina) = leggera interruzione della voce.</p>
+
+    <h3>👋 Saluti & gentilezze</h3>
+    <div class="m-item">
+      <div class="word">'Ia ora na</div>
+      <div class="pron">🗣️ io-rà-na</div>
+      <div class="desc">Ciao / salve a ogni ora. I locali lo dicono tutto d'un fiato: "ioràna"!</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Maeva · Mānava</div>
+      <div class="pron">🗣️ ma-è-va · mà-na-va</div>
+      <div class="desc">Benvenuto: lo trovi anche sui cartelli in aeroporto.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">'E aha tō 'oe huru?</div>
+      <div class="pron">🗣️ è à-a to ò-e hu-rù</div>
+      <div class="desc">Come stai?</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Maita'i (roa)</div>
+      <div class="pron">🗣️ mai-tà-i (rò-a)</div>
+      <div class="desc">(Molto) bene — la risposta pronta da sorridere.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Māuruuru (roa)</div>
+      <div class="pron">🗣️ màu-ru-ru (rò-a)</div>
+      <div class="desc">Grazie (mille). La parola più importante del viaggio.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">'Aita pe'ape'a</div>
+      <div class="pron">🗣️ ài-ta pe-a-pe-a</div>
+      <div class="desc">Nessun problema / pregò. Il motto rilassato delle isole.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Nānā</div>
+      <div class="pron">🗣️ na-nà</div>
+      <div class="desc">Arrivederci / ci vediamo.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Manuia!</div>
+      <div class="pron">🗣️ ma-nuì-a</div>
+      <div class="desc">Salute! (per il brindisi, con una Hinano in mano).</div>
+    </div>
+
+    <h3>🛟 Frasi di sopravvivenza</h3>
+    <div class="m-item">
+      <div class="word">'E · 'Aita</div>
+      <div class="pron">🗣️ è · ài-ta</div>
+      <div class="desc">Sì · No.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">'Aita i papu ia'u</div>
+      <div class="pron">🗣️ ài-ta i pà-pu ia ù</div>
+      <div class="desc">Non ho capito.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Faa taere te parau</div>
+      <div class="pron">🗣️ fa-a ta-è-re te pa-ràu</div>
+      <div class="desc">Parla più piano, per favore.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Parau Marite?</div>
+      <div class="pron">🗣️ pa-ràu ma-rì-te</div>
+      <div class="desc">Parli inglese?</div>
+    </div>
+    <div class="m-item">
+      <div class="word">E hia moni teie?</div>
+      <div class="pron">🗣️ e hìa mò-ni tiè-e</div>
+      <div class="desc">Quanto costa questo? (al mercato di Papeete).</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Tei hea te fare iti?</div>
+      <div class="pron">🗣️ tèi hè-a te fà-re ì-ti</div>
+      <div class="desc">Dov'è il bagno? (fare iti = "casetta").</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Taoto maita'i</div>
+      <div class="pron">🗣️ ta-ò-to mai-tà-i</div>
+      <div class="desc">Buonanotte.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Ua here vau ia oe</div>
+      <div class="pron">🗣️ ù-a hè-re và-u ia ò-e</div>
+      <div class="desc">Ti amo — da sussurrare al tramonto su Matira Beach.</div>
+    </div>
+
+    <h3>🍽️ A tavola & al mercato</h3>
+    <div class="m-item">
+      <div class="word">Mā'a · Tama'a maita'i!</div>
+      <div class="pron">🗣️ mà-a · ta-mà-a mai-tà-i</div>
+      <div class="desc">Cibo · Buon appetito!</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Pape</div>
+      <div class="pron">🗣️ pà-pe</div>
+      <div class="desc">Acqua (pape ha'ari = acqua di cocco).</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Ha'ari</div>
+      <div class="pron">🗣️ ha-à-ri</div>
+      <div class="desc">Cocco.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">E'ia</div>
+      <div class="pron">🗣️ è-ia</div>
+      <div class="desc">Pesce.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Moa</div>
+      <div class="pron">🗣️ mò-a</div>
+      <div class="desc">Pollo.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Pua'a</div>
+      <div class="pron">🗣️ puà-a</div>
+      <div class="desc">Maiale.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">'Uru</div>
+      <div class="pron">🗣️ ù-ru</div>
+      <div class="desc">Frutto del pane.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Mei'a · Fe'i</div>
+      <div class="pron">🗣️ mè-ìa · fè-ì</div>
+      <div class="desc">Banana dolce · banana rossa da cuocere.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Manga</div>
+      <div class="pron">🗣️ màn-ga</div>
+      <div class="desc">Mango.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Pia</div>
+      <div class="pron">🗣️ pìa</div>
+      <div class="desc">Birra.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Moni</div>
+      <div class="pron">🗣️ mò-ni</div>
+      <div class="desc">Soldi.</div>
+    </div>
+
+    <h3>🔢 Numeri da mercato</h3>
+    <div class="m-item">
+      <div class="word">1 hō'ē · 2 piti · 3 toru</div>
+      <div class="pron">🗣️ ho-è · pì-ti · tò-ru</div>
+      <div class="desc">Uno · due · tre.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">4 maha · 5 pae</div>
+      <div class="pron">🗣️ mà-ha · pà-e</div>
+      <div class="desc">Quattro · cinque.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">6 ono · 7 hitu</div>
+      <div class="pron">🗣️ ò-no · hì-tu</div>
+      <div class="desc">Sei · sette.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">8 va'u · 9 iva</div>
+      <div class="pron">🗣️ và-u · ì-va</div>
+      <div class="desc">Otto · nove.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">10 'ahuru</div>
+      <div class="pron">🗣️ a-hù-ru</div>
+      <div class="desc">Dieci.</div>
+    </div>
+
+    <h3>✨ Parole che sentirai ovunque</h3>
+    <div class="m-item">
+      <div class="word">Mana</div>
+      <div class="pron">🗣️ mà-na</div>
+      <div class="desc">Energia spirituale: ce l'hanno persone, luoghi, canti.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Moana · Miti</div>
+      <div class="pron">🗣️ mo-à-na · mì-ti</div>
+      <div class="desc">Oceano aperto · mare.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Motu</div>
+      <div class="pron">🗣️ mò-tu</div>
+      <div class="desc">Isolotto della laguna (sì, come il rum, ma senza accento!).</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Tiare</div>
+      <div class="pron">🗣️ ti-à-re</div>
+      <div class="desc">Il fiore simbolo: si porta all'orecchio.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Vahine · Tāne</div>
+      <div class="pron">🗣️ và-hì-ne · tà-ne</div>
+      <div class="desc">Donna · uomo.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Popa'a</div>
+      <div class="pron">🗣️ po-pà-a</div>
+      <div class="desc">Straniero: sarai tu! Detto con affetto.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Ma'ohi</div>
+      <div class="pron">🗣️ ma-ò-hi</div>
+      <div class="desc">Tahitiano DOC, il popolo nativo.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Fenua</div>
+      <div class="pron">🗣️ fe-nù-a</div>
+      <div class="desc">Terra / patria.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Va'a</div>
+      <div class="pron">🗣️ và-a</div>
+      <div class="desc">Canoa a bilanciere: sport nazionale.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">'Ori · Hīmene · Pahu</div>
+      <div class="pron">🗣️ ò-ri · hì-me-ne · pà-hu</div>
+      <div class="desc">Danza · canto · tamburo: il cuore delle feste.</div>
+    </div>
+    <div class="m-item">
+      <div class="word">Hei · Pareu</div>
+      <div class="pron">🗣️ hè-i · pa-rè-u</div>
+      <div class="desc">Corona di fiori · sarong.</div>
+    </div>
+
+
+    <div class="m-alert info">
+      <strong>💡 Regola d'oro:</strong> i tahitiani adorano chi ci prova: anche un "'Ia ora na" storto apre sorrisi, sconti e consigli.
+    </div>
+  </div>
+
   <!-- ============ FOOTER ============ -->
   <div class="m-footer">
     Daily Brief Polinesia · Edizione mobile · N°21<br>
@@ -2167,7 +2409,7 @@ applyStates();
 // Smooth scroll for anchors + evidenzia chip attivo
 const navLinks = Array.from(document.querySelectorAll('.m-nav-quick a'));
 const navContainer = document.querySelector('.m-nav-quick');
-const NAV_OFFSET = 60; // altezza del nav sticky
+const NAV_OFFSET = 20; // nav in basso: quasi nessun offset in alto
 
 navLinks.forEach(a => {
   a.addEventListener('click', (e) => {
@@ -2223,7 +2465,7 @@ const io = new IntersectionObserver((entries) => {
   }
 }, {
   // Il nav sticky occupa i primi 60px: considera visibile solo dopo
-  rootMargin: '-60px 0px -60% 0px',
+  rootMargin: '-10px 0px -45% 0px',
   threshold: [0.1, 0.25, 0.5, 0.75, 1]
 });
 
@@ -2258,7 +2500,7 @@ function showInstallBanner() {
     <button id="install-yes" style="background:white;color:#0c5b7a;border:none;padding:10px 14px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;">Installa</button>
     <button id="install-no" style="background:transparent;color:white;border:1px solid rgba(255,255,255,0.4);padding:10px 12px;border-radius:6px;font-size:13px;cursor:pointer;">✕</button>
   `;
-  banner.style.cssText = 'position:fixed;bottom:90px;left:10px;right:10px;background:linear-gradient(135deg,#0c5b7a,#164a6b);color:white;padding:12px 14px;border-radius:12px;display:flex;gap:8px;align-items:center;z-index:150;box-shadow:0 4px 16px rgba(0,0,0,0.25);animation:slideUp 0.35s ease-out;';
+  banner.style.cssText = 'position:fixed;bottom:130px;left:10px;right:10px;background:linear-gradient(135deg,#0c5b7a,#164a6b);color:white;padding:12px 14px;border-radius:12px;display:flex;gap:8px;align-items:center;z-index:150;box-shadow:0 4px 16px rgba(0,0,0,0.25);animation:slideUp 0.35s ease-out;';
   document.body.appendChild(banner);
 
   const style = document.createElement('style');
@@ -2286,7 +2528,7 @@ window.addEventListener('load', () => {
   if (isIOS && !isStandalone && !localStorage.getItem('polinesia-ios-hint')) {
     setTimeout(() => {
       const hint = document.createElement('div');
-      hint.style.cssText = 'position:fixed;bottom:90px;left:10px;right:10px;background:#164a6b;color:white;padding:12px 14px;border-radius:12px;z-index:150;font-size:13px;box-shadow:0 4px 16px rgba(0,0,0,0.25);';
+      hint.style.cssText = 'position:fixed;bottom:130px;left:10px;right:10px;background:#164a6b;color:white;padding:12px 14px;border-radius:12px;z-index:150;font-size:13px;box-shadow:0 4px 16px rgba(0,0,0,0.25);';
       hint.innerHTML = `<strong>📱 Aggiungi alla Home</strong><br><small style="opacity:0.85;">Tocca <span style="font-size:16px;">⎋</span> in basso → "Aggiungi alla schermata Home" per avere l'app sempre a portata</small> <span onclick="this.parentElement.remove();localStorage.setItem('polinesia-ios-hint','1');" style="float:right;cursor:pointer;padding:2px 6px;">✕</span>`;
       document.body.appendChild(hint);
     }, 3000);
