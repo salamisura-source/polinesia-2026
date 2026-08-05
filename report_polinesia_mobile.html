@@ -586,6 +586,23 @@
     details.m-acc { border: 1px solid #ddd; }
     details.m-acc[open] .acc-body, details.m-acc .acc-body { display: block !important; }
   }
+
+  /* ============ SEZIONE CIBO & BEVANDE ============ */
+  .m-item img.food {
+    width: 100%; height: 170px; object-fit: cover;
+    border-radius: 10px; display: block; margin-bottom: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .m-item .pron {
+    font-size: 12.5px; color: #8a4a1f; margin-top: 4px;
+    background: #fdf5ef; display: inline-block; padding: 2px 8px; border-radius: 8px;
+  }
+  .m-item .cig {
+    margin-top: 8px; padding: 8px 10px; border-radius: 8px;
+    background: #fce6e6; border-left: 4px solid #a03040;
+    color: #7a1f1f; font-size: 12.5px;
+  }
+
 </style>
 </head>
 <body>
@@ -615,6 +632,7 @@
   <a href="#tip">💡 Tip</a>
   <a href="#consigli">🎁 30 consigli</a>
   <a href="#sanita">🚑 Sanità</a>
+  <a href="#cibo">🍽️ Cibo</a>
 </nav>
 
 <!-- ============ PROGRESS BAR CHECKBOX ============ -->
@@ -1660,6 +1678,302 @@
 
     <div class="m-alert info" style="margin-top:10px;">
       <strong>🏥 Ospedale di riferimento:</strong> CHPF Taaone (Tahiti). Moorea: Hôpital Afareaitu · Bora Bora: Hôpital Vaitape · Raiatea: Hôpital Uturoa. Per casi gravi: evacuazione su NZ/AUS/FR → verifica copertura assicurazione &gt;500.000 €.
+    </div>
+  </div>
+
+
+  <!-- ============ CIBO & BEVANDE ============ -->
+  <div class="m-card" id="cibo">
+    <h2>🍽️ Cibo &amp; bevande · 30 + 15</h2>
+    <p style="font-size:13px; color:#5a6b78;">I piatti tipici delle tue 3 isole e le bevande da provare, con nome tahitiano e pronuncia. Prezzi indicativi in XPF.</p>
+
+    <h3>🌺 Tahiti</h3>
+    <div class="m-item">
+      <img class="food" src="cibo_p01.jpg" alt="E'ia ota · Poisson cru" loading="lazy">
+      <div class="name">🐟 E'ia ota · Poisson cru <span class="price">2.000-2.500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>è-ia ò-ta</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Il piatto nazionale: tonno crudo marinato nel lime, latte di cocco, pomodoro, cetriolo, cipolla.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p02.jpg" alt="Firi firi" loading="lazy">
+      <div class="name">🍩 Firi firi <span class="price">200-300 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>fì-ri fì-ri</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Ciambella fritta a forma di otto: farina, latte di cocco, zucchero. Si puccia nel caffè.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p03.jpg" alt="Po'e mei'a" loading="lazy">
+      <div class="name">🍌 Po'e mei'a <span class="price">500-800 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>po-è mè-ia</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Pudding di banana (mei'a), amido di manioca, latte di cocco e vaniglia di Taha'a.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p04.jpg" alt="Ma'a tinito" loading="lazy">
+      <div class="name">🥘 Ma'a tinito <span class="price">~1.500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>mà-a ti-nì-to</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Il piatto della domenica sino-tahitiana: maiale, cavolo, fagioli rossi, noodle.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p05.jpg" alt="Chow mein delle roulottes" loading="lazy">
+      <div class="name">🍜 Chow mein delle roulottes <span class="price">1.500-2.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>scio-meìn</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Nome locale sino-tahitiano: noodle saltati con pollo, gamberi, verdure e soia. Street food serale.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p06.jpg" alt="'Uru arrosto" loading="lazy">
+      <div class="name">🍞 'Uru arrosto <span class="price">500-1.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>ù-ru</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Frutto del pane intero cotto sulla brace: il "pane" delle isole, polpa cremosa.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p07.jpg" alt="Mahi-mahi alla vaniglia" loading="lazy">
+      <div class="name">🌼 Mahi-mahi alla vaniglia <span class="price">2.500-3.500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>mà-i mà-i</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Filetto di mahi-mahi con crema di cocco e vaniglia di Taha'a: il piatto elegante.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p08.jpg" alt="Pua'a roti" loading="lazy">
+      <div class="name">🥓 Pua'a roti <span class="price">1.500-2.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>puà-a rò-ti</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Maiale arrosto della domenica mattina, crosta croccante: mercato e roulottes.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p09.jpg" alt="Fafaru" loading="lazy">
+      <div class="name">🫙 Fafaru <span class="price">prezzo vario XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>fa-fa-rù</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Tonno fermentato in acqua di mare, servito con mitihue (cocco fermentato), taro e 'umara. Per coraggiosi: odore forte, sapore amato dai locali.</div>
+      <div class="cig">⚠️ <strong>CIGUATERA:</strong> se preparato con pesci della laguna (non tonno/spadaro) vale il rischio ciguatera: chiedi quale pesce è stato usato.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p10.jpg" alt="Kato" loading="lazy">
+      <div class="name">🍪 Kato <span class="price">200-400 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>kà-to</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Biscottini al latte di cocco da inzuppare nel caffè: merenda dei bambini (e non).</div>
+    </div>
+
+    <h3>🥥 Moorea</h3>
+    <div class="m-item">
+      <img class="food" src="cibo_p11.jpg" alt="Moa fafa · Poulet fafa" loading="lazy">
+      <div class="name">🍗 Moa fafa · Poulet fafa <span class="price">1.800-2.500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>mò-a fà-fa</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Pollo stufato con fafa (foglie giovani di taro) e latte di cocco: il comfort food polinesiano.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p12.jpg" alt="E'ia alla brace" loading="lazy">
+      <div class="name">🐠 E'ia alla brace <span class="price">2.000-3.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>è-ia</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Pescato del giorno (roi, pesce pappagallo) intero nella foglia di banano, lime e burro.</div>
+      <div class="cig">⚠️ <strong>CIGUATERA:</strong> roi (cernia), pesce pappagallo e dentice sono pesci di barriera a rischio: chiedi al ristorante di che pesce si tratta; sicuri = tonno, mahi-mahi, marlin, bonito.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p13.jpg" alt="Fe'e al cocco" loading="lazy">
+      <div class="name">🐙 Fe'e al cocco <span class="price">~2.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>fe-è</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Polpo tenero stufato in crema di cocco e cipolla: specialità degli snack.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p14.jpg" alt="Taro e 'umara" loading="lazy">
+      <div class="name">🍠 Taro e 'umara <span class="price">500-800 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>tà-ro e ù-ma-ra</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Taro e patata dolce arrostiti delle valli Opunohu/Cook's Bay: il contorno di casa.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p15.jpg" alt="Kaveu" loading="lazy">
+      <div class="name">🦀 Kaveu <span class="price">2.500-4.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>ka-vè-u</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Granchio del cocco cotto, servito con lime: piatto festivo raro, da ordinare prima.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p16.jpg" alt="Pāhua al lime" loading="lazy">
+      <div class="name">🦪 Pāhua al lime <span class="price">1.500-2.500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>pa-ù-a</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Carne di vongola gigante (tridacna) cruda al lime o in curry di cocco: sapore di laguna.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p17.jpg" alt="Pua'a ahima'a" loading="lazy">
+      <div class="name">🔥 Pua'a ahima'a <span class="price">~2.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>a-i-mà-a</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Maiale, 'uru, taro e fe'i cotti al vapore nel forno interrato di pietre calde: il rito della domenica.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p18.jpg" alt="Chevrettes in curry" loading="lazy">
+      <div class="name">🦐 Chevrettes in curry <span class="price">2.000-3.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>sce-vrèt</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Nome locale: gamberetti d'acqua dolce stufati in curry e latte di cocco.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p19.jpg" alt="Varo grigliato" loading="lazy">
+      <div class="name">🦞 Varo grigliato <span class="price">2.500-4.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>và-ro</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Cannocchia/mantis shrimp alla brace con burro all'aglio: delizia delle maree.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p20.jpg" alt="Manga" loading="lazy">
+      <div class="name">🥭 Manga <span class="price">300-600 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>màn-ga</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Mango dolce maturo con spruzzo di lime: la frutta più buona del mondo, dicono qui.</div>
+    </div>
+
+    <h3>💜 Bora Bora</h3>
+    <div class="m-item">
+      <img class="food" src="cibo_p21.jpg" alt="Tonno tataki" loading="lazy">
+      <div class="name">🍣 Tonno tataki <span class="price">2.500-3.500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>ta-tà-ki</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Tonno della laguna scottato al sesamo, soia e lime: l'aperitivo fronte Otemanu.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p22.jpg" alt="'Ōura miti · Aragosta alla vaniglia" loading="lazy">
+      <div class="name">🦞 'Ōura miti · Aragosta alla vaniglia <span class="price">6.000-9.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>ò-u-ra mì-ti</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Aragosta locale (oura miti) grigliata con burro alla vaniglia di Taha'a: la cena speciale.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p23.jpg" alt="'Uru fritto & pua toro" loading="lazy">
+      <div class="name">🥫 'Uru fritto & pua toro <span class="price">1.200-1.800 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>puà tò-ro</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Frittelle di frutto del pane con corned beef rosolato (pua toro): comfort food isolano.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p24.jpg" alt="Fe'i al cocco" loading="lazy">
+      <div class="name">🍮 Fe'i al cocco <span class="price">600-900 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>fe-ì</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Banana rossa fe'i cotta al forno nel latte di cocco: dolce umile, colore arancio.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p25.jpg" alt="Po'e di papaya" loading="lazy">
+      <div class="name">🍈 Po'e di papaya <span class="price">500-800 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>po-è</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Pudding di papaya con amido di manioca, servito con crema di cocco fresca.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p26.jpg" alt="Vana" loading="lazy">
+      <div class="name">🟣 Vana <span class="price">1.000-2.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>và-na</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Riccio di mare aperto al momento, crudo con lime: lo spuntino dei pescatori.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p27.jpg" alt="Mā'oa taioro" loading="lazy">
+      <div class="name">🐚 Mā'oa taioro <span class="price">1.000-1.800 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>ma-ò-a</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Lumachine di mare raccolte sulla barriera, in salsa taioro di cocco fermentato.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p28.jpg" alt="Casse-croûte di tonno" loading="lazy">
+      <div class="name">🥖 Casse-croûte di tonno <span class="price">800-1.200 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>cas-crùt</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Nome locale: baguette croccante con pesce crudo marinato e burro. Il pranzo da snack.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p29.jpg" alt="Mape caldi" loading="lazy">
+      <div class="name">🌰 Mape caldi <span class="price">300-500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>mà-pe</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Le "castagne polinesiane" arrostite: snack da strada tiepido, sapore tra castagna e noce.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_p30.jpg" alt="Dessert alla vaniglia (vanira) di Taha'a" loading="lazy">
+      <div class="name">🍨 Dessert alla vaniglia (vanira) di Taha'a <span class="price">800-1.200 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>va-nì-ra</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Gelato o torta con la vaniglia nera migliore del mondo (Taha'a è a un braccio di mare).</div>
+    </div>
+
+    <h3>🍹 Bevande alcoliche</h3>
+    <div class="m-item">
+      <img class="food" src="cibo_b01.jpg" alt="Pia Hinano" loading="lazy">
+      <div class="name">🍺 Pia Hinano <span class="price">400-600 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>pìa</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> La lager locale dal 1955, ghiacciata: l'etichetta con la vahine è un souvenir. (pia = birra)</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b02.jpg" alt="Pia Manuia" loading="lazy">
+      <div class="name">🍺 Pia Manuia <span class="price">600-800 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>pìa ma-nuì-a</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Il birrificio craft polinesiano: blonde e IPA giovani. Manuia = salute/fortuna!</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b03.jpg" alt="Ti' punch al rum Mana'o" loading="lazy">
+      <div class="name">🥃 Ti' punch al rum Mana'o <span class="price">800-1.200 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>tì punch</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Rum bianco di Tahiti, lime e zucchero di canna: corto e deciso, come nelle Antille.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b04.jpg" alt="Rum Mana'o invecchiato" loading="lazy">
+      <div class="name">🥃 Rum Mana'o invecchiato <span class="price">1.000-1.500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>ma-na-ò</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Ambrato, da sorseggiare al tramonto sulla veranda del bungalow.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b05.jpg" alt="Punch coco (ha'ari)" loading="lazy">
+      <div class="name">🥥 Punch coco (ha'ari) <span class="price">900-1.300 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>ha-à-ri</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Rum, cocco fresco (ha'ari) e ananas: servito nella noce aperta. Pericolosamente buono.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b06.jpg" alt="Punch planteur" loading="lazy">
+      <div class="name">🍹 Punch planteur <span class="price">900-1.300 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>plan-tèr</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Rum + succhi tropicali (ananas, guava, manga): il rito del tramonto su ogni veranda.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b07.jpg" alt="Liquore alla vaniglia di Taha'a" loading="lazy">
+      <div class="name">🌼 Liquore alla vaniglia di Taha'a <span class="price">~1.000 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>ta-hà-a</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Digestivo artigianale profumatissimo dell'isola della vaniglia. Da riportare a casa.</div>
+    </div>
+
+    <h3>🥤 Bevande analcoliche</h3>
+    <div class="m-item">
+      <img class="food" src="cibo_b08.jpg" alt="Pape ha'ari · acqua di cocco" loading="lazy">
+      <div class="name">🥥 Pape ha'ari · acqua di cocco <span class="price">300-500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>pà-pe ha-à-ri</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Acqua di cocco fresca (pape = acqua, ha'ari = cocco) aperta al momento in spiaggia.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b09.jpg" alt="Coco glacé" loading="lazy">
+      <div class="name">🥤 Coco glacé <span class="price">500-800 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>co-co gla-sè</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Cocco frullato ghiacciato dei chioschi: la merenda definitiva sotto le palme.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b10.jpg" alt="Citronnade allo zenzero" loading="lazy">
+      <div class="name">🫚 Citronnade allo zenzero <span class="price">400-600 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>si-tronàd</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Lime, zenzero fresco e zucchero di canna: la limonata di casa delle roulottes.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b11.jpg" alt="Succo di nono" loading="lazy">
+      <div class="name">🧃 Succo di nono <span class="price">500-900 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>nò-no</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Il succo di noni, celebre "rimedio" locale: sapore audace, fama da superfood.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b12.jpg" alt="Succo d'ananas Rotui" loading="lazy">
+      <div class="name">🍍 Succo d'ananas Rotui <span class="price">300-500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>ro-tuì</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> L'ananas di Moorea (il più dolce del mondo) in succo: prodotto ai piedi del monte Rotui.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b13.jpg" alt="Succo di manga & guava" loading="lazy">
+      <div class="name">🥭 Succo di manga & guava <span class="price">300-500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>màn-ga</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Nettari Rotui di mango e guava: la scorta da valigia per il rientro.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b14.jpg" alt="Caffè di Taha'a" loading="lazy">
+      <div class="name">☕ Caffè di Taha'a <span class="price">300-500 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>ta-hà-a</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> Caffè coltivato sull'isola della vaniglia: colazione profumata nelle pensioni.</div>
+    </div>
+    <div class="m-item">
+      <img class="food" src="cibo_b15.jpg" alt="Cioccolata calda + firi firi" loading="lazy">
+      <div class="name">☕ Cioccolata calda + firi firi <span class="price">400-600 XPF</span></div>
+      <div class="pron">🗣️ si pronuncia: <strong>cio-co-là-ta</strong></div>
+      <div class="desc"><strong>Ingredienti:</strong> La colazione polinesiana classica: cioccolata calda densa con firi firi da pucciare.</div>
+    </div>
+
+    <div class="m-alert warn">
+      <strong>⚠️ Ciguatera:</strong> evita i grandi pesci di barriera (barracuda, cernia adulta, grande pesce pappagallo, dentice). Sicuri: tonno, mahi-mahi, marlin, bonito. Nel dubbio chiedi: "ciguatera?"
+    </div>
+    <div class="m-alert info">
+      <strong>💡 Lessico furbo:</strong> <em>ma'a</em> = cibo · <em>pape</em> = acqua · <em>ha'ari</em> = cocco · <em>pia</em> = birra · <em>e'ia</em> = pesce · <em>māuruuru</em> = grazie!
     </div>
   </div>
 
