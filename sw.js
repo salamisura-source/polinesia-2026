@@ -1,6 +1,6 @@
 // Service Worker Polinesia 2026
 // Strategia: cache-first per gli asset, network-first per HTML (aggiornamenti)
-const CACHE_NAME = 'polinesia-v21-2026-08-04';
+const CACHE_NAME = 'polinesia-v22-2026-08-05';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -10,6 +10,7 @@ const CORE_ASSETS = [
   './report_polinesia_agosto_2026.html',
   './viaggio_polinesia.ics',
   './manifest.json',
+  './infografica_sanita.png',
 ];
 
 // Install: pre-cache dei file core
