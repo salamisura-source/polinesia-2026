@@ -609,6 +609,11 @@
   /* ============ MINI VOCABOLARIO ============ */
   .m-item .word { font-size: 15.5px; font-weight: 800; color: #164a6b; }
 
+
+  /* ============ ESCURSIONI TOP ============ */
+  .exc-photos { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; margin: 8px 0; }
+  .exc-photos img { width: 100%; height: 82px; object-fit: cover; border-radius: 8px; }
+
 </style>
 </head>
 <body>
@@ -664,10 +669,6 @@
     <p style="font-size:13.5px; color:#5a6b78;">Versione ottimizzata per smartphone del daily brief. Solo <strong>informazioni operative</strong> per il viaggio: itinerario, hotel, voli, ferry, escursioni, ristoranti, kit medico, consigli. <em>Zero notizie di cronaca/politica.</em></p>
     <div class="m-alert tip">
       <strong>💡 Sistema checkbox:</strong> tocca qualsiasi voce spuntabile per ciclare i 4 stati: vuoto → <strong>✓ fatto</strong> → <strong>❤ mi piace</strong> → <strong>✗ non mi piace</strong> → vuoto. Le tue scelte si salvano nell'URL: usa "Condividi link" in basso per portarle su altri dispositivi.
-    </div>
-    <div class="m-currency">
-      <div class="cell"><span class="big">1 €</span>= 119,33 XPF</div>
-      <div class="cell"><span class="big">1.000 XPF</span>≈ 8,38 €</div>
     </div>
   </div>
 
@@ -917,11 +918,6 @@
       <li><strong>Rientro:</strong> lunedì 31/8 preparati a essere zombie (se lavori, prendi 1-2 giorni di ferie extra).</li>
     </ul>
 
-    <h3>🇺🇸 ESTA obbligatoria</h3>
-    <div class="m-alert warn">
-      Il tuo volo transita per <strong>SFO andata + ritorno</strong>. ESTA obbligatoria, ~21 USD, valida 2 anni. Richiedila su <a href="https://esta.cbp.dhs.gov" target="_blank" rel="noopener">esta.cbp.dhs.gov</a> almeno 72h prima. All'arrivo a SFO fai la fila "Visitors" (30-60 min).
-    </div>
-
     <h3>💱 Denaro &amp; pagamenti</h3>
     <div class="m-currency">
       <div class="cell"><span class="big">1 €</span>= 119,33 XPF</div>
@@ -946,8 +942,52 @@
 
   <!-- ============ ESCURSIONI COMPLETE (ACCORDION) ============ -->
   <div id="escursioni">
-    <h2 style="font-size:17px; color:#0c5b7a; margin:16px 6px 8px;">🏝️ Escursioni per hotel · lista completa</h2>
-    <p style="font-size:12.5px; color:#5a6b78; margin:0 6px 10px;">4 hotel · 16 attività gratuite dei resort + 38 escursioni terra/mare — allineato al desktop.</p>
+    <h2 style="font-size:17px; color:#0c5b7a; margin:16px 6px 8px;">🏝️ Escursioni · le 6 imperdibili</h2>
+    <p style="font-size:12.5px; color:#5a6b78; margin:0 6px 10px;">Tocca una card per spuntarla (✓ fatto · ❤ mi piace · ✗ no). Qui sotto la lista completa per hotel.</p>
+    <div class="m-item actionable">
+      <div class="name">⭐ Lagoon Cruise razze & squali <span class="price p2">~15k XPF</span></div>
+      <div class="meta">🥥 Moorea · 4h · ~15k XPF · Corallina Tours</div>
+      <div class="exc-photos"><img src="esc_e1a.jpg" alt="⭐ Lagoon Cruise razze & squali" loading="lazy"><img src="esc_e1b.jpg" alt="⭐ Lagoon Cruise razze & squali" loading="lazy"><img src="esc_e1c.jpg" alt="⭐ Lagoon Cruise razze & squali" loading="lazy"></div>
+      <div class="desc">Il classico assoluto di Moorea: razze pastinaca e squali pinna nera che nuotano in acqua bassa, più stop nel coral garden. Emozione gigante, zero pericolo se guidati.</div>
+      <div class="desc"><strong>💡 Consigli:</strong> Prenota 2-3 gg prima (sold-out in agosto) · uscita mattina = acqua calma · porta action-cam · lycra/rash guard contro il sole.</div>
+    </div>
+    <div class="m-item actionable">
+      <div class="name">⭐ Tiki Tour in piroga + motu <span class="price p2">~14k XPF</span></div>
+      <div class="meta">🥥 Moorea · full day · ~14k XPF · il top-rated dell'isola</div>
+      <div class="exc-photos"><img src="esc_e2a.jpg" alt="⭐ Tiki Tour in piroga + motu" loading="lazy"><img src="esc_e2b.jpg" alt="⭐ Tiki Tour in piroga + motu" loading="lazy"><img src="esc_e2c.jpg" alt="⭐ Tiki Tour in piroga + motu" loading="lazy"></div>
+      <div class="desc">Piroga tradizionale, tiki sommersi, marae antichi e picnic polinesiano su un motu. Cultura + laguna in un colpo solo.</div>
+      <div class="desc"><strong>💡 Consigli:</strong> Prenota 1 settimana prima · cappello e acqua · chiedi alla guida dei marae: storie pazzesche · cash per artigianato locale.</div>
+    </div>
+    <div class="m-item actionable">
+      <div class="name">⭐ Full Day Lagoon + motu picnic <span class="price p2">~22k XPF</span></div>
+      <div class="meta">💜 Bora Bora · 7h · ~22k XPF · Lagoon Service</div>
+      <div class="exc-photos"><img src="esc_e3a.jpg" alt="⭐ Full Day Lagoon + motu picnic" loading="lazy"><img src="esc_e3b.jpg" alt="⭐ Full Day Lagoon + motu picnic" loading="lazy"><img src="esc_e3c.jpg" alt="⭐ Full Day Lagoon + motu picnic" loading="lazy"></div>
+      <div class="desc">L'esperienza-cartolina: outrigger canoe, ukulele a bordo, snorkel nel coral garden e pranzo tahitiano su un motu davanti a Otemanu.</div>
+      <div class="desc"><strong>💡 Consigli:</strong> Prenota PRIMA di partire dall'Italia (cronico sold-out) · felpa leggera per il vento in barca · attrezzatura snorkel inclusa.</div>
+    </div>
+    <div class="m-item actionable">
+      <div class="name"> Sunset catamaran <span class="price p2">~11-13k XPF</span></div>
+      <div class="meta">💜 Bora Bora · 2h · ~11-13k XPF</div>
+      <div class="exc-photos"><img src="esc_e4a.jpg" alt=" Sunset catamaran" loading="lazy"><img src="esc_e4b.jpg" alt=" Sunset catamaran" loading="lazy"><img src="esc_e4c.jpg" alt=" Sunset catamaran" loading="lazy"></div>
+      <div class="desc">Vela al tramonto con la silhouette del Mont Otemanu e cocktail in mano. La foto che posterai per prima.</div>
+      <div class="desc"><strong>💡 Consigli:</strong> Prenota 2-3 gg prima · felpa: dopo il sole l'aliseo pizzica · lato sinistro della barca = vista migliore.</div>
+    </div>
+    <div class="m-item actionable">
+      <div class="name">🚙 4×4 Papenoo Valley <span class="price p2">~17k XPF</span></div>
+      <div class="meta">🌺 Tahiti · 8h · ~17k XPF · Te Mana Tahiti Tours</div>
+      <div class="exc-photos"><img src="esc_e5a.jpg" alt="🚙 4×4 Papenoo Valley" loading="lazy"><img src="esc_e5b.jpg" alt="🚙 4×4 Papenoo Valley" loading="lazy"><img src="esc_e5c.jpg" alt="🚙 4×4 Papenoo Valley" loading="lazy"></div>
+      <div class="desc">L'interno selvaggio di Tahiti: cascate, belvedere sulla valle Papenoo, fango e giungla. L'avventura più richiesta dell'isola.</div>
+      <div class="desc"><strong>💡 Consigli:</strong> Prenota prima di partire · scarpe chiuse + k-way · macchina fotografica con laccio (polvere e schizzi).</div>
+    </div>
+    <div class="m-item actionable">
+      <div class="name">🐬 Dolphin watching + Aquarium <span class="price p2">~9k XPF</span></div>
+      <div class="meta">🌺 Tahiti · 2-3h · ~9k XPF · Activiseas</div>
+      <div class="exc-photos"><img src="esc_e6a.jpg" alt="🐬 Dolphin watching + Aquarium" loading="lazy"><img src="esc_e6b.jpg" alt="🐬 Dolphin watching + Aquarium" loading="lazy"><img src="esc_e6c.jpg" alt="🐬 Dolphin watching + Aquarium" loading="lazy"></div>
+      <div class="desc">Uscita mattutina coi delfini di Ta'apuna e snorkel all'Aquarium di Faa'a: coralli, relitti WWII e, con fortuna, tartarughe.</div>
+      <div class="desc"><strong>💡 Consigli:</strong> Delfini più attivi 8-10 del mattino · pick-up hotel incluso · mai toccare gli animali: si guarda, non si tocca.</div>
+    </div>
+
+    <h3 style="margin:14px 6px 6px; color:#333;">📚 Lista completa per hotel</h3>
 
     <!-- ============ HOTEL 1 · IC TAHITI ============ -->
     <details class="m-acc">
@@ -1474,11 +1514,7 @@
       <li>Farmaci cronici in quantità doppia + prescrizione in inglese/francese</li>
     </ul>
 
-    <h3>Numeri d'emergenza 24/7</h3>
-    <a class="hotel-phone" href="tel:15">📞 <strong>15</strong> · SAMU (urgenze mediche)</a>
-    <a class="hotel-phone" href="tel:17">📞 <strong>17</strong> · Gendarmerie</a>
-    <a class="hotel-phone" href="tel:18">📞 <strong>18</strong> · Pompieri</a>
-    <a class="hotel-phone" href="tel:112">📞 <strong>112</strong> · Numero europeo unico</a>
+    <div class="m-alert info" style="margin-top:10px;"> Numeri d'emergenza e ospedali: li trovi nella sezione <strong>Sanità</strong> (chip 🚑 nel menu in basso), sempre a un tocco.</div>
 
     <div class="m-alert info" style="margin-top:10px;">
       <strong>Kit repellenti anti-zanzare:</strong> ✅ già acquistato (Jungle Formula spray + roll-on, Autan Tropical, Foille Extra Strong, Alontan Extreme).
@@ -1512,67 +1548,6 @@
       <div class="desc">Festa nazionale francese. Molti negozi/uffici chiusi la mattina, aperti dal pomeriggio. Buon giorno per una giornata rilassata in laguna o al Belvédère di Opunohu.</div>
     </div>
 
-    <h3>⭐ Il tuo calendario giorno per giorno</h3>
-    <div class="m-item" style="background:#fff7e6; border-left-color:#b56a00;">
-      <div class="name">⭐ Ven 7 · Partenza da Bologna</div>
-      <div class="desc">LX 1669 BLQ 10:25 → ZRH · LX 38 → SFO 16:15 · notte Francisco Bay Inn</div>
-    </div>
-    <div class="m-item" style="background:#fff7e6; border-left-color:#b56a00;">
-      <div class="name">⭐ Sab 8 · Arrivo Papeete</div>
-      <div class="desc">UA 115 SFO 13:25 → PPT 18:55 · check-in IC Tahiti</div>
-    </div>
-    <div class="m-item">
-      <div class="name">Dom 9 · Tahiti 1 (jet-lag day)</div>
-      <div class="desc">Giornata resort + eventuale visita Salon Mamao pomeriggio</div>
-    </div>
-    <div class="m-item">
-      <div class="name">Lun 10-Mar 11 · Tahiti esplorazione</div>
-      <div class="desc">Papeete, Punaauia · Tahiti Iti, Teahupoo, cascate Faarumai</div>
-    </div>
-    <div class="m-item" style="background:#eaf3fb; border-left-color:#0c5b7a;">
-      <div class="name">⛴️ Mer 12 · Ferry Tahiti → Moorea</div>
-      <div class="desc">Aremiti 25 min · check-in Cook's Bay Hotel</div>
-    </div>
-    <div class="m-item">
-      <div class="name">Gio 13 - Lun 17 · Moorea (5 giorni)</div>
-      <div class="desc">Include Ferragosto sabato 15/8. Lagoon cruise, snorkeling, Belvedere Opunohu, cena Moorea Beach Café</div>
-    </div>
-    <div class="m-item" style="background:#eaf3fb; border-left-color:#0c5b7a;">
-      <div class="name">🛫 Mar 18 · Volo Moorea → Bora Bora</div>
-      <div class="desc">Air Moana NM918 MOZ 10:35 → BOB 11:25 · check-in Royal Bora Bora</div>
-    </div>
-    <div class="m-item">
-      <div class="name">Mer 19 - Dom 23 · Bora al Royal (5 giorni)</div>
-      <div class="desc">Lagoon tour, snorkeling, Matira Beach, cene al motu, sunset cruise</div>
-    </div>
-    <div class="m-item" style="background:#fff7e6; border-left-color:#b56a00;">
-      <div class="name">🚕 Lun 24 · Trasferimento hotel</div>
-      <div class="desc">Royal → IC Le Moana (~5-10 min taxi ~1.500 XPF, Matira Point). 2 notti overwater.</div>
-    </div>
-    <div class="m-item">
-      <div class="name">Mar 25 · IC Le Moana</div>
-      <div class="desc">Ultima full-day a Bora Bora · overwater experience · Deep Ocean Spa consigliato</div>
-    </div>
-    <div class="m-item" style="background:#eaf3fb; border-left-color:#0c5b7a;">
-      <div class="name">🛫 Mer 26 · Volo Bora → Papeete</div>
-      <div class="desc">Air Moana NM914 BOB 15:15 → PPT · check-in IC Tahiti (2° soggiorno)</div>
-    </div>
-    <div class="m-item">
-      <div class="name">Gio 27 · Tahiti 2 (ultimo giorno)</div>
-      <div class="desc">Shopping perle nere, ultimo bagno in laguna</div>
-    </div>
-    <div class="m-item" style="background:#faeaea; border-left-color:#a03040;">
-      <div class="name">⭐ Ven 28 · Rientro 1/3</div>
-      <div class="desc">UA 114 PPT 21:10 → SFO 08:15 (+1) · volo notturno</div>
-    </div>
-    <div class="m-item" style="background:#faeaea; border-left-color:#a03040;">
-      <div class="name">Sab 29 · Rientro 2/3</div>
-      <div class="desc">LH 455 SFO 14:40 → FRA 10:25 (+1) · attraversamento data line</div>
-    </div>
-    <div class="m-item" style="background:#faeaea; border-left-color:#a03040;">
-      <div class="name">🏁 Dom 30 · RIENTRO A BOLOGNA</div>
-      <div class="desc">LH 286 FRA 16:20 → BLQ 17:50 · casa</div>
-    </div>
   </div>
 
   <!-- ============ TIP DEL GIORNO ============ -->
