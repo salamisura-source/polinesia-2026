@@ -367,6 +367,7 @@
   .meteo-cell .temp { font-size: 22px; font-weight: 800; color: #164a6b; margin: 4px 0 2px; font-variant-numeric: tabular-nums; }
   .meteo-cell .cond { font-size: 11px; color: #5a6b78; }
   .meteo-cell .wind { font-size: 10px; color: #999; margin-top: 2px; }
+  .meteo-cell .feels { font-size: 10px; color: #b56a00; margin-top: 2px; font-weight: 700; }
 
   /* ===== FOOTER ===== */
   footer {
@@ -446,9 +447,9 @@
 <!-- ===== METEO LIVE ===== -->
 <h2 class="section">🌤️ Meteo live</h2>
 <div id="meteo-live">
-  <div class="meteo-cell"><div class="isl">🌺 Tahiti</div><div class="temp" id="mt-tah">–</div><div class="cond" id="mc-tah">carico…</div><div class="wind" id="mw-tah"></div></div>
-  <div class="meteo-cell"><div class="isl">🥥 Moorea</div><div class="temp" id="mt-moo">–</div><div class="cond" id="mc-moo">carico…</div><div class="wind" id="mw-moo"></div></div>
-  <div class="meteo-cell"><div class="isl">💜 Bora Bora</div><div class="temp" id="mt-bor">–</div><div class="cond" id="mc-bor">carico…</div><div class="wind" id="mw-bor"></div></div>
+  <div class="meteo-cell"><div class="isl">🌺 Tahiti</div><div class="temp" id="mt-tah">–</div><div class="cond" id="mc-tah">carico…</div><div class="wind" id="mw-tah"></div><div class="feels" id="mf-tah"></div></div>
+  <div class="meteo-cell"><div class="isl">🥥 Moorea</div><div class="temp" id="mt-moo">–</div><div class="cond" id="mc-moo">carico…</div><div class="wind" id="mw-moo"></div><div class="feels" id="mf-moo"></div></div>
+  <div class="meteo-cell"><div class="isl">💜 Bora Bora</div><div class="temp" id="mt-bor">–</div><div class="cond" id="mc-bor">carico…</div><div class="wind" id="mw-bor"></div><div class="feels" id="mf-bor"></div></div>
 </div>
 
 <!-- ===== I 4 REPORT ===== -->
@@ -722,10 +723,17 @@ function weatherLabel(code) {
   return '—';
 }
 
+function feelsLike(t, rh) {
+  const g = (17.27 * t) / (237.3 + t) + Math.log(rh / 100);
+  const td = (237.3 * g) / (17.27 - g);
+  const e = 6.11 * Math.exp(5417.7530 * (1 / 273.16 - 1 / (273.15 + td)));
+  return Math.round(t + 0.5555 * (e - 10));
+}
+
 async function loadWeather() {
   for (const loc of LOCATIONS) {
     try {
-      const url = `https://api.open-meteo.com/v1/forecast?latitude=${loc.lat}&longitude=${loc.lon}&current=temperature_2m,weather_code,wind_speed_10m&timezone=Pacific%2FTahiti`;
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${loc.lat}&longitude=${loc.lon}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m&timezone=Pacific%2FTahiti`;
       const r = await fetch(url);
       const d = await r.json();
       const c = d.current;
@@ -733,9 +741,11 @@ async function loadWeather() {
       document.getElementById('mt-' + loc.key).innerHTML = `${icon} ${Math.round(c.temperature_2m)}°`;
       document.getElementById('mc-' + loc.key).textContent = weatherLabel(c.weather_code);
       document.getElementById('mw-' + loc.key).textContent = `vento ${Math.round(c.wind_speed_10m)} km/h`;
+      document.getElementById('mf-' + loc.key).textContent = `umidita ${Math.round(c.relative_humidity_2m)}% - percepita ${feelsLike(c.temperature_2m, c.relative_humidity_2m)} gradi`;
     } catch(e) {
       document.getElementById('mc-' + loc.key).textContent = 'offline';
       document.getElementById('mw-' + loc.key).textContent = '';
+      document.getElementById('mf-' + loc.key).textContent = '';
     }
   }
 }
