@@ -2477,7 +2477,7 @@ async function loadMobileWx() {
       const r = await fetch(url);
       const c = (await r.json()).current;
       document.getElementById('lm-' + loc.key).textContent = Math.round(c.temperature_2m) + String.fromCharCode(176);
-      document.getElementById('lf-' + loc.key).textContent = 'UR ' + Math.round(c.relative_humidity_2m) + '% - percepita ' + feelsLike(c.temperature_2m, c.relative_humidity_2m) + String.fromCharCode(176);
+      document.getElementById('lf-' + loc.key).textContent = String.fromCodePoint(128167) + ' ' + Math.round(c.relative_humidity_2m) + '% ' + String.fromCodePoint(8594) + ' percepita ' + feelsLike(c.temperature_2m, c.relative_humidity_2m) + String.fromCharCode(176);
     } catch (e) {
       document.getElementById('lf-' + loc.key).textContent = 'offline';
     }

@@ -741,7 +741,7 @@ async function loadWeather() {
       document.getElementById('mt-' + loc.key).innerHTML = `${icon} ${Math.round(c.temperature_2m)}°`;
       document.getElementById('mc-' + loc.key).textContent = weatherLabel(c.weather_code);
       document.getElementById('mw-' + loc.key).textContent = `vento ${Math.round(c.wind_speed_10m)} km/h`;
-      document.getElementById('mf-' + loc.key).textContent = `umidita ${Math.round(c.relative_humidity_2m)}% - percepita ${feelsLike(c.temperature_2m, c.relative_humidity_2m)} gradi`;
+      document.getElementById('mf-' + loc.key).textContent = String.fromCodePoint(128167) + ' ' + Math.round(c.relative_humidity_2m) + '% ' + String.fromCodePoint(183) + ' percepita ' + feelsLike(c.temperature_2m, c.relative_humidity_2m) + String.fromCharCode(176);
     } catch(e) {
       document.getElementById('mc-' + loc.key).textContent = 'offline';
       document.getElementById('mw-' + loc.key).textContent = '';
