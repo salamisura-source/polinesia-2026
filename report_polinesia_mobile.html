@@ -2457,6 +2457,36 @@ const io = new IntersectionObserver((entries) => {
 sections.forEach(s => io.observe(s));
 
 // ==================================================
+// METEO LIVE + TEMPERATURA PERCEPITA (humidex)
+// ==================================================
+const WX_LOC = [
+  { key:'tah', lat:-17.5516, lon:-149.5585 },
+  { key:'moo', lat:-17.53,   lon:-149.83 },
+  { key:'bor', lat:-16.5004, lon:-151.7415 },
+];
+function feelsLike(t, rh) {
+  const g = (17.27 * t) / (237.3 + t) + Math.log(rh / 100);
+  const td = (237.3 * g) / (17.27 - g);
+  const e = 6.11 * Math.exp(5417.7530 * (1 / 273.16 - 1 / (273.15 + td)));
+  return Math.round(t + 0.5555 * (e - 10));
+}
+async function loadMobileWx() {
+  for (const loc of WX_LOC) {
+    try {
+      const url = 'https://api.open-meteo.com/v1/forecast?latitude=' + loc.lat + '&longitude=' + loc.lon + '&current=temperature_2m,relative_humidity_2m,weather_code&timezone=Pacific%2FTahiti';
+      const r = await fetch(url);
+      const c = (await r.json()).current;
+      document.getElementById('lm-' + loc.key).textContent = Math.round(c.temperature_2m) + String.fromCharCode(176);
+      document.getElementById('lf-' + loc.key).textContent = 'UR ' + Math.round(c.relative_humidity_2m) + '% - percepita ' + feelsLike(c.temperature_2m, c.relative_humidity_2m) + String.fromCharCode(176);
+    } catch (e) {
+      document.getElementById('lf-' + loc.key).textContent = 'offline';
+    }
+  }
+}
+loadMobileWx();
+setInterval(loadMobileWx, 30 * 60 * 1000);
+
+// ==================================================
 // PWA: registrazione service worker + banner install
 // ==================================================
 if ('serviceWorker' in navigator) {
