@@ -1,6 +1,14 @@
 // Service Worker Polinesia 2026
 // Strategia: cache-first per gli asset, network-first per HTML (aggiornamenti)
-const CACHE_NAME = 'polinesia-v22-2026-08-05';
+const CACHE_NAME = 'polinesia-v23-2026-08-06';
+
+// Offline garantito: tutte le foto (cibo + escursioni) pre-cachate
+const pad = (n) => String(n).padStart(2, '0');
+const CIBO_IMG = [...Array(30)].map((_, i) => `./cibo_p${pad(i + 1)}.jpg`)
+  .concat([...Array(15)].map((_, i) => `./cibo_b${pad(i + 1)}.jpg`));
+const ESC_IMG = [];
+for (let i = 1; i <= 6; i++) for (const c of ['a', 'b', 'c']) ESC_IMG.push(`./esc_e${i}${c}.jpg`);
+
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -11,6 +19,8 @@ const CORE_ASSETS = [
   './viaggio_polinesia.ics',
   './manifest.json',
   './infografica_sanita.png',
+  ...CIBO_IMG,
+  ...ESC_IMG,
 ];
 
 // Install: pre-cache dei file core
