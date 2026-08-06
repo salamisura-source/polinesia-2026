@@ -15,7 +15,7 @@
   html { font-size: 16px; }
   body {
     margin: 0;
-    padding: 0 0 130px 0;
+    padding: 0 0 175px 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background: #f5f6f8;
     color: #1a1d24;
@@ -491,7 +491,7 @@
   /* Bottom action bar */
   #action-bar {
     position: fixed;
-    bottom: calc(56px + env(safe-area-inset-bottom)); /* sopra il carosello in basso */
+    bottom: calc(96px + env(safe-area-inset-bottom)); /* sopra il carosello a 2 righe */
     left: 0;
     right: 0;
     background: white;
@@ -518,7 +518,7 @@
   /* Toast */
   #toast {
     position: fixed;
-    bottom: 140px;
+    bottom: 185px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(20,25,35,0.95);
@@ -544,16 +544,15 @@
   /* ============ TAB NAV FISSA IN BASSO (pollice-friendly) ============ */
   .m-nav-quick {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 6px;
-    overflow-x: auto;
-    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
     background: rgba(255, 255, 255, 0.97);
     backdrop-filter: saturate(180%) blur(12px);
     -webkit-backdrop-filter: saturate(180%) blur(12px);
     border-top: 1px solid #e0e5eb;
     box-shadow: 0 -2px 8px rgba(12, 91, 122, 0.10);
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
     position: fixed;
     left: 0;
     right: 0;
@@ -2477,7 +2476,7 @@ function showInstallBanner() {
     <button id="install-yes" style="background:white;color:#0c5b7a;border:none;padding:10px 14px;border-radius:6px;font-weight:700;font-size:13px;cursor:pointer;">Installa</button>
     <button id="install-no" style="background:transparent;color:white;border:1px solid rgba(255,255,255,0.4);padding:10px 12px;border-radius:6px;font-size:13px;cursor:pointer;">✕</button>
   `;
-  banner.style.cssText = 'position:fixed;bottom:130px;left:10px;right:10px;background:linear-gradient(135deg,#0c5b7a,#164a6b);color:white;padding:12px 14px;border-radius:12px;display:flex;gap:8px;align-items:center;z-index:150;box-shadow:0 4px 16px rgba(0,0,0,0.25);animation:slideUp 0.35s ease-out;';
+  banner.style.cssText = 'position:fixed;bottom:180px;left:10px;right:10px;background:linear-gradient(135deg,#0c5b7a,#164a6b);color:white;padding:12px 14px;border-radius:12px;display:flex;gap:8px;align-items:center;z-index:150;box-shadow:0 4px 16px rgba(0,0,0,0.25);animation:slideUp 0.35s ease-out;';
   document.body.appendChild(banner);
 
   const style = document.createElement('style');
@@ -2505,7 +2504,7 @@ window.addEventListener('load', () => {
   if (isIOS && !isStandalone && !localStorage.getItem('polinesia-ios-hint')) {
     setTimeout(() => {
       const hint = document.createElement('div');
-      hint.style.cssText = 'position:fixed;bottom:130px;left:10px;right:10px;background:#164a6b;color:white;padding:12px 14px;border-radius:12px;z-index:150;font-size:13px;box-shadow:0 4px 16px rgba(0,0,0,0.25);';
+      hint.style.cssText = 'position:fixed;bottom:180px;left:10px;right:10px;background:#164a6b;color:white;padding:12px 14px;border-radius:12px;z-index:150;font-size:13px;box-shadow:0 4px 16px rgba(0,0,0,0.25);';
       hint.innerHTML = `<strong>📱 Aggiungi alla Home</strong><br><small style="opacity:0.85;">Tocca <span style="font-size:16px;">⎋</span> in basso → "Aggiungi alla schermata Home" per avere l'app sempre a portata</small> <span onclick="this.parentElement.remove();localStorage.setItem('polinesia-ios-hint','1');" style="float:right;cursor:pointer;padding:2px 6px;">✕</span>`;
       document.body.appendChild(hint);
     }, 3000);
