@@ -607,6 +607,15 @@
 
   /* ============ MINI VOCABOLARIO ============ */
   .m-item .word { font-size: 15.5px; font-weight: 800; color: #164a6b; }
+  #vocabolario .word { font-size: 18.5px; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  #vocabolario .pron { font-size: 14.5px; }
+  #vocabolario .desc { font-size: 15px; }
+  #vocabolario .play {
+    flex: 0 0 auto; border: none; background: #0c5b7a; color: white;
+    width: 36px; height: 36px; border-radius: 20px; font-size: 16px;
+    cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+  #vocabolario .play:active { transform: scale(0.92); }
 
 
   /* ============ ESCURSIONI TOP ============ */
@@ -1974,225 +1983,225 @@
 
     <h3>👋 Saluti & gentilezze</h3>
     <div class="m-item">
-      <div class="word">'Ia ora na</div>
+      <div class="word"><span>'Ia ora na</span><button class="play" data-v="v01" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ io-rà-na</div>
       <div class="desc">Ciao / salve a ogni ora. I locali lo dicono tutto d'un fiato: "ioràna"!</div>
     </div>
     <div class="m-item">
-      <div class="word">Maeva · Mānava</div>
+      <div class="word"><span>Maeva · Mānava</span><button class="play" data-v="v02" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ma-è-va · mà-na-va</div>
       <div class="desc">Benvenuto: lo trovi anche sui cartelli in aeroporto.</div>
     </div>
     <div class="m-item">
-      <div class="word">'E aha tō 'oe huru?</div>
+      <div class="word"><span>'E aha tō 'oe huru?</span><button class="play" data-v="v03" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ è à-a to ò-e hu-rù</div>
       <div class="desc">Come stai?</div>
     </div>
     <div class="m-item">
-      <div class="word">Maita'i (roa)</div>
+      <div class="word"><span>Maita'i (roa)</span><button class="play" data-v="v04" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ mai-tà-i (rò-a)</div>
       <div class="desc">(Molto) bene — la risposta pronta da sorridere.</div>
     </div>
     <div class="m-item">
-      <div class="word">Māuruuru (roa)</div>
+      <div class="word"><span>Māuruuru (roa)</span><button class="play" data-v="v05" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ màu-ru-ru (rò-a)</div>
       <div class="desc">Grazie (mille). La parola più importante del viaggio.</div>
     </div>
     <div class="m-item">
-      <div class="word">'Aita pe'ape'a</div>
+      <div class="word"><span>'Aita pe'ape'a</span><button class="play" data-v="v06" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ài-ta pe-a-pe-a</div>
       <div class="desc">Nessun problema / pregò. Il motto rilassato delle isole.</div>
     </div>
     <div class="m-item">
-      <div class="word">Nānā</div>
+      <div class="word"><span>Nānā</span><button class="play" data-v="v07" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ na-nà</div>
       <div class="desc">Arrivederci / ci vediamo.</div>
     </div>
     <div class="m-item">
-      <div class="word">Manuia!</div>
+      <div class="word"><span>Manuia!</span><button class="play" data-v="v08" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ma-nuì-a</div>
       <div class="desc">Salute! (per il brindisi, con una Hinano in mano).</div>
     </div>
 
     <h3>🛟 Frasi di sopravvivenza</h3>
     <div class="m-item">
-      <div class="word">'E · 'Aita</div>
+      <div class="word"><span>'E · 'Aita</span><button class="play" data-v="v09" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ è · ài-ta</div>
       <div class="desc">Sì · No.</div>
     </div>
     <div class="m-item">
-      <div class="word">'Aita i papu ia'u</div>
+      <div class="word"><span>'Aita i papu ia'u</span><button class="play" data-v="v10" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ài-ta i pà-pu ia ù</div>
       <div class="desc">Non ho capito.</div>
     </div>
     <div class="m-item">
-      <div class="word">Faa taere te parau</div>
+      <div class="word"><span>Faa taere te parau</span><button class="play" data-v="v11" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ fa-a ta-è-re te pa-ràu</div>
       <div class="desc">Parla più piano, per favore.</div>
     </div>
     <div class="m-item">
-      <div class="word">Parau Marite?</div>
+      <div class="word"><span>Parau Marite?</span><button class="play" data-v="v12" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ pa-ràu ma-rì-te</div>
       <div class="desc">Parli inglese?</div>
     </div>
     <div class="m-item">
-      <div class="word">E hia moni teie?</div>
+      <div class="word"><span>E hia moni teie?</span><button class="play" data-v="v13" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ e hìa mò-ni tiè-e</div>
       <div class="desc">Quanto costa questo? (al mercato di Papeete).</div>
     </div>
     <div class="m-item">
-      <div class="word">Tei hea te fare iti?</div>
+      <div class="word"><span>Tei hea te fare iti?</span><button class="play" data-v="v14" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ tèi hè-a te fà-re ì-ti</div>
       <div class="desc">Dov'è il bagno? (fare iti = "casetta").</div>
     </div>
     <div class="m-item">
-      <div class="word">Taoto maita'i</div>
+      <div class="word"><span>Taoto maita'i</span><button class="play" data-v="v15" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ta-ò-to mai-tà-i</div>
       <div class="desc">Buonanotte.</div>
     </div>
     <div class="m-item">
-      <div class="word">Ua here vau ia oe</div>
+      <div class="word"><span>Ua here vau ia oe</span><button class="play" data-v="v16" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ù-a hè-re và-u ia ò-e</div>
       <div class="desc">Ti amo — da sussurrare al tramonto su Matira Beach.</div>
     </div>
 
     <h3>🍽️ A tavola & al mercato</h3>
     <div class="m-item">
-      <div class="word">Mā'a · Tama'a maita'i!</div>
+      <div class="word"><span>Mā'a · Tama'a maita'i!</span><button class="play" data-v="v17" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ mà-a · ta-mà-a mai-tà-i</div>
       <div class="desc">Cibo · Buon appetito!</div>
     </div>
     <div class="m-item">
-      <div class="word">Pape</div>
+      <div class="word"><span>Pape</span><button class="play" data-v="v18" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ pà-pe</div>
       <div class="desc">Acqua (pape ha'ari = acqua di cocco).</div>
     </div>
     <div class="m-item">
-      <div class="word">Ha'ari</div>
+      <div class="word"><span>Ha'ari</span><button class="play" data-v="v19" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ha-à-ri</div>
       <div class="desc">Cocco.</div>
     </div>
     <div class="m-item">
-      <div class="word">E'ia</div>
+      <div class="word"><span>E'ia</span><button class="play" data-v="v20" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ è-ia</div>
       <div class="desc">Pesce.</div>
     </div>
     <div class="m-item">
-      <div class="word">Moa</div>
+      <div class="word"><span>Moa</span><button class="play" data-v="v21" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ mò-a</div>
       <div class="desc">Pollo.</div>
     </div>
     <div class="m-item">
-      <div class="word">Pua'a</div>
+      <div class="word"><span>Pua'a</span><button class="play" data-v="v22" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ puà-a</div>
       <div class="desc">Maiale.</div>
     </div>
     <div class="m-item">
-      <div class="word">'Uru</div>
+      <div class="word"><span>'Uru</span><button class="play" data-v="v23" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ù-ru</div>
       <div class="desc">Frutto del pane.</div>
     </div>
     <div class="m-item">
-      <div class="word">Mei'a · Fe'i</div>
+      <div class="word"><span>Mei'a · Fe'i</span><button class="play" data-v="v24" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ mè-ìa · fè-ì</div>
       <div class="desc">Banana dolce · banana rossa da cuocere.</div>
     </div>
     <div class="m-item">
-      <div class="word">Manga</div>
+      <div class="word"><span>Manga</span><button class="play" data-v="v25" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ màn-ga</div>
       <div class="desc">Mango.</div>
     </div>
     <div class="m-item">
-      <div class="word">Pia</div>
+      <div class="word"><span>Pia</span><button class="play" data-v="v26" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ pìa</div>
       <div class="desc">Birra.</div>
     </div>
     <div class="m-item">
-      <div class="word">Moni</div>
+      <div class="word"><span>Moni</span><button class="play" data-v="v27" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ mò-ni</div>
       <div class="desc">Soldi.</div>
     </div>
 
     <h3>🔢 Numeri da mercato</h3>
     <div class="m-item">
-      <div class="word">1 hō'ē · 2 piti · 3 toru</div>
+      <div class="word"><span>1 hō'ē · 2 piti · 3 toru</span><button class="play" data-v="v28" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ho-è · pì-ti · tò-ru</div>
       <div class="desc">Uno · due · tre.</div>
     </div>
     <div class="m-item">
-      <div class="word">4 maha · 5 pae</div>
+      <div class="word"><span>4 maha · 5 pae</span><button class="play" data-v="v29" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ mà-ha · pà-e</div>
       <div class="desc">Quattro · cinque.</div>
     </div>
     <div class="m-item">
-      <div class="word">6 ono · 7 hitu</div>
+      <div class="word"><span>6 ono · 7 hitu</span><button class="play" data-v="v30" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ò-no · hì-tu</div>
       <div class="desc">Sei · sette.</div>
     </div>
     <div class="m-item">
-      <div class="word">8 va'u · 9 iva</div>
+      <div class="word"><span>8 va'u · 9 iva</span><button class="play" data-v="v31" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ và-u · ì-va</div>
       <div class="desc">Otto · nove.</div>
     </div>
     <div class="m-item">
-      <div class="word">10 'ahuru</div>
+      <div class="word"><span>10 'ahuru</span><button class="play" data-v="v32" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ a-hù-ru</div>
       <div class="desc">Dieci.</div>
     </div>
 
     <h3>✨ Parole che sentirai ovunque</h3>
     <div class="m-item">
-      <div class="word">Mana</div>
+      <div class="word"><span>Mana</span><button class="play" data-v="v33" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ mà-na</div>
       <div class="desc">Energia spirituale: ce l'hanno persone, luoghi, canti.</div>
     </div>
     <div class="m-item">
-      <div class="word">Moana · Miti</div>
+      <div class="word"><span>Moana · Miti</span><button class="play" data-v="v34" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ mo-à-na · mì-ti</div>
       <div class="desc">Oceano aperto · mare.</div>
     </div>
     <div class="m-item">
-      <div class="word">Motu</div>
+      <div class="word"><span>Motu</span><button class="play" data-v="v35" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ mò-tu</div>
       <div class="desc">Isolotto della laguna (sì, come il rum, ma senza accento!).</div>
     </div>
     <div class="m-item">
-      <div class="word">Tiare</div>
+      <div class="word"><span>Tiare</span><button class="play" data-v="v36" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ti-à-re</div>
       <div class="desc">Il fiore simbolo: si porta all'orecchio.</div>
     </div>
     <div class="m-item">
-      <div class="word">Vahine · Tāne</div>
+      <div class="word"><span>Vahine · Tāne</span><button class="play" data-v="v37" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ và-hì-ne · tà-ne</div>
       <div class="desc">Donna · uomo.</div>
     </div>
     <div class="m-item">
-      <div class="word">Popa'a</div>
+      <div class="word"><span>Popa'a</span><button class="play" data-v="v38" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ po-pà-a</div>
       <div class="desc">Straniero: sarai tu! Detto con affetto.</div>
     </div>
     <div class="m-item">
-      <div class="word">Ma'ohi</div>
+      <div class="word"><span>Ma'ohi</span><button class="play" data-v="v39" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ma-ò-hi</div>
       <div class="desc">Tahitiano DOC, il popolo nativo.</div>
     </div>
     <div class="m-item">
-      <div class="word">Fenua</div>
+      <div class="word"><span>Fenua</span><button class="play" data-v="v40" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ fe-nù-a</div>
       <div class="desc">Terra / patria.</div>
     </div>
     <div class="m-item">
-      <div class="word">Va'a</div>
+      <div class="word"><span>Va'a</span><button class="play" data-v="v41" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ và-a</div>
       <div class="desc">Canoa a bilanciere: sport nazionale.</div>
     </div>
     <div class="m-item">
-      <div class="word">'Ori · Hīmene · Pahu</div>
+      <div class="word"><span>'Ori · Hīmene · Pahu</span><button class="play" data-v="v42" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ ò-ri · hì-me-ne · pà-hu</div>
       <div class="desc">Danza · canto · tamburo: il cuore delle feste.</div>
     </div>
     <div class="m-item">
-      <div class="word">Hei · Pareu</div>
+      <div class="word"><span>Hei · Pareu</span><button class="play" data-v="v43" aria-label="Ascolta la pronuncia">🔊</button></div>
       <div class="pron">🗣️ hè-i · pa-rè-u</div>
       <div class="desc">Corona di fiori · sarong.</div>
     </div>
@@ -2535,6 +2544,14 @@ function showInstallBanner() {
     banner.remove();
   };
 }
+
+// Audio pronunce vocabolario
+document.addEventListener('click', (e) => {
+  const b = e.target.closest('.play[data-v]');
+  if (!b) return;
+  const a = new Audio('vocab_' + b.dataset.v + '.mp3');
+  a.play().catch(() => showToast('Audio in arrivo'));
+});
 
 // Fallback iOS: mostra istruzioni "aggiungi a schermata home"
 window.addEventListener('load', () => {
