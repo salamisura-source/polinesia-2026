@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Polinesia 26">
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYzViN2EiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMGFhYzEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQyIiBmaWxsPSJ1cmwoI2cpIi8+PHRleHQgeD0iOTYiIHk9Ijk4IiBmb250LWZhbWlseT0iQXBwbGUgQ29sb3IgRW1vamksIFNlZ29lIFVJIEVtb2ppLCBzYW5zLXNlcmlmIiBmb250LXNpemU9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+8J+MujwvdGV4dD48dGV4dCB4PSI5NiIgeT0iMTYwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSwgU2Vnb2UgVUksIFJvYm90bywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9IjgwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPlBGPC90ZXh0Pjwvc3ZnPg==">
-<title>📱 Polinesia MOBILE · Rev. N°23 · T-1</title>
+<title>📱 Polinesia MOBILE · Rev. N°24 · T-1</title>
 <style>
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html { font-size: 16px; }
@@ -27,7 +27,8 @@
 
   /* ============ HEADER (scorre via, NON sticky) ============ */
   .m-header {
-    background: linear-gradient(135deg, #0c5b7a, #164a6b);
+    background: linear-gradient(135deg, #075e75, #0c8a9c 55%, #12b0b0);
+    position: relative;
     color: white;
     padding: 12px 14px 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -579,6 +580,74 @@
     box-shadow: 0 2px 6px rgba(12, 91, 122, 0.35);
   }
 
+  /* ============ VESTE GRAFICA REV24 ============ */
+  :root { --bg: #f5f6f8; }
+  body { background: var(--bg); }
+  .m-header .tiare { position: absolute; right: 12px; top: 10px; opacity: .45; }
+  .wave-div { display: block; width: 100%; height: 22px; margin-top: -1px; color: var(--bg); }
+  .m-item.isl-tah { border-left-color: #e07a5f; }
+  .m-item.isl-moo { border-left-color: #146945; }
+  .m-item.isl-bor { border-left-color: #3d2e70; }
+  .m-nav-quick .t-chip {
+    flex: 0 0 auto; padding: 6px 12px; border: none; border-radius: 16px;
+    background: #164a6b; color: #fff; font-size: 12px; font-weight: 700; cursor: pointer;
+  }
+
+  /* ============ TEMA NOTTE IN LAGUNA ============ */
+  body[data-theme="notte"] { --bg: #0e1626; background: #0e1626; color: #e8eef7; }
+  body[data-theme="notte"] .m-card { background: #16233a; box-shadow: 0 2px 10px rgba(0,0,0,.45); }
+  body[data-theme="notte"] .m-card h2 { color: #7fd4e0; }
+  body[data-theme="notte"] .m-card h3 { color: #cfe0f5; }
+  body[data-theme="notte"] .m-card p,
+  body[data-theme="notte"] .m-item .meta,
+  body[data-theme="notte"] .m-item .desc { color: #a9bdd8; }
+  body[data-theme="notte"] .m-item { background: #1d2c47; }
+  body[data-theme="notte"] .m-item .name { color: #e8eef7; }
+  body[data-theme="notte"] .m-item .name .price { background: #14283f; color: #9fd4e8; }
+  body[data-theme="notte"] .m-item .price.p1 { background: #12301f; color: #9fe0b0; }
+  body[data-theme="notte"] .m-item .price.p2 { background: #332b12; color: #ffe1a0; }
+  body[data-theme="notte"] .m-item .price.p3 { background: #3a1a1a; color: #ffb0b0; }
+  body[data-theme="notte"] .m-item .pron { background: #3a2c1a; color: #ffd9a0; }
+  body[data-theme="notte"] .m-item .word { color: #9fd4e0; }
+  body[data-theme="notte"] .m-item .cig { background: #3a1a1a; color: #ffb0b0; border-left-color: #a03040; }
+  body[data-theme="notte"] .m-item a.link { background: #0c8a9c; }
+  body[data-theme="notte"] details.m-acc { background: #16233a; }
+  body[data-theme="notte"] details.m-acc > summary { background: #16233a; color: #7fd4e0; }
+  body[data-theme="notte"] details.m-acc > .acc-body { border-top-color: #22355a; }
+  body[data-theme="notte"] ul.actionable > li,
+  body[data-theme="notte"] ol.actionable > li { background: #1d2c47; color: #dfe9f5; }
+  body[data-theme="notte"] .m-day { border-bottom-color: #22355a; }
+  body[data-theme="notte"] .m-day .date { color: #8fa3bf; }
+  body[data-theme="notte"] .m-day .content { color: #cfe0f5; }
+  body[data-theme="notte"] .m-day.highlight { background: #2a2410; border-bottom-color: #5a4a10; }
+  body[data-theme="notte"] .hotel-nights { background: #22355a; color: #cfe0f5; }
+  body[data-theme="notte"] .m-alert.info { background: #14283f; color: #9fd4e8; border-left-color: #2a6f8f; }
+  body[data-theme="notte"] .m-alert.warn { background: #3a2c14; color: #ffd9a0; border-left-color: #b56a00; }
+  body[data-theme="notte"] .m-alert.ok   { background: #12301f; color: #9fe0b0; border-left-color: #1a7a3a; }
+  body[data-theme="notte"] .m-alert.tip  { background: #332b12; color: #ffe1a0; border-left-color: #ffb020; }
+  body[data-theme="notte"] .hotel-site { background: #14283f; color: #9fd4e8; }
+  body[data-theme="notte"] .hotel-phone { background: #1d2c47; color: #cfe0f5; }
+  body[data-theme="notte"] .m-currency .cell { background: #1d2c47; color: #cfe0f5; }
+  body[data-theme="notte"] .m-currency .cell .big { color: #7fd4e0; }
+  body[data-theme="notte"] .ferry-box { background: linear-gradient(135deg, #12301f, #0f3a26); }
+  body[data-theme="notte"] .ferry-box h3 { color: #9fe0b0; }
+  body[data-theme="notte"] .m-nav-quick { background: rgba(14,22,38,.97); border-top-color: #22355a; }
+  body[data-theme="notte"] .m-nav-quick a { background: #1d2c47; color: #9fb8d8; }
+  body[data-theme="notte"] .m-nav-quick a.active { background: linear-gradient(135deg, #0c8a9c, #12b0b0); color: #fff; }
+  body[data-theme="notte"] .m-nav-quick .t-chip { background: #0c8a9c; }
+  body[data-theme="notte"] #checkbox-progress-container { background: #16233a; }
+  body[data-theme="notte"] #checkbox-progress { background: #22355a; }
+  body[data-theme="notte"] #checkbox-progress-label { color: #8fa3bf; }
+  body[data-theme="notte"] .count.c-todo { background: #22355a; color: #cfe0f5; }
+  body[data-theme="notte"] #action-bar { background: #16233a; }
+  body[data-theme="notte"] #action-bar .reset { background: #22355a; color: #9fb8d8; }
+  body[data-theme="notte"] .m-footer { color: #5f7796; }
+  body[data-theme="notte"] .booking-tag.walk-in { background: #12301f; color: #9fe0b0; }
+  body[data-theme="notte"] .booking-tag.same-day { background: #332b12; color: #ffe1a0; }
+  body[data-theme="notte"] .booking-tag.day-before { background: #3a1a1a; color: #ffb0b0; }
+  body[data-theme="notte"] .booking-tag.week-before { background: #4a1414; color: #ffd0d0; }
+  body[data-theme="notte"] #vocabolario .play { background: #0c8a9c; }
+
   /* ============ PRINT ============ */
   @media print {
     #action-bar, #toast, #checkbox-progress-container, .m-nav-quick, .m-header { display: none !important; }
@@ -625,16 +694,19 @@
 </style>
 </head>
 <body>
+<script>try{var _t=localStorage.getItem("polinesia-theme");if(_t)document.body.dataset.theme=_t;}catch(e){}</script>
 
 <!-- ============ HEADER STICKY ============ -->
 <header class="m-header">
+  <svg class="tiare" width="44" height="44" viewBox="0 0 46 46" aria-hidden="true"><g fill="#fff"><circle cx="23" cy="10" r="6"/><circle cx="35" cy="18" r="6"/><circle cx="31" cy="32" r="6"/><circle cx="15" cy="32" r="6"/><circle cx="11" cy="18" r="6"/><circle cx="23" cy="22" r="5" fill="#ffdb70"/></g></svg>
   <h1>🌺 Polinesia · 7-30 ago</h1>
-  <div class="sub">Rev. N°23 · aggiornata: <span id="upd-stamp">…</span></div>
+  <div class="sub">Rev. N°24 · aggiornata: <span id="upd-stamp">…</span></div>
   <div class="countdown-bar">
     <span>Alla partenza da Bologna</span>
     <span class="big">T-1</span>
   </div>
 </header>
+<svg class="wave-div" viewBox="0 0 430 22" preserveAspectRatio="none" aria-hidden="true"><path d="M0 12 Q 54 0 108 12 T 216 12 T 324 12 T 432 12 V22 H0 Z" fill="currentColor"/></svg>
 
 <!-- ============ QUICK NAV ============ -->
 <nav class="m-nav-quick">
@@ -654,6 +726,7 @@
   <a href="#cibo">🍽️ Cibo</a>
   <a href="#vocabolario">🗣️ Parla</a>
   <a href="#operatori">🏢 Operatori</a>
+  <button id="theme-toggle" class="t-chip" aria-label="Cambia tema giorno/notte">🌙</button>
 </nav>
 
 <!-- ============ PROGRESS BAR CHECKBOX ============ -->
@@ -961,42 +1034,42 @@
   <div id="escursioni">
     <h2 style="font-size:17px; color:#0c5b7a; margin:16px 6px 8px;">🏝️ Escursioni · le 7 imperdibili</h2>
     <p style="font-size:12.5px; color:#5a6b78; margin:0 6px 10px;">Tocca una card per spuntarla (✓ fatto · ❤ mi piace · ✗ no). Qui sotto la lista completa per hotel.</p>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-moo">
       <div class="name">⭐ Lagoon Cruise razze & squali <span class="price p2">~15k XPF</span></div>
       <div class="meta">🥥 Moorea · 4h · ~15k XPF · Corallina Tours</div>
       <div class="exc-photos"><img src="esc_e1a.jpg" alt="⭐ Lagoon Cruise razze & squali" loading="lazy"><img src="esc_e1b.jpg" alt="⭐ Lagoon Cruise razze & squali" loading="lazy"><img src="esc_e1c.jpg" alt="⭐ Lagoon Cruise razze & squali" loading="lazy"></div>
       <div class="desc">Il classico assoluto di Moorea: razze pastinaca e squali pinna nera che nuotano in acqua bassa, più stop nel coral garden. Emozione gigante, zero pericolo se guidati.</div>
       <div class="desc"><strong>💡 Consigli:</strong> Prenota 2-3 gg prima (sold-out in agosto) · uscita mattina = acqua calma · porta action-cam · lycra/rash guard contro il sole · <strong>ospiti Cook's Bay:</strong> −10% Voila (COOKS10), −20% Island Tour (MOOREA20), −15% Vitamin Sea (COOKSDEAL15).</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-moo">
       <div class="name">⭐ Tiki Tour in piroga + motu <span class="price p2">~14k XPF</span></div>
       <div class="meta">🥥 Moorea · full day · ~14k XPF · il top-rated dell'isola</div>
       <div class="exc-photos"><img src="esc_e2a.jpg" alt="⭐ Tiki Tour in piroga + motu" loading="lazy"><img src="esc_e2b.jpg" alt="⭐ Tiki Tour in piroga + motu" loading="lazy"><img src="esc_e2c.jpg" alt="⭐ Tiki Tour in piroga + motu" loading="lazy"></div>
       <div class="desc">Piroga tradizionale, tiki sommersi, marae antichi e picnic polinesiano su un motu. Cultura + laguna in un colpo solo.</div>
       <div class="desc"><strong>💡 Consigli:</strong> Prenota 1 settimana prima · cappello e acqua · chiedi alla guida dei marae: storie pazzesche · cash per artigianato locale · <strong>ospiti Cook's Bay:</strong> codici sconto nella lista completa qui sotto.</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-bor">
       <div class="name">⭐ Full Day Lagoon + motu picnic <span class="price p2">~22k XPF</span></div>
       <div class="meta">💜 Bora Bora · 7h · ~22k XPF · Lagoon Service</div>
       <div class="exc-photos"><img src="esc_e3a.jpg" alt="⭐ Full Day Lagoon + motu picnic" loading="lazy"><img src="esc_e3b.jpg" alt="⭐ Full Day Lagoon + motu picnic" loading="lazy"><img src="esc_e3c.jpg" alt="⭐ Full Day Lagoon + motu picnic" loading="lazy"></div>
       <div class="desc">L'esperienza-cartolina: outrigger canoe, ukulele a bordo, snorkel nel coral garden e pranzo tahitiano su un motu davanti a Otemanu.</div>
       <div class="desc"><strong>💡 Consigli:</strong> Prenota PRIMA di partire dall'Italia (cronico sold-out) · felpa leggera per il vento in barca · attrezzatura snorkel inclusa · 📞 Lagoon Service +689 87 75 69 57.</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-bor">
       <div class="name"> Sunset catamaran <span class="price p2">~11-13k XPF</span></div>
       <div class="meta">💜 Bora Bora · 2h · ~11-13k XPF</div>
       <div class="exc-photos"><img src="esc_e4a.jpg" alt=" Sunset catamaran" loading="lazy"><img src="esc_e4b.jpg" alt=" Sunset catamaran" loading="lazy"><img src="esc_e4c.jpg" alt=" Sunset catamaran" loading="lazy"></div>
       <div class="desc">Vela al tramonto con la silhouette del Mont Otemanu e cocktail in mano. La foto che posterai per prima.</div>
       <div class="desc"><strong>💡 Consigli:</strong> Prenota 2-3 gg prima · felpa: dopo il sole l'aliseo pizzica · lato sinistro della barca = vista migliore · 📞 Reef Discovery +689 87 76 43 43.</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-tah">
       <div class="name">🚙 4×4 Papenoo Valley <span class="price p2">~17k XPF</span></div>
       <div class="meta">🌺 Tahiti · 8h · ~17k XPF · Te Mana Tahiti Tours</div>
       <div class="exc-photos"><img src="esc_e5a.jpg" alt="🚙 4×4 Papenoo Valley" loading="lazy"><img src="esc_e5b.jpg" alt="🚙 4×4 Papenoo Valley" loading="lazy"><img src="esc_e5c.jpg" alt="🚙 4×4 Papenoo Valley" loading="lazy"></div>
       <div class="desc">L'interno selvaggio di Tahiti: cascate, belvedere sulla valle Papenoo, fango e giungla. L'avventura più richiesta dell'isola.</div>
       <div class="desc"><strong>💡 Consigli:</strong> Prenota prima di partire · scarpe chiuse + k-way · macchina fotografica con laccio (polvere e schizzi).</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-tah">
       <div class="name">🐬 Dolphin watching + Aquarium <span class="price p2">~9k XPF</span></div>
       <div class="meta">🌺 Tahiti · 2-3h · ~9k XPF · Activiseas</div>
       <div class="exc-photos"><img src="esc_e6a.jpg" alt="🐬 Dolphin watching + Aquarium" loading="lazy"><img src="esc_e6b.jpg" alt="🐬 Dolphin watching + Aquarium" loading="lazy"><img src="esc_e6c.jpg" alt="🐬 Dolphin watching + Aquarium" loading="lazy"></div>
@@ -1004,7 +1077,7 @@
       <div class="desc"><strong>💡 Consigli:</strong> Delfini più attivi 8-10 del mattino · pick-up hotel incluso · mai toccare gli animali: si guarda, non si tocca.</div>
     </div>
 
-        <div class="m-item actionable">
+        <div class="m-item actionable isl-bor">
       <div class="name">🐋 Whale watching · megattere <span class="price p2">~10-13k XPF</span></div>
       <div class="meta">💜 Bora Bora · 3-4h · AGOSTO = PIENA STAGIONE</div>
       <div class="exc-photos"><img src="esc_w1.jpg" alt="Coda di megattera nella laguna di Bora Bora" loading="lazy"><img src="esc_w2.jpg" alt="Barca di whale watching nella laguna" loading="lazy"><img src="esc_w3.jpg" alt="Megattera in salto" loading="lazy"></div>
@@ -1300,7 +1373,7 @@
           <a class="hotel-phone" href="tel:+68987288777">📞 +689 87 28 87 77</a>
         </div>
 
-                <div class="m-item actionable">
+                <div class="m-item actionable isl-bor">
           <div class="name">🐋 Whale watching megattere <span class="price p2">~10-13k XPF</span></div>
           <span class="booking-tag day-before">2-3 gg prima</span>
           <div class="desc">AGOSTO = STAGIONE delle megattere alle Isole Sottovento: salti, pinne e canti. Uscite 3-4h fuori laguna con guide certificate.</div>
@@ -1309,7 +1382,7 @@
           <a class="link" href="https://moanaadventuretours.com/" target="_blank" rel="noopener">Moana Adventure ↗</a>
           <a class="hotel-phone" href="tel:+68987782737">📞 +689 87 78 27 37</a>
         </div>
-        <div class="m-item actionable">
+        <div class="m-item actionable isl-bor">
           <div class="name">🧒 Treasure hunt snorkel (bimbi 5+) <span class="price p2">~9k XPF</span></div>
           <span class="booking-tag day-before">1-2 gg prima</span>
           <div class="desc">Caccia al tesoro in laguna: indizi, 3-4 stop e tesoro finale. Bimbi eroi, genitori rilassati.</div>
@@ -1381,7 +1454,7 @@
           <a class="link" href="https://reefdiscovery.com/" target="_blank" rel="noopener">Reef Discovery ↗</a>
           <a class="hotel-phone" href="tel:+68987764343">📞 +689 87 76 43 43</a>
         </div>
-        <div class="m-item actionable">
+        <div class="m-item actionable isl-bor">
           <div class="name">Guided jet-ski tour laguna <span class="price p3">~28k XPF</span></div>
           <span class="booking-tag day-before">2-3 gg prima</span>
           <div class="desc">2 h · giro completo laguna + stop coral garden. Patente non richiesta. Briefing 20 min. Alt.: Bora Bora Quad & Jet Ski Adventures +689 89 75 54 58.</div>
@@ -1432,7 +1505,7 @@
           <a class="link" href="https://tahitinuihelicopters.com/en/contact-us" target="_blank" rel="noopener">Polynesia Helicopter ↗</a>
           <a class="hotel-phone" href="tel:+68987777186">📞 +689 87 777 186</a>
         </div>
-        <div class="m-item actionable">
+        <div class="m-item actionable isl-bor">
           <div class="name">🧖 Deep Ocean Spa (IC Thalasso) <span class="price p3">15-40k XPF</span></div>
           <span class="booking-tag day-before">1-2 gg prima</span>
           <div class="desc">1-3 h · <strong>esclusiva ospiti IHG</strong>: shuttle gratuito Le Moana → Thalasso, trattamenti con acqua di profondità (500m). Best-seller "Deep Sea Water Wrap".</div>
@@ -2298,7 +2371,7 @@
     <h2>🏢 Operatori escursioni · Bora Bora</h2>
     <p style="font-size:13px; color:#5a6b78;">La rubrica completa delle compagnie verificate: sito, telefono e cosa fanno meglio. Tocca una card per spuntarla (es. "prenotato ✓").</p>
 
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-bor">
       <div class="name">Lagoon Service Bora Bora</div>
       <div class="meta">⛵ Lagoon & motu</div>
       <a class="hotel-site" href="https://lagoonservice.com/" target="_blank" rel="noopener">🌐 lagoonservice.com ↗</a>
@@ -2312,7 +2385,7 @@
       <a class="hotel-phone" href="tel:+68987764343">📞 +689 87 76 43 43</a>
       <div class="desc">Specialisti dello snorkeling in barca con gruppi piccoli (8 persone) e guide certificate con conoscenze di biologia marina: Signature Lagoon Tour con le mante, whale watching nella stagione (ago-ott), treasure hunt per bambini e tour privati o luxury. Famosi per qualità del servizio e rispetto della natura; anche sunset cruise. Tra i più recensiti dell’isola.</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-bor">
       <div class="name">Moana Adventure Tours</div>
       <div class="meta">🚤 Jet-ski & combo, dal 1969</div>
       <a class="hotel-site" href="https://moanaadventuretours.com/" target="_blank" rel="noopener">🌐 moanaadventuretours.com ↗</a>
@@ -2326,14 +2399,14 @@
       <a class="hotel-phone" href="tel:+68987776746">📞 +689 87 77 67 46</a>
       <div class="desc">Centro immersioni con 33 anni di attività e premio Travellers’ Choice di TripAdvisor: battesimi per principianti, immersioni per brevettati, corsi PADI e CMAS, barche e istruttori privati. Nitrox gratuito per i brevettati. La scelta giusta per i giardini di corallo e le stazioni di pulizia delle mante, con comfort e sicurezza al primo posto.</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-bor">
       <div class="name">TOP Dive Bora Bora</div>
       <div class="meta">🤿 Catena sub n°1</div>
       <a class="hotel-site" href="https://www.topdive.com/" target="_blank" rel="noopener">🌐 www.topdive.com ↗</a>
       <a class="hotel-phone" href="tel:+68987216628">📞 +689 87 21 66 28</a>
       <div class="desc">La catena di diving più grande della Polinesia, con base a Toopua: immersioni per tutti i livelli, corsi con certificazioni internazionali e uscite mattina e pomeriggio. Organizzazione solida e multisede: comoda se vuoi immergerti anche a Tahiti o Moorea con lo stesso operatore. Prenota con 1-2 giorni di anticipo in agosto.</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-bor">
       <div class="name">Aqua Safari Bora Bora</div>
       <div class="meta">⛑️ Randonnée sous-marine</div>
       <a class="hotel-site" href="https://www.aquasafaribora.com/" target="_blank" rel="noopener">🌐 www.aquasafaribora.com ↗</a>
@@ -2368,7 +2441,7 @@
       <a class="hotel-phone" href="tel:+68987283479">📞 +689 87 28 34 79</a>
       <div class="desc">Specialisti di pesca d’altura: blue marlin, tonno pinna gialla, mahi-mahi e wahoo, più reef fishing (GT, barracuda) e combo pesca+snorkel per famiglie. Pick-up diretto al pontile del tuo hotel, mezza o giornata intera, tour personalizzabili col proprietario Carter White. Prenota e paga anche dopo: formula book now pay later.</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-bor">
       <div class="name">Tahiti Nui Helicopters</div>
       <div class="meta">🚁 Voli panoramici</div>
       <a class="hotel-site" href="https://tahitinuihelicopters.com/" target="_blank" rel="noopener">🌐 tahitinuihelicopters.com ↗</a>
@@ -2382,14 +2455,14 @@
       <a class="hotel-phone" href="tel:+68940607700">📞 +689 40 60 77 00</a>
       <div class="desc">La spa dell’InterContinental Bora Bora Resort & Thalasso: trattamenti con acqua di profondità pompata a 500 m, idroterapia e bungalow dal fondo trasparente sul lagon. Aperta tutti i giorni 9:30-19:00; best-seller il Deep Sea Water Wrap. Accessibile anche a chi non soggiorna, su prenotazione: mezza giornata di puro lusso.</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-bor">
       <div class="name">Bora Bora Jetboard</div>
       <div class="meta">⚡ Jetboard elettrico</div>
       <a class="hotel-site" href="https://boraborajetboard.com/" target="_blank" rel="noopener">🌐 boraborajetboard.com ↗</a>
       <a class="hotel-phone" href="tel:+68987257070">📞 +689 87 25 70 70</a>
       <div class="desc">L’attività più nuova del lagon: jetboard elettrici per “volare” sull’acqua turchese con istruttore al fianco, tutti i giorni 8:00-18:00. Nessuna esperienza richiesta, briefing rapido e tante risate garantite. Per chi cerca l’originalità da raccontare agli amici: +689 87 25 70 70.</div>
     </div>
-    <div class="m-item actionable">
+    <div class="m-item actionable isl-bor">
       <div class="name">Maitai Tours</div>
       <div class="meta">🚤 Jet-ski & island tour</div>
       <a class="hotel-site" href="https://maitaitours.com/" target="_blank" rel="noopener">🌐 maitaitours.com ↗</a>
@@ -2400,7 +2473,7 @@
 
   <!-- ============ FOOTER ============ -->
   <div class="m-footer">
-    Daily Brief Polinesia · Edizione mobile · Rev. N°23<br>
+    Daily Brief Polinesia · Edizione mobile · Rev. N°24<br>
     Countdown T-1 · partenza venerdì 7 agosto<br>
     <br>
     Preferisci la versione desktop completa? Apri <code>report_polinesia_quotidiano.html</code>
@@ -2699,6 +2772,25 @@ async function loadMobileWx() {
 }
 loadMobileWx();
 setInterval(loadMobileWx, 30 * 60 * 1000);
+
+// ============ TEMA GIORNO / NOTTE ============
+(function () {
+  const KEY = 'polinesia-theme';
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  const apply = (t) => {
+    if (t === 'notte') document.body.dataset.theme = 'notte';
+    else delete document.body.dataset.theme;
+    btn.textContent = t === 'notte' ? '☀️' : '🌙';
+  };
+  apply(localStorage.getItem(KEY) || 'giorno');
+  btn.addEventListener('click', () => {
+    const t = document.body.dataset.theme === 'notte' ? 'giorno' : 'notte';
+    localStorage.setItem(KEY, t);
+    apply(t);
+    showToast(t === 'notte' ? 'Notte in laguna 🌙' : 'Buongiorno ☀️');
+  });
+})();
 
 // ==================================================
 // PWA: registrazione service worker + banner install
