@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Polinesia 26">
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYzViN2EiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMGFhYzEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQyIiBmaWxsPSJ1cmwoI2cpIi8+PHRleHQgeD0iOTYiIHk9Ijk4IiBmb250LWZhbWlseT0iQXBwbGUgQ29sb3IgRW1vamksIFNlZ29lIFVJIEVtb2ppLCBzYW5zLXNlcmlmIiBmb250LXNpemU9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+8J+MujwvdGV4dD48dGV4dCB4PSI5NiIgeT0iMTYwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSwgU2Vnb2UgVUksIFJvYm90bywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9IjgwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPlBGPC90ZXh0Pjwvc3ZnPg==">
-<title>📱 Polinesia MOBILE · 4 ago 2026 · T-3</title>
+<title>📱 Polinesia MOBILE · Rev. N°22 · T-1</title>
 <style>
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html { font-size: 16px; }
@@ -629,10 +629,10 @@
 <!-- ============ HEADER STICKY ============ -->
 <header class="m-header">
   <h1>🌺 Polinesia · 7-30 ago</h1>
-  <div class="sub">Edizione mobile · 4 ago 2026 · N°21</div>
+  <div class="sub">Rev. N°22 · aggiornata: <span id="upd-stamp">…</span></div>
   <div class="countdown-bar">
     <span>Alla partenza da Bologna</span>
-    <span class="big">T-3</span>
+    <span class="big">T-1</span>
   </div>
 </header>
 
@@ -2293,8 +2293,8 @@
 
   <!-- ============ FOOTER ============ -->
   <div class="m-footer">
-    Daily Brief Polinesia · Edizione mobile · N°21<br>
-    4 agosto 2026 · Countdown T-3<br>
+    Daily Brief Polinesia · Edizione mobile · Rev. N°22<br>
+    Countdown T-1 · partenza venerdì 7 agosto<br>
     <br>
     Preferisci la versione desktop completa? Apri <code>report_polinesia_quotidiano.html</code>
     <div class="ai-disclosure" style="margin-top:10px; font-size:10.5px; line-height:1.5; color:#8a94a0; font-style:normal;">🤖 <strong>Trasparenza AI:</strong> sito e app sono realizzati interamente con sistemi di intelligenza artificiale (testi, grafica e immagini, salvo quelle reali segnalate come tali), ai sensi degli obblighi di trasparenza dell'AI Act UE (Reg. UE 2024/1689, art. 50) e della normativa italiana in materia di intelligenza artificiale. Contenuti a scopo informativo personale: verifica sempre le informazioni critiche (voli, sanità, emergenze) con fonti ufficiali.</div>
@@ -2491,6 +2491,16 @@ function setNavH() {
 setNavH();
 window.addEventListener('resize', setNavH);
 window.addEventListener('load', setNavH);
+
+// Timbro "aggiornata": data/ora reale dell'ultimo publish (Last-Modified del server, ora di Papeete)
+fetch(window.location.href, { method: 'HEAD' }).then((r) => {
+  const lm = r.headers.get('last-modified');
+  if (!lm) return;
+  const fmt = new Intl.DateTimeFormat('it-IT', { timeZone: 'Pacific/Tahiti', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' });
+  document.getElementById('upd-stamp').textContent = fmt.format(new Date(lm)) + ' (Papeete)';
+}).catch(() => {
+  document.getElementById('upd-stamp').textContent = 'versione offline';
+});
 const NAV_OFFSET = 20; // nav in basso: quasi nessun offset in alto
 
 navLinks.forEach(a => {
