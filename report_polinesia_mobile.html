@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Polinesia 26">
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYzViN2EiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMGFhYzEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQyIiBmaWxsPSJ1cmwoI2cpIi8+PHRleHQgeD0iOTYiIHk9Ijk4IiBmb250LWZhbWlseT0iQXBwbGUgQ29sb3IgRW1vamksIFNlZ29lIFVJIEVtb2ppLCBzYW5zLXNlcmlmIiBmb250LXNpemU9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+8J+MujwvdGV4dD48dGV4dCB4PSI5NiIgeT0iMTYwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSwgU2Vnb2UgVUksIFJvYm90bywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9IjgwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPlBGPC90ZXh0Pjwvc3ZnPg==">
-<title>📱 Polinesia MOBILE · Rev. N°24 · T-1</title>
+<title>📱 Polinesia MOBILE · Rev. N°25 · T-1</title>
 <style>
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html { font-size: 16px; }
@@ -580,6 +580,19 @@
     box-shadow: 0 2px 6px rgba(12, 91, 122, 0.35);
   }
 
+  .m-day.today {
+    background: linear-gradient(90deg, #fff6dd, #ffe9a8);
+    border: 2px solid #ffb020; border-radius: 10px;
+    padding: 10px; margin: 4px -6px;
+  }
+  body[data-theme="notte"] .m-day.today { background: #332b12; }
+  .oggi-badge {
+    display: inline-block; margin-top: 4px; background: #ffb020; color: #5a3a00;
+    font-weight: 800; font-size: 10px; padding: 2px 8px; border-radius: 10px;
+  }
+  details.past-box > summary { color: #66788a; font-size: 13.5px; }
+  details.past-box .m-day { opacity: .8; }
+
   /* ============ VESTE GRAFICA REV24 ============ */
   :root { --bg: #f5f6f8; }
   body { background: var(--bg); }
@@ -700,7 +713,7 @@
 <header class="m-header">
   <svg class="tiare" width="44" height="44" viewBox="0 0 46 46" aria-hidden="true"><g fill="#fff"><circle cx="23" cy="10" r="6"/><circle cx="35" cy="18" r="6"/><circle cx="31" cy="32" r="6"/><circle cx="15" cy="32" r="6"/><circle cx="11" cy="18" r="6"/><circle cx="23" cy="22" r="5" fill="#ffdb70"/></g></svg>
   <h1>🌺 Polinesia · 7-30 ago</h1>
-  <div class="sub">Rev. N°24 · aggiornata: <span id="upd-stamp">…</span></div>
+  <div class="sub">Rev. N°25 · aggiornata: <span id="upd-stamp">…</span></div>
   <div class="countdown-bar">
     <span>Alla partenza da Bologna</span>
     <span class="big">T-1</span>
@@ -859,47 +872,47 @@
   <div class="m-card" id="hotel">
     <h2>🏨 I tuoi 5 hotel</h2>
 
-    <div class="m-item" style="background:#fff5f0; border-left-color:#a03040;">
+    <details class="m-acc hacc" data-ranges="807-808"><summary>🌉 Francisco Bay Inn · San Francisco · 1 notte (7-8/8)</summary><div class="acc-body">
       <div class="hotel-title" style="color:#a03040;">🌉 Francisco Bay Inn</div>
       <span class="hotel-nights">1 notte · 7-8/8</span>
       <p style="font-size:13px; margin:6px 0;">San Francisco · Marina District · 1501 Lombard Street</p>
       <a class="hotel-site" href="https://franciscobayinn.reservandohoteles.com/" target="_blank" rel="noopener">🌐 franciscobayinn.reservandohoteles.com ↗</a>
       <a class="hotel-phone" href="tel:+14154743030">📞 +1 415 474 3030</a>
-    </div>
+    </div></details>
 
-    <div class="m-item" style="background:#fdf5ef; border-left-color:#8a4a1f;">
+    <details class="m-acc hacc" data-ranges="808-812,826-828"><summary>🌺 IC Tahiti · 4+2 notti (8-12/8 e 26-28/8)</summary><div class="acc-body">
       <div class="hotel-title" style="color:#8a4a1f;">🌺 InterContinental Tahiti Resort &amp; Spa</div>
       <span class="hotel-nights">4+2 notti · 8-12/8 e 26-28/8</span>
       <p style="font-size:13px; margin:6px 0;">Faa'a · Tahiti · tra aeroporto e Papeete</p>
       <a class="hotel-site" href="https://tahiti.intercontinental.com/" target="_blank" rel="noopener">🌐 tahiti.intercontinental.com ↗</a>
       <a class="hotel-phone" href="tel:+68940865168">📞 Concierge +689 40 86 51 68</a>
       <a class="hotel-phone" href="/cdn-cgi/l/email-protection#f99a96979a909c8b9e9cd78d9891908d90b990919ed79a9694">✉️ <span class="__cf_email__" data-cfemail="187b77767b717d6a7f7d366c7970716c715871707f367b7775">[email&#160;protected]</span></a>
-    </div>
+    </div></details>
 
-    <div class="m-item" style="background:#eef7f2; border-left-color:#146945;">
+    <details class="m-acc hacc" data-ranges="812-818"><summary>🥥 Cook's Bay Moorea · 6 notti (12-18/8)</summary><div class="acc-body">
       <div class="hotel-title" style="color:#146945;">🥥 Cook's Bay Hotel &amp; Suites</div>
       <span class="hotel-nights">6 notti · 12-18/8</span>
       <p style="font-size:13px; margin:6px 0;">Cook's Bay · Moorea · fronte laguna</p>
       <a class="hotel-site" href="https://www.mooreacooksbay.com/" target="_blank" rel="noopener">🌐 mooreacooksbay.com ↗</a>
       <a class="hotel-phone" href="tel:+68940554100">📞 +689 40 55 41 00</a>
-    </div>
+    </div></details>
 
-    <div class="m-item" style="background:#f2eef8; border-left-color:#3d2e70;">
+    <details class="m-acc hacc" data-ranges="818-824"><summary>💜 Royal Bora Bora · 6 notti (18-24/8)</summary><div class="acc-body">
       <div class="hotel-title" style="color:#3d2e70;">💜 Royal Bora Bora</div>
       <span class="hotel-nights">6 notti · 18-24/8</span>
       <p style="font-size:13px; margin:6px 0;">Matira · Bora Bora main island (no barca)</p>
       <a class="hotel-site" href="https://www.royalborabora.com/" target="_blank" rel="noopener">🌐 royalborabora.com ↗</a>
       <a class="hotel-phone" href="tel:+68940675051">📞 +689 40 67 50 51</a>
-    </div>
+    </div></details>
 
-    <div class="m-item" style="background:#e6f5f8; border-left-color:#006d8f;">
+    <details class="m-acc hacc" data-ranges="824-826"><summary>🐚 IC Le Moana · 2 notti overwater (24-26/8)</summary><div class="acc-body">
       <div class="hotel-title" style="color:#006d8f;">🐚 InterContinental Le Moana</div>
       <span class="hotel-nights">2 notti · 24-26/8 · overwater</span>
       <p style="font-size:13px; margin:6px 0;">Matira Point · Bora Bora · overwater bungalow</p>
       <a class="hotel-site" href="https://lemoana.intercontinental.com/" target="_blank" rel="noopener">🌐 lemoana.intercontinental.com ↗</a>
       <a class="hotel-phone" href="tel:+68940604900">📞 +689 40 60 49 00</a>
       <a class="hotel-phone" href="/cdn-cgi/l/email-protection#eb8c9888c58984998a8984998ac5878e86848a858aab82838cc5888486">✉️ <span class="__cf_email__" data-cfemail="abccd8c885c9c4d9cac9c4d9ca85c7cec6c4cac5caebc2c3cc85c8c4c6">[email&#160;protected]</span></a>
-    </div>
+    </div></details>
   </div>
 
   <!-- ============ VOLI ============ -->
@@ -2473,7 +2486,7 @@
 
   <!-- ============ FOOTER ============ -->
   <div class="m-footer">
-    Daily Brief Polinesia · Edizione mobile · Rev. N°24<br>
+    Daily Brief Polinesia · Edizione mobile · Rev. N°25<br>
     Countdown T-1 · partenza venerdì 7 agosto<br>
     <br>
     Preferisci la versione desktop completa? Apri <code>report_polinesia_quotidiano.html</code>
@@ -2772,6 +2785,63 @@ async function loadMobileWx() {
 }
 loadMobileWx();
 setInterval(loadMobileWx, 30 * 60 * 1000);
+
+// ============ ITINERARIO VIVO ============
+(function () {
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Pacific/Tahiti' }));
+  const mese = now.getMonth() + 1, gior = now.getDate();
+  const md = mese * 100 + gior;
+  const card = document.getElementById('itinerario');
+  if (!card) return;
+
+  // giorni passati -> blocco comprimibile; oggi -> evidenziato
+  const days = Array.from(card.querySelectorAll('.m-day'));
+  const past = [];
+  days.forEach((d) => {
+    const dayEl = d.querySelector('.date .day');
+    if (!dayEl) return;
+    const m = dayEl.textContent.match(/(\d+)\s*AGO/);
+    if (!m) return;
+    const n = +m[1];
+    if (mese === 8 && n === gior) {
+      d.classList.add('today');
+      const b = document.createElement('div');
+      b.className = 'oggi-badge';
+      b.textContent = '📍 OGGI';
+      d.querySelector('.date').appendChild(b);
+    } else if (mese > 8 || (mese === 8 && n < gior)) {
+      past.push(d);
+    }
+  });
+  if (past.length) {
+    const det = document.createElement('details');
+    det.className = 'm-acc past-box';
+    det.innerHTML = '<summary>⏪ Giorni passati (' + past.length + ') — tocca per rivedere</summary><div class="acc-body"></div>';
+    const body = det.querySelector('.acc-body');
+    past.forEach((p) => body.appendChild(p));
+    const intro = card.querySelector('p');
+    if (intro) intro.after(det);
+  }
+
+  // hotel di oggi aperto
+  document.querySelectorAll('details.hacc').forEach((hh) => {
+    const ranges = (hh.dataset.ranges || '').split(',');
+    hh.open = ranges.some((r) => {
+      const [a, b] = r.split('-').map(Number);
+      return md >= a && md <= b;
+    });
+  });
+
+  // accordion escursioni/ristoranti dell'isola in cui sei oggi
+  const isl = (md >= 808 && md <= 811) || (md >= 826 && md <= 828) ? 'Tahiti'
+            : (md >= 812 && md <= 817) ? 'Moorea'
+            : (md >= 818 && md <= 825) ? 'Bora' : null;
+  if (isl) {
+    document.querySelectorAll('#escursioni details.m-acc > summary, #ristoranti details.m-acc > summary').forEach((s) => {
+      if (s.textContent.includes(isl)) s.parentElement.open = true;
+    });
+  }
+})();
 
 // ============ TEMA GIORNO / NOTTE ============
 (function () {
