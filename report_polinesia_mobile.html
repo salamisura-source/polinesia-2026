@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Polinesia 26">
 <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYzViN2EiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMGFhYzEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQyIiBmaWxsPSJ1cmwoI2cpIi8+PHRleHQgeD0iOTYiIHk9Ijk4IiBmb250LWZhbWlseT0iQXBwbGUgQ29sb3IgRW1vamksIFNlZ29lIFVJIEVtb2ppLCBzYW5zLXNlcmlmIiBmb250LXNpemU9Ijg4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkb21pbmFudC1iYXNlbGluZT0iY2VudHJhbCI+8J+MujwvdGV4dD48dGV4dCB4PSI5NiIgeT0iMTYwIiBmb250LWZhbWlseT0iLWFwcGxlLXN5c3RlbSwgU2Vnb2UgVUksIFJvYm90bywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyOCIgZm9udC13ZWlnaHQ9IjgwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0id2hpdGUiPlBGPC90ZXh0Pjwvc3ZnPg==">
-<title>📱 Polinesia MOBILE · Rev. N°31 · T-1</title>
+<title>📱 Polinesia MOBILE · Rev. N°32 · T-1</title>
 <style>
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html { font-size: 16px; }
@@ -593,6 +593,54 @@
   details.past-box > summary { color: #66788a; font-size: 13.5px; }
   details.past-box .m-day { opacity: .8; }
 
+
+  /* ============ LOOK WOW REV32 ============ */
+  .m-header { padding-bottom: 88px; overflow: hidden; }
+  .m-header[data-sky="alba"]    { background: linear-gradient(160deg, #ff9a7a, #ffd1a0 40%, #12b0b0); }
+  .m-header[data-sky="giorno"]  { background: linear-gradient(135deg, #075e75, #0c8a9c 55%, #12b0b0); }
+  .m-header[data-sky="tramonto"]{ background: linear-gradient(160deg, #7a2a60, #e05a3a 55%, #ff9a5a); }
+  .m-header[data-sky="notte"]   { background: linear-gradient(160deg, #0e1626, #12354a 60%, #0c5b7a); }
+  .scene { position: absolute; left: 0; right: 0; bottom: 0; height: 88px; pointer-events: none; }
+  .scene .orb {
+    position: absolute; right: 16%; top: 4px; width: 46px; height: 46px; border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #fff7d6, #ffdb70 60%, rgba(255,219,112,0) 74%);
+    box-shadow: 0 0 26px 10px rgba(255,219,112,.35);
+    animation: floaty 6s ease-in-out infinite;
+  }
+  .m-header[data-sky="tramonto"] .scene .orb { top: 26px; background: radial-gradient(circle at 35% 35%, #ffe0b0, #ff8c5a 60%, rgba(255,140,90,0) 74%); box-shadow: 0 0 30px 12px rgba(255,140,90,.4); }
+  .m-header[data-sky="notte"] .scene .orb { background: radial-gradient(circle at 40% 40%, #ffffff, #cfd8e6 60%, rgba(207,216,230,0) 74%); box-shadow: 0 0 18px 6px rgba(207,216,230,.3); }
+  .scene .canoe { position: absolute; left: -80px; bottom: 30px; width: 64px; height: 20px; opacity: .8; animation: sail 55s linear infinite; }
+  .scene .w { position: absolute; left: 0; right: 0; height: 20px; background-repeat: repeat-x; background-size: 120px 20px; }
+  .scene .w1 { bottom: 0;  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20'%3E%3Cpath d='M0 10 Q15 2 30 10 T60 10 T90 10 T120 10 V20 H0 Z' fill='%23ffffff' fill-opacity='.30'/%3E%3C/svg%3E"); animation: wave 7s linear infinite; }
+  .scene .w2 { bottom: 7px;  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20'%3E%3Cpath d='M0 10 Q15 2 30 10 T60 10 T90 10 T120 10 V20 H0 Z' fill='%23ffffff' fill-opacity='.18'/%3E%3C/svg%3E"); animation: wave 11s linear infinite reverse; }
+  .scene .w3 { bottom: 14px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20'%3E%3Cpath d='M0 10 Q15 2 30 10 T60 10 T90 10 T120 10 V20 H0 Z' fill='%23ffffff' fill-opacity='.10'/%3E%3C/svg%3E"); animation: wave 16s linear infinite; }
+  @keyframes wave  { from { background-position-x: 0; } to { background-position-x: 120px; } }
+  @keyframes sail  { from { transform: translateX(0); } to { transform: translateX(110vw); } }
+  @keyframes floaty{ 0%,100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+  /* chips di vetro + glow */
+  .m-nav-quick { border-radius: 18px 18px 0 0; box-shadow: 0 -6px 24px rgba(12,176,176,.18); }
+  .m-nav-quick a { background: rgba(240,248,251,.92); backdrop-filter: blur(6px); }
+  .m-nav-quick a.active { animation: glowpulse 2.6s ease-in-out infinite; }
+  @keyframes glowpulse { 0%,100% { box-shadow: 0 2px 6px rgba(12,91,122,.35); } 50% { box-shadow: 0 2px 16px rgba(18,176,176,.6); } }
+  /* titoli gradient */
+  .m-card h2 {
+    background: linear-gradient(90deg, #0c8a9c, #e07a5f);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+  body[data-theme="notte"] .m-card h2 { background: linear-gradient(90deg, #7fd4e0, #ffb0a0); -webkit-background-clip: text; background-clip: text; }
+  /* pattern tiare di fondo */
+  body { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cg fill='%230c8a9c' fill-opacity='.05'%3E%3Ccircle cx='28' cy='16' r='5'/%3E%3Ccircle cx='40' cy='24' r='5'/%3E%3Ccircle cx='36' cy='38' r='5'/%3E%3Ccircle cx='20' cy='38' r='5'/%3E%3Ccircle cx='16' cy='24' r='5'/%3E%3C/g%3E%3C/svg%3E"); }
+  body[data-theme="notte"] { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56'%3E%3Cg fill='%237fd4e0' fill-opacity='.04'%3E%3Ccircle cx='28' cy='16' r='5'/%3E%3Ccircle cx='40' cy='24' r='5'/%3E%3Ccircle cx='36' cy='38' r='5'/%3E%3Ccircle cx='20' cy='38' r='5'/%3E%3Ccircle cx='16' cy='24' r='5'/%3E%3C/g%3E%3C/svg%3E"); }
+  /* card che salgono */
+  .pre { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+  .pre.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .pre { opacity: 1; transform: none; transition: none; }
+    .scene .w, .scene .canoe, .scene .orb, .m-nav-quick a.active { animation: none; }
+  }
+  @media print { .scene { display: none; } }
+
   /* ============ VESTE GRAFICA REV24 ============ */
   :root { --bg: #f5f6f8; }
   body { background: var(--bg); }
@@ -713,13 +761,18 @@
 <header class="m-header">
   <svg class="tiare" width="44" height="44" viewBox="0 0 46 46" aria-hidden="true"><g fill="#fff"><circle cx="23" cy="10" r="6"/><circle cx="35" cy="18" r="6"/><circle cx="31" cy="32" r="6"/><circle cx="15" cy="32" r="6"/><circle cx="11" cy="18" r="6"/><circle cx="23" cy="22" r="5" fill="#ffdb70"/></g></svg>
   <h1>🌺 Polinesia · 7-30 ago</h1>
-  <div class="sub">Rev. N°31 · aggiornata: <span id="upd-stamp">…</span></div>
+  <div class="sub">Rev. N°32 · aggiornata: <span id="upd-stamp">…</span></div>
   <div class="countdown-bar">
     <span>Alla partenza da Bologna</span>
     <span class="big">T-1</span>
   </div>
+<div class="scene" aria-hidden="true">
+    <div class="orb"></div>
+    <svg class="canoe" viewBox="0 0 64 20"><path d="M2 12 Q32 20 62 12 L56 16 Q32 22 8 16 Z M30 12 L30 3 L40 11 Z" fill="rgba(15,25,35,.55)"/></svg>
+    <div class="w w3"></div><div class="w w2"></div><div class="w w1"></div>
+  </div>
 </header>
-<svg class="wave-div" viewBox="0 0 430 22" preserveAspectRatio="none" aria-hidden="true"><path d="M0 12 Q 54 0 108 12 T 216 12 T 324 12 T 432 12 V22 H0 Z" fill="currentColor"/></svg>
+<svg class="wave-div"  viewBox="0 0 430 22" preserveAspectRatio="none" aria-hidden="true"><path d="M0 12 Q 54 0 108 12 T 216 12 T 324 12 T 432 12 V22 H0 Z" fill="currentColor"/></svg>
 
 <!-- ============ QUICK NAV ============ -->
 <nav class="m-nav-quick">
@@ -2772,7 +2825,7 @@
 
   <!-- ============ FOOTER ============ -->
   <div class="m-footer">
-    Daily Brief Polinesia · Edizione mobile · Rev. N°31<br>
+    Daily Brief Polinesia · Edizione mobile · Rev. N°32<br>
     Countdown T-1 · partenza venerdì 7 agosto<br>
     <br>
     Preferisci la versione desktop completa? Apri <code>report_polinesia_quotidiano.html</code>
@@ -3071,6 +3124,31 @@ async function loadMobileWx() {
 }
 loadMobileWx();
 setInterval(loadMobileWx, 30 * 60 * 1000);
+
+// ============ CIELO DINAMICO (ora di Papeete) ============
+(function () {
+  const hd = document.querySelector('.m-header');
+  if (!hd) return;
+  const setSky = () => {
+    if (document.body.dataset.theme === 'notte') { hd.dataset.sky = 'notte'; return; }
+    const hh = new Date(new Date().toLocaleString('en-US', { timeZone: 'Pacific/Tahiti' })).getHours();
+    hd.dataset.sky = (hh >= 5 && hh < 9) ? 'alba' : (hh < 16 ? 'giorno' : (hh < 19 ? 'tramonto' : 'notte'));
+  };
+  setSky();
+  setInterval(setSky, 60000);
+  new MutationObserver(setSky).observe(document.body, { attributes: true, attributeFilter: ['data-theme'] });
+})();
+
+// ============ REVEAL CARDS ============
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const els = document.querySelectorAll('.m-card, details.m-acc');
+  els.forEach((el) => el.classList.add('pre'));
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: 0.08 });
+  els.forEach((el) => io.observe(el));
+})();
 
 // ============ ITINERARIO VIVO ============
 (function () {
