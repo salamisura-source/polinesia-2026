@@ -440,10 +440,6 @@
   </div>
 </section>
 
-<!-- ===== HOTEL STRIP ===== -->
-<h2 class="section">🏨 Dove sono / dove sarò</h2>
-<div class="hotel-strip" id="hotel-strip"></div>
-
 <!-- ===== METEO LIVE ===== -->
 <h2 class="section">🌤️ Meteo live</h2>
 <div id="meteo-live">
@@ -622,41 +618,6 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// ==================================================
-// HOTEL STRIP · evidenzia dove sei ORA
-// ==================================================
-const STAYS = [
-  { id:'sf', name:"🌉 Francisco Bay Inn", cls:'sf', dates:'7-8 ago', start:'2026-08-07T19:00:00-07:00', end:'2026-08-08T11:00:00-07:00' },
-  { id:'ic1', name:"🌺 IC Tahiti", cls:'ic', dates:'8-12 ago', start:'2026-08-08T18:55:00-10:00', end:'2026-08-12T11:00:00-10:00' },
-  { id:'cb', name:"🥥 Cook's Bay", cls:'cb', dates:'12-18 ago', start:'2026-08-12T15:00:00-10:00', end:'2026-08-18T09:30:00-10:00' },
-  { id:'rb', name:"💜 Royal Bora Bora", cls:'rb', dates:'18-24 ago', start:'2026-08-18T13:00:00-10:00', end:'2026-08-24T11:00:00-10:00' },
-  { id:'lm', name:"🐚 IC Le Moana", cls:'lm', dates:'24-26 ago', start:'2026-08-24T15:00:00-10:00', end:'2026-08-26T14:00:00-10:00' },
-  { id:'ic2', name:"🌺 IC Tahiti 2", cls:'ic', dates:'26-28 ago', start:'2026-08-26T18:00:00-10:00', end:'2026-08-28T18:00:00-10:00' },
-];
-
-function renderHotels() {
-  const now = new Date();
-  const strip = document.getElementById('hotel-strip');
-  strip.innerHTML = '';
-  STAYS.forEach(s => {
-    const start = new Date(s.start), end = new Date(s.end);
-    let status = 'next', statusTxt = 'prossimo';
-    if (now > end) { status = 'done'; statusTxt = '✓ concluso'; }
-    else if (now >= start && now <= end) { status = 'now'; statusTxt = '👉 SEI QUI'; }
-    else {
-      const diffDays = Math.ceil((start - now) / 86400000);
-      statusTxt = diffDays === 1 ? 'domani' : (diffDays > 0 ? `tra ${diffDays} gg` : 'prossimo');
-    }
-    const isNow = status === 'now';
-    const link = document.createElement('a');
-    link.href = 'report_polinesia_mobile.html#hotel';
-    link.className = 'hotel-pill ' + s.cls + (isNow ? ' now' : '');
-    link.innerHTML = `<div class="dates">${s.dates}</div><div class="name">${s.name}</div><div class="status ${status}">${statusTxt}</div>`;
-    strip.appendChild(link);
-  });
-}
-renderHotels();
-setInterval(renderHotels, 60000); // ogni minuto
 
 // ==================================================
 // CONVERTITORE XPF <-> EUR
