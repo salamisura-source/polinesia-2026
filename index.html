@@ -388,21 +388,9 @@
 <!-- ===== HERO CON COUNTDOWN LIVE ===== -->
 <section class="hero">
   <h1>🌺 Polinesia Francese 2026</h1>
-  <div class="sub">Bologna → Tahiti · Moorea · Bora Bora · 23 giorni</div>
+  <div class="sub">Tahiti · Moorea · Bora Bora · la guida completa</div>
 
-  <div id="cd-phase">Pre-partenza · verifica dettagli finali</div>
-
-  <div class="countdown-live" id="countdown-live" aria-live="polite">
-    <div class="cd-cell"><div class="num" id="cd-d">–</div><div class="lbl">Giorni</div></div>
-    <div class="cd-cell"><div class="num" id="cd-h">–</div><div class="lbl">Ore</div></div>
-    <div class="cd-cell"><div class="num" id="cd-m">–</div><div class="lbl">Minuti</div></div>
-    <div class="cd-cell"><div class="num" id="cd-s">–</div><div class="lbl">Secondi</div></div>
-  </div>
-
-  <div class="cd-target">
-    <div class="item">🎯 <span id="cd-title">Prossimo evento</span></div>
-    <div class="item">📆 <span id="cd-date" class="badge">–</span></div>
-  </div>
+  <div id="cd-phase">🌺 Guida viva: meteo, cibo, escursioni, vocabolario parlato</div>
 </section>
 
 <!-- ===== METEO LIVE ===== -->
@@ -479,7 +467,7 @@
   <a class="qa phone" href="tel:+68940508888"><span class="emoji">⛴️</span>Aremiti<br><small style="color:#999;font-weight:400;">Ferry</small></a>
   <a class="qa phone" href="tel:15"><span class="emoji">🚑</span>SAMU 15<br><small style="color:#999;font-weight:400;">Urgenze</small></a>
   <a class="qa phone" href="tel:112"><span class="emoji">🆘</span>112<br><small style="color:#999;font-weight:400;">Emergenza EU</small></a>
-  <a class="qa phone" href="tel:+14154743030"><span class="emoji">🌉</span>Bay Inn SF<br><small style="color:#999;font-weight:400;">Notte 7/8</small></a>
+  
 </div>
 
 <h2 class="section">🌐 Siti hotel &amp; servizi</h2>
@@ -488,14 +476,14 @@
   <a class="qa web" href="https://www.mooreacooksbay.com/" target="_blank" rel="noopener"><span class="emoji">🥥</span>Cook's Bay<br><small style="color:#999;font-weight:400;">mooreacooksbay</small></a>
   <a class="qa web" href="https://www.royalborabora.com/" target="_blank" rel="noopener"><span class="emoji">💜</span>Royal Bora<br><small style="color:#999;font-weight:400;">royalborabora</small></a>
   <a class="qa web" href="https://lemoana.intercontinental.com/" target="_blank" rel="noopener"><span class="emoji">🐚</span>IC Le Moana<br><small style="color:#999;font-weight:400;">lemoana.interco</small></a>
-  <a class="qa web" href="https://franciscobayinn.reservandohoteles.com/" target="_blank" rel="noopener"><span class="emoji">🌉</span>Bay Inn<br><small style="color:#999;font-weight:400;">reservandohoteles</small></a>
+  
   <a class="qa web" href="https://aremitiexpress.com/" target="_blank" rel="noopener"><span class="emoji">⛴️</span>Aremiti<br><small style="color:#999;font-weight:400;">aremitiexpress</small></a>
   <a class="qa web" href="https://esta.cbp.dhs.gov" target="_blank" rel="noopener"><span class="emoji">🇺🇸</span>ESTA<br><small style="color:#999;font-weight:400;">cbp.dhs.gov</small></a>
-  <a class="qa web" href="https://airmoana.pf" target="_blank" rel="noopener"><span class="emoji">✈️</span>Air Moana<br><small style="color:#999;font-weight:400;">NM918 / NM914</small></a>
+  <a class="qa web" href="https://airmoana.pf" target="_blank" rel="noopener"><span class="emoji">✈️</span>Air Moana<br><small style="color:#999;font-weight:400;">airmoana.pf</small></a>
 </div>
 
 <footer>
-  Dashboard aggiornata dinamicamente · <strong>N°21 · 4 agosto 2026</strong><br>
+  Dashboard aggiornata dinamicamente · <strong>Rev. N°34</strong><br>
   Countdown live, meteo API, convertitore in-browser · nessuna dipendenza esterna installata<br>
   <em>Buon viaggio! 🐢🌴✨</em>
   <div class="ai-disclosure" style="margin-top:10px; font-size:10.5px; line-height:1.5; color:#8a94a0; font-style:normal;">🤖 <strong>Trasparenza AI:</strong> sito e app sono realizzati interamente con sistemi di intelligenza artificiale (testi, grafica e immagini, salvo quelle reali segnalate come tali), ai sensi degli obblighi di trasparenza dell'AI Act UE (Reg. UE 2024/1689, art. 50) e della normativa italiana in materia di intelligenza artificiale. Contenuti a scopo informativo personale: verifica sempre le informazioni critiche (voli, sanità, emergenze) con fonti ufficiali.</div>
@@ -515,74 +503,6 @@
 // COUNTDOWN LIVE (aggiornato ogni secondo)
 // ==================================================
 const RATE_EUR_XPF = 119.3317;
-
-// Tutte le milestone del viaggio in ISO (con timezone locale del posto)
-// Europe/Rome UTC+2 (CEST) durante agosto
-// Pacific/Tahiti UTC-10
-// America/Los_Angeles UTC-7 (PDT) durante agosto
-const MILESTONES = [
-  { id: 'lx1669',    label: '✈️ Partenza da Bologna (LX 1669)',       date: '2026-08-07T10:25:00+02:00', phase: 'partenza' },
-  { id: 'lx38',      label: '✈️ Volo Zurigo → San Francisco (LX 38)', date: '2026-08-07T13:15:00+02:00', phase: 'viaggio' },
-  { id: 'sfarrive',  label: '🌉 Arrivo San Francisco',                date: '2026-08-07T16:15:00-07:00', phase: 'viaggio' },
-  { id: 'ua115',     label: '✈️ Volo San Francisco → Papeete (UA 115)', date: '2026-08-08T13:25:00-07:00', phase: 'viaggio' },
-  { id: 'pptarrive', label: '🌺 Arrivo a Papeete',                    date: '2026-08-08T18:55:00-10:00', phase: 'polinesia' },
-  { id: 'ferry',     label: '⛴️ Ferry Aremiti Tahiti → Moorea',       date: '2026-08-12T12:25:00-10:00', phase: 'polinesia' },
-  { id: 'cbcheckin', label: '🥥 Check-in Cook\'s Bay Moorea',          date: '2026-08-12T15:00:00-10:00', phase: 'polinesia' },
-  { id: 'nm918',     label: '✈️ Volo Moorea → Bora Bora (NM918)',     date: '2026-08-18T10:35:00-10:00', phase: 'polinesia' },
-  { id: 'royalin',   label: '💜 Check-in Royal Bora Bora',            date: '2026-08-18T13:00:00-10:00', phase: 'polinesia' },
-  { id: 'lemoana',   label: '🐚 Trasferimento IC Le Moana overwater', date: '2026-08-24T14:00:00-10:00', phase: 'polinesia' },
-  { id: 'nm914',     label: '✈️ Volo Bora Bora → Papeete (NM914)',    date: '2026-08-26T15:15:00-10:00', phase: 'polinesia' },
-  { id: 'ua114',     label: '🛫 UA 114 · inizio rientro',              date: '2026-08-28T21:10:00-10:00', phase: 'rientro' },
-  { id: 'lh455',     label: '🛫 LH 455 SFO → Francoforte',            date: '2026-08-29T14:40:00-07:00', phase: 'rientro' },
-  { id: 'lh286',     label: '🏠 LH 286 · Rientro a Bologna',          date: '2026-08-30T16:20:00+02:00', phase: 'rientro' },
-  { id: 'blq',       label: '🏠 A CASA (BLQ)',                        date: '2026-08-30T17:50:00+02:00', phase: 'fine' },
-];
-
-function updateCountdown() {
-  const now = new Date();
-  const next = MILESTONES.find(m => new Date(m.date) > now);
-
-  if (!next) {
-    // Viaggio finito
-    document.getElementById('cd-title').textContent = 'Viaggio concluso · benvenuti a casa!';
-    document.getElementById('cd-date').textContent = '30/8/26 17:50';
-    document.getElementById('cd-phase').textContent = '🏠 Rientrati';
-    ['d','h','m','s'].forEach(k => document.getElementById('cd-' + k).textContent = '0');
-    return;
-  }
-
-  const target = new Date(next.date);
-  let diff = Math.max(0, target - now);
-  const d = Math.floor(diff / 86400000); diff -= d * 86400000;
-  const h = Math.floor(diff / 3600000);  diff -= h * 3600000;
-  const m = Math.floor(diff / 60000);    diff -= m * 60000;
-  const s = Math.floor(diff / 1000);
-
-  document.getElementById('cd-d').textContent = d;
-  document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
-  document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
-  document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
-
-  document.getElementById('cd-title').textContent = next.label;
-  const dt = new Date(next.date);
-  const dateStr = dt.toLocaleDateString('it-IT', { day:'2-digit', month:'2-digit' }) + ' · ' +
-                  dt.toLocaleTimeString('it-IT', { hour:'2-digit', minute:'2-digit', timeZone: next.date.includes('-10:00') ? 'Pacific/Tahiti' : (next.date.includes('-07:00') ? 'America/Los_Angeles' : 'Europe/Rome') }) +
-                  (next.date.includes('-10:00') ? ' PPT' : (next.date.includes('-07:00') ? ' SFO' : ''));
-  document.getElementById('cd-date').textContent = dateStr;
-
-  const phaseTxt = {
-    partenza:  '✈️ Partenza imminente · ultimi preparativi',
-    viaggio:   '🛫 In viaggio · andata',
-    polinesia: '🌴 In Polinesia',
-    rientro:   '🛬 Rientro in corso',
-    fine:      '🏠 Rientrati'
-  }[next.phase] || '';
-  document.getElementById('cd-phase').textContent = phaseTxt;
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
-
 
 // ==================================================
 // CONVERTITORE XPF <-> EUR
